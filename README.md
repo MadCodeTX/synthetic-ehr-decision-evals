@@ -21,43 +21,43 @@ by code from ground-truth facts plus a frozen policy (`policy/POLICY.md`). No mo
 ### Bank v2, core shard (9,350 trials per model; holdout = 2,969 cases of unseen wording and unseen case types)
 
 <!-- V2_TABLE -->
-| | **Jev 1.13** | **Qwen3.8-27B (chat JSON)** | **SemIf Qwen3.8-27B** | **Laya fine-tuned (v1 dev)** | **SemIf Qwen3.5-4B** | **Laya zero-shot** |
-|---|---|---|---|---|---|---|
-| **Holdout accuracy** | **83.6%** | **76.2%** | **73.0%** | **72.8%** | **50.6%** | **32.0%** |
-| 95% CI | 82.3–84.9 | 74.6–77.7 | 71.3–74.5 | 71.1–74.3 | 48.8–52.4 | 30.4–33.7 |
-| chart / inbox / results | 70.2 / 97.3 / 84.3 | 71.1 / 88.6 / 69.5 | 64.8 / 88.3 / 66.7 | 63.9 / 82.1 / 72.9 | 51.8 / 58.0 / 42.3 | 30.8 / 40.4 / 25.3 |
-| Abstains when it should | 74.8% | 80.9% | 65.0% | 80.4% | 17.2% | 11.7% |
-| Abstains when it shouldn't | 1.9% | 13.4% | 13.8% | 27.2% | 4.0% | 7.6% |
-| Valid output | 100.0% | 97.3% | 99.9% | 100.0% | 100.0% | 100.0% |
-| Latency p50 (conc. 1 → 8) | 322 → 311 ms | 511 → 2752 ms | 915 → 5042 ms | 26 → 89 ms | 134 → 1082 ms | 24 → 91 ms |
-| Calibration ECE | 0.0156 | — | 0.0409 | 0.0595 | 0.2547 | 0.2107 |
-| API cost for the run | $0.55 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 |
+| | **Jev 1.13** | **Qwen3.8-27B (chat JSON)** | **SemIf Qwen3.8-27B** | **Laya fine-tuned (v1 dev)** | **CLM-8B fine-tuned (v1 dev)** | **SemIf Qwen3.5-4B** | **CLM-8B zero-shot** | **Laya zero-shot** |
+|---|---|---|---|---|---|---|---|---|
+| **Holdout accuracy** | **83.6%** | **76.2%** | **73.0%** | **72.8%** | **60.4%** | **50.6%** | **41.6%** | **32.0%** |
+| 95% CI | 82.3–84.9 | 74.6–77.7 | 71.3–74.5 | 71.1–74.3 | 58.6–62.1 | 48.8–52.4 | 39.8–43.3 | 30.4–33.7 |
+| chart / inbox / results | 70.2 / 97.3 / 84.3 | 71.1 / 88.6 / 69.5 | 64.8 / 88.3 / 66.7 | 63.9 / 82.1 / 72.9 | 49.4 / 71.2 / 61.2 | 51.8 / 58.0 / 42.3 | 51.0 / 33.1 / 40.0 | 30.8 / 40.4 / 25.3 |
+| Abstains when it should | 74.8% | 80.9% | 65.0% | 80.4% | 78.2% | 17.2% | 72.9% | 11.7% |
+| Abstains when it shouldn't | 1.9% | 13.4% | 13.8% | 27.2% | 32.2% | 4.0% | 46.6% | 7.6% |
+| Valid output | 100.0% | 97.3% | 99.9% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% |
+| Latency p50 (conc. 1 → 8) | 322 → 311 ms | 511 → 2752 ms | 915 → 5042 ms | 26 → 89 ms | 96 → 612 ms | 134 → 1082 ms | 95 → 607 ms | 24 → 91 ms |
+| Calibration ECE | 0.0156 | — | 0.0409 | 0.0595 | 0.1545 | 0.2547 | 0.3505 | 0.2107 |
+| API cost for the run | $0.55 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 |
 <!-- /V2_TABLE -->
 
 Holdout-only case types. No model or fine-tune saw these case types in development data:
 
 <!-- V2_UNSEEN -->
-| holdout-only case type | n | Jev 1.13 | Qwen3.8-27B (chat JSON) | SemIf Qwen3.8-27B | Laya fine-tuned (v1 dev) | SemIf Qwen3.5-4B | Laya zero-shot |
-|---|---|---|---|---|---|---|---|
-| `chart/two_edit_name` | 500 | 57.6 | 57.6 | 55.2 | 62.0 | 50.2 | 30.8 |
-| `inbox/same_destination_multi_request` | 500 | 97.4 | 88.0 | 90.8 | 84.4 | 55.4 | 44.8 |
-| `results/rule_order_collisions` | 500 | 80.6 | 57.8 | 63.2 | 69.8 | 40.0 | 22.6 |
+| holdout-only case type | n | Jev 1.13 | Qwen3.8-27B (chat JSON) | SemIf Qwen3.8-27B | Laya fine-tuned (v1 dev) | CLM-8B fine-tuned (v1 dev) | SemIf Qwen3.5-4B | CLM-8B zero-shot | Laya zero-shot |
+|---|---|---|---|---|---|---|---|---|---|
+| `chart/two_edit_name` | 500 | 57.6 | 57.6 | 55.2 | 62.0 | 49.6 | 50.2 | 52.2 | 30.8 |
+| `inbox/same_destination_multi_request` | 500 | 97.4 | 88.0 | 90.8 | 84.4 | 74.4 | 55.4 | 32.8 | 44.8 |
+| `results/rule_order_collisions` | 500 | 80.6 | 57.8 | 63.2 | 69.8 | 57.8 | 40.0 | 38.2 | 22.6 |
 <!-- /V2_UNSEEN -->
 
 ### Bank v1 (6,226 trials per model; holdout = 1,032 cases)
 
 <!-- V1_TABLE -->
-| | **Jev 1.13** | **Qwen3.8-27B (chat JSON)** | **SemIf Qwen3.8-27B** | **Laya fine-tuned (v1 dev)** | **SemIf Qwen3.5-4B** | **Laya zero-shot** |
-|---|---|---|---|---|---|---|
-| **Holdout accuracy** | **91.4%** | **87.0%** | **79.2%** | **79.1%** | **50.4%** | **29.2%** |
-| 95% CI | 89.5–92.9 | 84.8–88.9 | 76.6–81.5 | 76.5–81.4 | 47.3–53.4 | 26.5–32.0 |
-| chart / inbox / results | 88.2 / 97.4 / 89.6 | 87.4 / 91.1 / 83.3 | 77.7 / 88.7 / 72.7 | 72.8 / 89.4 / 76.8 | 47.0 / 63.6 / 42.9 | 29.4 / 34.4 / 24.6 |
-| Abstains when it should | 82.1% | 85.6% | 70.5% | 87.8% | 17.1% | 10.2% |
-| Abstains when it shouldn't | 1.5% | 10.0% | 13.7% | 14.3% | 4.2% | 7.7% |
-| Valid output | 100.0% | 96.8% | 100.0% | 100.0% | 100.0% | 100.0% |
-| Latency p50 (conc. 1 → 8) | 233 → 286 ms | 484 → 2418 ms | 659 → 4721 ms | 70 → 90 ms | 174 → 986 ms | 70 → 92 ms |
-| Calibration ECE | 0.016 | — | 0.0286 | 0.0386 | 0.2578 | 0.2393 |
-| API cost for the run | $0.35 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 |
+| | **Jev 1.13** | **Qwen3.8-27B (chat JSON)** | **SemIf Qwen3.8-27B** | **Laya fine-tuned (v1 dev)** | **CLM-8B fine-tuned (v1 dev)** | **SemIf Qwen3.5-4B** | **CLM-8B zero-shot** | **Laya zero-shot** |
+|---|---|---|---|---|---|---|---|---|
+| **Holdout accuracy** | **91.4%** | **87.0%** | **79.2%** | **79.1%** | **64.2%** | **50.4%** | **41.5%** | **29.2%** |
+| 95% CI | 89.5–92.9 | 84.8–88.9 | 76.6–81.5 | 76.5–81.4 | 61.3–67.1 | 47.3–53.4 | 38.5–44.5 | 26.5–32.0 |
+| chart / inbox / results | 88.2 / 97.4 / 89.6 | 87.4 / 91.1 / 83.3 | 77.7 / 88.7 / 72.7 | 72.8 / 89.4 / 76.8 | 50.3 / 76.8 / 67.8 | 47.0 / 63.6 / 42.9 | 53.0 / 33.1 / 36.9 | 29.4 / 34.4 / 24.6 |
+| Abstains when it should | 82.1% | 85.6% | 70.5% | 87.8% | 91.9% | 17.1% | 73.0% | 10.2% |
+| Abstains when it shouldn't | 1.5% | 10.0% | 13.7% | 14.3% | 18.3% | 4.2% | 44.7% | 7.7% |
+| Valid output | 100.0% | 96.8% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% | 100.0% |
+| Latency p50 (conc. 1 → 8) | 233 → 286 ms | 484 → 2418 ms | 659 → 4721 ms | 70 → 90 ms | 32 → 32 ms | 174 → 986 ms | 32 → 33 ms | 70 → 92 ms |
+| Calibration ECE | 0.016 | — | 0.0286 | 0.0386 | 0.0183 | 0.2578 | 0.3319 | 0.2393 |
+| API cost for the run | $0.35 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 |
 <!-- /V1_TABLE -->
 
 Full per-stratum tables, metric definitions, label-quality checks and caveats are in
@@ -76,7 +76,7 @@ Full per-stratum tables, metric definitions, label-quality checks and caveats ar
 3. **v2 is meaningfully harder.** Every capable model lost 6–11 points on the v2 holdout (unseen wording and
    unseen case types).
    - Chart matching is the hardest workflow: about 70% even for the best models.
-   - No model can reliably count a two-letter name difference: `two_edit_name` is 50–62% for every model except zero-shot Laya, which is lower still.
+   - No model can reliably count a two-letter name difference: no model scores above 62% on `two_edit_name`.
 4. **Ordered-rule reasoning separates the models.** On `rule_order_collisions`, where two policy rules fire and
    the earlier one wins, Jev scores 80.6% and Qwen chat 57.8%.
 5. **Changing the interface did not rescue Qwen.** SemIf reads the same Qwen family's answer from one forward
@@ -86,9 +86,17 @@ Full per-stratum tables, metric definitions, label-quality checks and caveats ar
    v1 dev took Laya from 29% to 79% on the v1 holdout. On v2's unseen wording it fell back to 72.8%, and it
    abstains on 27% of cases that had a routable answer. It is by far the fastest model (about 26 ms at
    concurrency 1).
-7. **Small and zero-shot models are not usable for this task**: SemIf Qwen3.5-4B scores about 50% and stock Laya
+7. **CLM-8B does not transfer to this task, and its speed advantage is smaller than advertised.**
+   - **Accuracy:** zero-shot, it scores 41.6% on the v2 holdout (41.5% on v1). In 46.6% of cases where a routable
+     answer existed, it chooses `needs_human_review`.
+   - **Fine-tuning** on v1 dev with CLM's own trainer (recipe chosen on dev validation) raises that to 60.4% on
+     v2 and 64.2% on v1. That is still 23 points behind Jev and 12 points behind the fine-tuned Laya.
+   - **Latency:** one CLM decision takes about 95 ms at concurrency 1, 3.4× faster than Jev (322 ms), not the
+     "up to 9×" in its announcement. With one GPU for the encoder it degrades to about 610 ms at concurrency 8,
+     where Jev stays at 0.31 s. Repeated states are served from CLM's embedding cache in about 30 ms.
+8. **Small and zero-shot models are not usable for this task**: SemIf Qwen3.5-4B scores about 50% and stock Laya
    about 30%, despite always producing valid options.
-8. **Label quality.** In 166 v1 cases and 404 v2 cases, the three strongest models agreed on a different answer
+9. **Label quality.** In 166 v1 cases and 404 v2 cases, the three strongest models agreed on a different answer
    than the label. The independent rule oracle confirms the label in all of them, and a hand-checked sample found
    no label errors. These are shared model blind spots, not bank errors.
 
@@ -101,6 +109,11 @@ Full per-stratum tables, metric definitions, label-quality checks and caveats ar
   generation (exllamav3, EXL3 8 bpw). Its output is always a valid option, and it has native probabilities.
 - **Laya**: `convaiinnovations/laya` typed-decision router, stock (zero-shot) and fine-tuned on the **v1 dev
   split only** using its official recipe.
+- **CLM-8B**: [Contrastive-LM/CLM](https://github.com/Contrastive-LM/CLM). A frozen Qwen3-8B encoder
+  (vLLM, last-token pooling) plus 18.9M-parameter state and action projection heads, served behind its
+  TypeSafe-compatible `/v1/systemone` API. It was tested with the stock reference head (zero-shot) and with
+  heads fine-tuned on the **v1 dev split only** using CLM's own `finetune.py --task choice`. See
+  [`integrations/clm/`](integrations/clm/).
 
 All self-hosted models ran on one server with 2× RTX 4090. All models received byte-identical evidence, options
 and policy text.
@@ -131,7 +144,9 @@ Other models:
 - any OpenAI-compatible chat endpoint: `--qwen-base <url> --qwen-model <id>` on a `qwen` plan (OpenRouter works;
   cost is counted);
 - any self-hosted Jev-compatible decisions service: `--decisions-base <url>` on `plan_decisions.json`;
-- a direct-logit service: `--semif-base <url>`.
+- a direct-logit service: `--semif-base <url>`;
+- a TypeSafe System One server such as CLM: `--decisions-base <url> --decisions-path /v1/systemone` with
+  `DECISIONS_MODEL=<served model name>` ([`integrations/clm/`](integrations/clm/)).
 
 A dependency-free Python client lives in `simple/`.
 
@@ -159,6 +174,7 @@ python3 analysis/analyze.py      <run_dir> --bank data/bank.jsonl --out metrics
 | `oracle/rules.py` | a label-blind rule implementation of the policy, used as an independent label check |
 | `evals/` | the TypeScript harness: exact prompts, strict validation, budgets, resume, drift checks, and an offline mock |
 | `simple/` | a minimal Python client that sends the same prompts |
+| `integrations/clm/` | scripts to serve, fine-tune (v1 dev only) and benchmark CLM-8B |
 | `verify/`, `analysis/` | independent run verifiers and metrics |
 | `results/` | scoreboards and per-trial records for every run above |
 | `docs/` | spec, data design, and a guide to running on a locked-down work machine |

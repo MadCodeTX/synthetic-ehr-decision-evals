@@ -28,7 +28,7 @@ export const QWEN_COST_LABEL = 'openrouter.ai: usage.cost summed per attempt (un
 export type RunOptions = {
   runDir: string; planPath: string; bankPath: string; policyPath: string;
   phases: string[]; concurrency: number; maxTrials?: number; maxUsd?: number; deadline?: string;
-  qwenBase?: string; qwenModel?: string; expectQwenId?: string | null; decisionsBase?: string; semifBase?: string; dryRun?: boolean; limit?: number | null;
+  qwenBase?: string; qwenModel?: string; expectQwenId?: string | null; decisionsBase?: string; decisionsPath?: string; semifBase?: string; dryRun?: boolean; limit?: number | null;
   // tuning / test hooks (not CLI-exposed except where noted)
   timeouts?: { jev_ms: number; qwen_ms: number; decisions_ms?: number; semif_ms?: number };
   healthIntervalMs?: number; statusIntervalMs?: number; stopPollMs?: number; backoffScale?: number;
@@ -146,7 +146,10 @@ export async function run(opts: RunOptions, deps: RunDeps = {}): Promise<RunSumm
   const isQwenOpenRouter = !!qwenBase && /(^|\.)openrouter\.ai$/.test(new URL(qwenBase).hostname);
   if (isQwenOpenRouter && !qwenModel) throw new Error('qwen on openrouter.ai requires --qwen-model (or QWEN_MODEL): OpenRouter hosts many models, so there is no single served id to pin');
   const decisionsBase = (opts.decisionsBase ?? process.env.DECISIONS_BASE_URL ?? '').replace(/\/+$/, '');
-  const decisionsEndpoint = decisionsBase + '/v1/decisions';
+  // Path of the decisions endpoint on that base: '/v1/decisions' (Laya-style services) or e.g. '/v1/systemone'
+  // (TypeSafe System One servers such as CLM). The request body is identical either way.
+  const decisionsPath = '/' + (opts.decisionsPath ?? process.env.DECISIONS_PATH ?? '/v1/decisions').replace(/^\/+/, '');
+  const decisionsEndpoint = decisionsBase + decisionsPath;
   if (usesDecisions && !decisionsBase) throw new Error('decisions arm in the plan but no endpoint: pass --decisions-base (or set DECISIONS_BASE_URL), e.g. http://host:8090');
   const semifBase = (opts.semifBase ?? process.env.SEMIF_BASE_URL ?? '').replace(/\/+$/, '');
   const semifEndpoint = semifBase + '/v1/decisions';
@@ -527,7 +530,7 @@ export function parseArgs(argv: string[]): RunOptions {
   const int = (n: string) => (a[n] === undefined ? undefined : (() => { const x = Number(a[n]); if (!Number.isInteger(x)) throw new Error(`--${n} must be an integer`); return x; })());
   const phasesArg = (a['phases'] ?? a['phase']) as string | undefined;
   if (!phasesArg) throw new Error('--phases is required');
-  const known = new Set(['run-dir', 'plan', 'bank', 'policy', 'phases', 'phase', 'concurrency', 'max-trials', 'max-usd', 'deadline', 'qwen-base', 'qwen-model', 'expect-qwen-id', 'decisions-base', 'laya-base', 'semif-base', 'dry-run', 'limit']);
+  const known = new Set(['run-dir', 'plan', 'bank', 'policy', 'phases', 'phase', 'concurrency', 'max-trials', 'max-usd', 'deadline', 'qwen-base', 'qwen-model', 'expect-qwen-id', 'decisions-base', 'decisions-path', 'laya-base', 'semif-base', 'dry-run', 'limit']);
   for (const k of Object.keys(a)) if (!known.has(k)) throw new Error(`unknown option --${k}`);
   if (a['laya-base'] !== undefined && a['decisions-base'] !== undefined) throw new Error('pass either --decisions-base or --laya-base (alias), not both');
   return {
@@ -536,7 +539,7 @@ export function parseArgs(argv: string[]): RunOptions {
     concurrency: int('concurrency') ?? 1, maxTrials: int('max-trials'),
     maxUsd: a['max-usd'] === undefined ? undefined : Number(a['max-usd']),
     deadline: a['deadline'] as string | undefined, qwenBase: a['qwen-base'] as string | undefined, qwenModel: a['qwen-model'] as string | undefined,
-    decisionsBase: (a['decisions-base'] ?? a['laya-base']) as string | undefined, semifBase: a['semif-base'] as string | undefined,
+    decisionsBase: (a['decisions-base'] ?? a['laya-base']) as string | undefined, decisionsPath: a['decisions-path'] as string | undefined, semifBase: a['semif-base'] as string | undefined,
     expectQwenId: (a['expect-qwen-id'] as string | undefined) ?? null, dryRun: !!a['dry-run'], limit: int('limit') ?? null,
   };
 }

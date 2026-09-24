@@ -162,6 +162,46 @@
    "ece_chosen_prob": 0.0386,
    "no_safe_option_trials": 150
   },
+  "CLM-8B fine-tuned (v1 dev)": {
+   "run_id": "v1-clm-ft",
+   "arm_key": "decisions",
+   "api_models": [
+    "clm-ft-v1dev"
+   ],
+   "trials": 6226,
+   "holdout_acc": 64.2,
+   "holdout_ci": [
+    61.3,
+    67.1
+   ],
+   "holdout_n": 1032,
+   "dev_acc": 82.6,
+   "dev_ci": [
+    81.4,
+    83.7
+   ],
+   "dev_n": 4084,
+   "all_acc": 78.9,
+   "all_n": 5116,
+   "holdout_chart": 50.3,
+   "all_chart": 62.0,
+   "holdout_inbox": 76.8,
+   "all_inbox": 89.9,
+   "holdout_results": 67.8,
+   "all_results": 86.2,
+   "abstain_recall": 91.9,
+   "false_abstain_rate": 18.3,
+   "counterfactual_acc": 83.0,
+   "valid_rate": 100.0,
+   "latency_p50_ms": 373,
+   "latency_p95_ms": 886,
+   "p50_load_c1_ms": 32,
+   "p50_load_c8_ms": 32,
+   "reported_cost_usd": 0,
+   "repeat_identical_pct": 100.0,
+   "ece_chosen_prob": 0.0183,
+   "no_safe_option_trials": 150
+  },
   "SemIf Qwen3.5-4B": {
    "run_id": "2026-09-23T15-43-56Z-semif-4b",
    "arm_key": "semif",
@@ -200,6 +240,46 @@
    "reported_cost_usd": 0,
    "repeat_identical_pct": 100.0,
    "ece_chosen_prob": 0.2578,
+   "no_safe_option_trials": 150
+  },
+  "CLM-8B zero-shot": {
+   "run_id": "v1-clm-zeroshot",
+   "arm_key": "decisions",
+   "api_models": [
+    "clm-latest"
+   ],
+   "trials": 6226,
+   "holdout_acc": 41.5,
+   "holdout_ci": [
+    38.5,
+    44.5
+   ],
+   "holdout_n": 1032,
+   "dev_acc": 43.2,
+   "dev_ci": [
+    41.7,
+    44.7
+   ],
+   "dev_n": 4084,
+   "all_acc": 42.8,
+   "all_n": 5116,
+   "holdout_chart": 53.0,
+   "all_chart": 50.4,
+   "holdout_inbox": 33.1,
+   "all_inbox": 36.5,
+   "holdout_results": 36.9,
+   "all_results": 40.8,
+   "abstain_recall": 73.0,
+   "false_abstain_rate": 44.7,
+   "counterfactual_acc": 52.7,
+   "valid_rate": 100.0,
+   "latency_p50_ms": 366,
+   "latency_p95_ms": 874,
+   "p50_load_c1_ms": 32,
+   "p50_load_c8_ms": 33,
+   "reported_cost_usd": 0,
+   "repeat_identical_pct": 100.0,
+   "ece_chosen_prob": 0.3319,
    "no_safe_option_trials": 150
   },
   "Laya zero-shot": {
@@ -261,8 +341,16 @@
     "acc": 82.0,
     "n": 139
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 67.6,
+    "n": 139
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 27.3,
+    "n": 139
+   },
+   "CLM-8B zero-shot": {
+    "acc": 57.6,
     "n": 139
    },
    "Laya zero-shot": {
@@ -287,8 +375,16 @@
     "acc": 76.3,
     "n": 139
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 71.2,
+    "n": 139
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 54.7,
+    "n": 139
+   },
+   "CLM-8B zero-shot": {
+    "acc": 69.1,
     "n": 139
    },
    "Laya zero-shot": {
@@ -313,8 +409,16 @@
     "acc": 84.4,
     "n": 135
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 42.2,
+    "n": 135
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 76.3,
+    "n": 135
+   },
+   "CLM-8B zero-shot": {
+    "acc": 20.7,
     "n": 135
    },
    "Laya zero-shot": {
@@ -339,8 +443,16 @@
     "acc": 95.0,
     "n": 140
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 75.7,
+    "n": 140
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 37.9,
+    "n": 140
+   },
+   "CLM-8B zero-shot": {
+    "acc": 72.9,
     "n": 140
    },
    "Laya zero-shot": {
@@ -365,8 +477,16 @@
     "acc": 91.8,
     "n": 134
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 59.7,
+    "n": 134
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 49.3,
+    "n": 134
+   },
+   "CLM-8B zero-shot": {
+    "acc": 57.5,
     "n": 134
    },
    "Laya zero-shot": {
@@ -391,8 +511,16 @@
     "acc": 93.4,
     "n": 136
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 77.9,
+    "n": 136
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 45.6,
+    "n": 136
+   },
+   "CLM-8B zero-shot": {
+    "acc": 50.7,
     "n": 136
    },
    "Laya zero-shot": {
@@ -417,8 +545,16 @@
     "acc": 77.8,
     "n": 135
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 73.3,
+    "n": 135
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 34.1,
+    "n": 135
+   },
+   "CLM-8B zero-shot": {
+    "acc": 66.7,
     "n": 135
    },
    "Laya zero-shot": {
@@ -443,8 +579,16 @@
     "acc": 58.0,
     "n": 131
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 44.3,
+    "n": 131
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 57.3,
+    "n": 131
+   },
+   "CLM-8B zero-shot": {
+    "acc": 24.4,
     "n": 131
    },
    "Laya zero-shot": {
@@ -469,8 +613,16 @@
     "acc": 69.3,
     "n": 137
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 56.2,
+    "n": 137
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 38.0,
+    "n": 137
+   },
+   "CLM-8B zero-shot": {
+    "acc": 39.4,
     "n": 137
    },
    "Laya zero-shot": {
@@ -495,8 +647,16 @@
     "acc": 84.4,
     "n": 141
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 60.3,
+    "n": 141
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 39.0,
+    "n": 141
+   },
+   "CLM-8B zero-shot": {
+    "acc": 51.1,
     "n": 141
    },
    "Laya zero-shot": {
@@ -521,8 +681,16 @@
     "acc": 84.8,
     "n": 138
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 59.4,
+    "n": 138
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 57.2,
+    "n": 138
+   },
+   "CLM-8B zero-shot": {
+    "acc": 51.4,
     "n": 138
    },
    "Laya zero-shot": {
@@ -547,8 +715,16 @@
     "acc": 84.0,
     "n": 144
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 43.8,
+    "n": 144
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 84.7,
+    "n": 144
+   },
+   "CLM-8B zero-shot": {
+    "acc": 21.5,
     "n": 144
    },
    "Laya zero-shot": {
@@ -573,8 +749,16 @@
     "acc": 83.6,
     "n": 140
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 74.3,
+    "n": 140
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 49.3,
+    "n": 140
+   },
+   "CLM-8B zero-shot": {
+    "acc": 70.7,
     "n": 140
    },
    "Laya zero-shot": {
@@ -599,8 +783,16 @@
     "acc": 100.0,
     "n": 118
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 97.5,
+    "n": 118
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 68.6,
+    "n": 118
+   },
+   "CLM-8B zero-shot": {
+    "acc": 47.5,
     "n": 118
    },
    "Laya zero-shot": {
@@ -625,8 +817,16 @@
     "acc": 94.4,
     "n": 143
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 80.4,
+    "n": 143
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 70.6,
+    "n": 143
+   },
+   "CLM-8B zero-shot": {
+    "acc": 21.7,
     "n": 143
    },
    "Laya zero-shot": {
@@ -651,8 +851,16 @@
     "acc": 96.7,
     "n": 120
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 94.2,
+    "n": 120
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 55.0,
+    "n": 120
+   },
+   "CLM-8B zero-shot": {
+    "acc": 33.3,
     "n": 120
    },
    "Laya zero-shot": {
@@ -677,8 +885,16 @@
     "acc": 85.5,
     "n": 138
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 85.5,
+    "n": 138
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 33.3,
+    "n": 138
+   },
+   "CLM-8B zero-shot": {
+    "acc": 44.2,
     "n": 138
    },
    "Laya zero-shot": {
@@ -703,8 +919,16 @@
     "acc": 99.2,
     "n": 131
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 88.5,
+    "n": 131
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 61.8,
+    "n": 131
+   },
+   "CLM-8B zero-shot": {
+    "acc": 29.8,
     "n": 131
    },
    "Laya zero-shot": {
@@ -729,8 +953,16 @@
     "acc": 93.9,
     "n": 147
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 95.9,
+    "n": 147
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 40.1,
+    "n": 147
+   },
+   "CLM-8B zero-shot": {
+    "acc": 48.3,
     "n": 147
    },
    "Laya zero-shot": {
@@ -755,8 +987,16 @@
     "acc": 92.6,
     "n": 135
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 93.3,
+    "n": 135
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 56.3,
+    "n": 135
+   },
+   "CLM-8B zero-shot": {
+    "acc": 37.0,
     "n": 135
    },
    "Laya zero-shot": {
@@ -781,8 +1021,16 @@
     "acc": 97.5,
     "n": 198
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 89.4,
+    "n": 198
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 91.9,
+    "n": 198
+   },
+   "CLM-8B zero-shot": {
+    "acc": 25.8,
     "n": 198
    },
    "Laya zero-shot": {
@@ -807,8 +1055,16 @@
     "acc": 97.2,
     "n": 143
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 92.3,
+    "n": 143
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 82.5,
+    "n": 143
+   },
+   "CLM-8B zero-shot": {
+    "acc": 37.8,
     "n": 143
    },
    "Laya zero-shot": {
@@ -833,8 +1089,16 @@
     "acc": 96.2,
     "n": 131
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 93.1,
+    "n": 131
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 64.9,
+    "n": 131
+   },
+   "CLM-8B zero-shot": {
+    "acc": 44.3,
     "n": 131
    },
    "Laya zero-shot": {
@@ -859,8 +1123,16 @@
     "acc": 84.3,
     "n": 140
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 80.7,
+    "n": 140
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 52.1,
+    "n": 140
+   },
+   "CLM-8B zero-shot": {
+    "acc": 37.9,
     "n": 140
    },
    "Laya zero-shot": {
@@ -885,8 +1157,16 @@
     "acc": 82.6,
     "n": 138
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 87.0,
+    "n": 138
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 44.2,
+    "n": 138
+   },
+   "CLM-8B zero-shot": {
+    "acc": 35.5,
     "n": 138
    },
    "Laya zero-shot": {
@@ -911,8 +1191,16 @@
     "acc": 69.5,
     "n": 141
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 84.4,
+    "n": 141
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 14.9,
+    "n": 141
+   },
+   "CLM-8B zero-shot": {
+    "acc": 49.6,
     "n": 141
    },
    "Laya zero-shot": {
@@ -937,8 +1225,16 @@
     "acc": 94.3,
     "n": 140
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 91.4,
+    "n": 140
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 74.3,
+    "n": 140
+   },
+   "CLM-8B zero-shot": {
+    "acc": 30.7,
     "n": 140
    },
    "Laya zero-shot": {
@@ -963,8 +1259,16 @@
     "acc": 75.4,
     "n": 134
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 83.6,
+    "n": 134
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 50.7,
+    "n": 134
+   },
+   "CLM-8B zero-shot": {
+    "acc": 36.6,
     "n": 134
    },
    "Laya zero-shot": {
@@ -989,8 +1293,16 @@
     "acc": 87.8,
     "n": 139
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 90.6,
+    "n": 139
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 9.4,
+    "n": 139
+   },
+   "CLM-8B zero-shot": {
+    "acc": 60.4,
     "n": 139
    },
    "Laya zero-shot": {
@@ -1015,7 +1327,15 @@
     "acc": 84.9,
     "n": 139
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 90.6,
+    "n": 139
+   },
    "SemIf Qwen3.5-4B": {
+    "acc": 42.4,
+    "n": 139
+   },
+   "CLM-8B zero-shot": {
     "acc": 42.4,
     "n": 139
    },
@@ -1041,8 +1361,16 @@
     "acc": 84.5,
     "n": 142
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 94.4,
+    "n": 142
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 12.0,
+    "n": 142
+   },
+   "CLM-8B zero-shot": {
+    "acc": 56.3,
     "n": 142
    },
    "Laya zero-shot": {
@@ -1067,8 +1395,16 @@
     "acc": 77.4,
     "n": 137
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 83.9,
+    "n": 137
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 43.8,
+    "n": 137
+   },
+   "CLM-8B zero-shot": {
+    "acc": 35.0,
     "n": 137
    },
    "Laya zero-shot": {
@@ -1093,8 +1429,16 @@
     "acc": 77.4,
     "n": 124
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 85.5,
+    "n": 124
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 60.5,
+    "n": 124
+   },
+   "CLM-8B zero-shot": {
+    "acc": 20.2,
     "n": 124
    },
    "Laya zero-shot": {
@@ -1119,8 +1463,16 @@
     "acc": 97.1,
     "n": 136
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 96.3,
+    "n": 136
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 40.4,
+    "n": 136
+   },
+   "CLM-8B zero-shot": {
+    "acc": 58.8,
     "n": 136
    },
    "Laya zero-shot": {
@@ -1145,8 +1497,16 @@
     "acc": 77.1,
     "n": 140
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 85.7,
+    "n": 140
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 77.9,
+    "n": 140
+   },
+   "CLM-8B zero-shot": {
+    "acc": 37.9,
     "n": 140
    },
    "Laya zero-shot": {
@@ -1171,8 +1531,16 @@
     "acc": 69.3,
     "n": 137
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 78.8,
+    "n": 137
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 71.5,
+    "n": 137
+   },
+   "CLM-8B zero-shot": {
+    "acc": 28.5,
     "n": 137
    },
    "Laya zero-shot": {
@@ -1197,8 +1565,16 @@
     "acc": 91.9,
     "n": 136
    },
+   "CLM-8B fine-tuned (v1 dev)": {
+    "acc": 67.6,
+    "n": 136
+   },
    "SemIf Qwen3.5-4B": {
     "acc": 39.7,
+    "n": 136
+   },
+   "CLM-8B zero-shot": {
+    "acc": 35.3,
     "n": 136
    },
    "Laya zero-shot": {
@@ -1209,6 +1585,6 @@
  },
  "notes": [
   "Every model received the same 6,226 trials (same cases, options and option order). Accuracy = choice == frozen label, one scored trial per case (phases pilot/broad/counterfactual/holdout, rep 0); invalid outputs count as wrong; no_valid_option ambiguity cases are excluded.",
-  "Run on the pre-publication text of the bank (differs from data/bank.jsonl only in five result source-system names and one policy sentence); the 54 historical seed trials are omitted. Jev+Qwen paired run at concurrency 2. The fine-tuned Laya was trained on this bank's dev split, so its v1 holdout number is in-distribution. See results/README.md."
+  "Jev, Qwen, SemIf and Laya ran on the pre-publication text of the bank (differs from data/bank.jsonl only in five result source-system names and one policy sentence); CLM ran on the published text. The 54 historical seed trials are omitted. Jev+Qwen paired run at concurrency 2; CLM at concurrency 6. The fine-tuned Laya and CLM heads were trained on this bank's dev split, so their v1 holdout numbers are in-distribution. See results/README.md."
  ]
 }

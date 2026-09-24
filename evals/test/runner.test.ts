@@ -304,3 +304,17 @@ test('qwen on openrouter.ai: Authorization header sent, usage.cost counted in bu
   const status = JSON.parse(fs.readFileSync(path.join(dir, 'status.json'), 'utf8'));
   assert.ok(status.spend.committed_usd > 0, 'qwen spend counted in the budget');
 });
+
+test('decisions arm: --decisions-path routes calls to a System One server path (e.g. CLM /v1/systemone)', async () => {
+  const dir = tmpDir('decisions-path');
+  const inner = makeMockFetch({ qwenModel: QWEN_ID });
+  const urls: string[] = [];
+  const f = async (url: string, init: any) => { urls.push(url); return inner(url.replace('/v1/systemone', '/v1/decisions'), init); };
+  const opts = baseOpts(dir, { planPath: path.join(FIX, 'plan-laya.json'), phases: ['pilot'], decisionsPath: '/v1/systemone' });
+  const s = await run(opts, deps(f));
+  assert.equal(s.exitCode, 0);
+  const calls = urls.filter((u) => !u.endsWith('/health'));
+  assert.ok(calls.length > 0 && calls.every((u) => u === 'http://mockhost:8090/v1/systemone'), 'every decision call uses the configured path');
+  const manifest = JSON.parse(fs.readFileSync(path.join(dir, 'manifest.json'), 'utf8'));
+  assert.equal(manifest.arms.decisions.endpoint, 'http://mockhost:8090/v1/systemone');
+});

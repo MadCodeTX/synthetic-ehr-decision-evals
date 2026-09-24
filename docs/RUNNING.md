@@ -61,7 +61,9 @@ Phases: `pilot`, `broad`, `counterfactual`, `repeat`, `load_c1`, `load_c2`, `loa
 - Paired run: `--plan data/plans/plan_jev-qwen.json` (needs the OpenRouter key and a Qwen endpoint).
 - Single arm: `--plan data/plans/plan_jev.json` (key only), `plan_qwen.json` (Qwen endpoint only,
   pass `--qwen-base` and `--qwen-model`), or `plan_decisions.json` (pass `--decisions-base`,
-  or the legacy alias `--laya-base`). `--qwen-model`/`QWEN_MODEL` is required when the Qwen base is
+  or the legacy alias `--laya-base`). The decisions endpoint path defaults to `/v1/decisions`; for TypeSafe
+  System One servers (e.g. CLM's `clm-serve`) pass `--decisions-path /v1/systemone` (or `DECISIONS_PATH`) and set
+  `DECISIONS_MODEL` / `DECISIONS_EXPECTED_MODEL` to the served model name. `--qwen-model`/`QWEN_MODEL` is required when the Qwen base is
   `openrouter.ai`.
 - Holdout is only dispatched when `holdout` is listed in `--phases`.
 - Default `--run-dir` is `runs/<arms>-<UTC timestamp>`; results land in `runs/` (git-ignored).

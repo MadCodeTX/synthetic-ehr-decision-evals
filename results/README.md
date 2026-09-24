@@ -9,8 +9,8 @@ Scores from the runs we did, on the banks in `data/`. Each folder has:
 
 | folder | bank | trials per arm | arms |
 |---|---|---|---|
-| [`v2/`](v2/SCOREBOARD.md) | v2 core shard `s00` (9,350 trials: 3,000-case stratified holdout with unseen wording + 3 unseen case types, dev sample, counterfactual families, repeat panel, load sweep) | 9,350 | Jev 1.13, Qwen3.8-27B, SemIf (Qwen3.8-27B, Qwen3.5-4B), Laya (zero-shot, fine-tuned on v1 dev) |
-| [`v1/`](v1/SCOREBOARD.md) | v1 (5,266 cases) | 6,226 | same six arms |
+| [`v2/`](v2/SCOREBOARD.md) | v2 core shard `s00` (9,350 trials: 3,000-case stratified holdout with unseen wording + 3 unseen case types, dev sample, counterfactual families, repeat panel, load sweep) | 9,350 | Jev 1.13, Qwen3.8-27B, SemIf (Qwen3.8-27B, Qwen3.5-4B), Laya and CLM-8B (each zero-shot and fine-tuned on v1 dev) |
+| [`v1/`](v1/SCOREBOARD.md) | v1 (5,266 cases) | 6,226 | same eight arms |
 
 ## The arms
 
@@ -21,6 +21,8 @@ Scores from the runs we did, on the banks in `data/`. Each folder has:
 | **SemIf Qwen3.8-27B / Qwen3.5-4B** | the same Qwen weights (EXL3 8 bpw) read out by a single forward pass over the option letters (SemIf "direct-options-v1"): no generation, so always a valid option, with native probabilities | exllamav3 behind a Jev-compatible endpoint |
 | **Laya zero-shot** | `convaiinnovations/laya` typed-decision router, stock checkpoints | local GPU service, Jev-compatible endpoint |
 | **Laya fine-tuned** | Laya fine-tuned with its official recipe on the **v1 dev split only** (4,084 items, ~7 GPU-minutes) | same |
+| **CLM-8B zero-shot** | `Contrastive-LM/CLM` v0.1: frozen `Qwen/Qwen3-8B` encoder (last-token pooling) + the reference projection heads `CLM_v0.1-8B.pt` (18.9M params); an option's score is the scaled cosine between the projected state (evidence + instructions) and the projected option description | vLLM v0.30.0 pooling server on 1× RTX 4090 + `clm.server` (`/v1/systemone`), heads on the second GPU |
+| **CLM-8B fine-tuned** | the same encoder with projection heads fine-tuned by CLM's `train/finetune.py --task choice` on the **v1 dev split only** (the same 4,084 items as Laya; ~8 s of head training once embeddings are cached) | same |
 
 All arms receive byte-identical inputs: the same evidence JSON, the same option keys and descriptions in the same
 order, and the same policy text. The request format depends only on the interface: the Jev/decisions wire format,
@@ -93,5 +95,28 @@ or the chat prompt in `docs/SPEC.md` §5. `input_hash` is identical across arms 
   GPU memory after 377 trials. 8 in-flight trials were recorded as connection errors and are kept as invalid
   answers. The service was relaunched with a 19 GB / 23 GB split, and the run resumed without repeating any
   completed trial (2 segments in `segments.jsonl`).
+- **CLM configuration and tuning (dev data only).**
+  - Settings compared on 600 v1 **dev** trials:
+    - embedder token budget 8,192 (38.8%) vs. CLM's default 2,048 (37.2%). vLLM truncation keeps the *last*
+      tokens, so 2,048 drops the start of long evidence;
+    - reference head (38.8%) vs. the no-head `clm-raw` ablation (28.0%).
+
+    The chosen setting is 8,192 tokens with the reference head.
+  - Fine-tuning recipes compared on the trainer's dev validation split (dev families only):
+    - default InfoNCE, 20 epochs: 59.5%;
+    - softce, 40 epochs: 60.3%;
+    - InfoNCE, 60 epochs: 68.8%;
+    - softce, 60 epochs at lr 1e-3: **70.1%**, chosen.
+
+    A second, longer sweep round was not run.
+  - The reference checkpoint and the fine-tuned head were loaded with `torch.load(weights_only=True)`, i.e.
+    plain tensors.
+  - v1 holdout and all of v2 were never used for any of these choices.
+- **CLM latency.** Each scored CLM run started with a fresh `clm.server` instance, so no run inherited another
+  run's embedding cache.
+  - Within a run, CLM caches state embeddings. Cases seen earlier in the same run (the v1 load phases reuse dev
+    cases from the broad phase) answer in about 30 ms. The v2 load phases were mostly first-sight: 95 ms at
+    concurrency 1 and 607 ms at concurrency 8, with the single-GPU encoder saturating.
+  - CLM runs used the published bank and policy text directly.
 - Every run passed its verifier (`verify/verify_paired.py` or `verify/verify_single.py`). The verifier recomputes
   hashes, validity, correctness and coverage from the raw run records.
