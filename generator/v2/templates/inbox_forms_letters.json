@@ -1,0 +1,360 @@
+[
+ {
+  "id": "forms_000",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Hi, could I get a work note for the days I missed around {pdate}? My employer wants it in writing.",
+  "register": "casual",
+  "notes": "work note",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_001",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "I am writing to request a work note documenting my visit of {pdate}, as my employer requires such a note for my absence.",
+  "register": "formal",
+  "notes": "formal work note",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_002",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Work note for time off around {pdate}. Please send through the portal.",
+  "register": "terse",
+  "notes": "terse work note",
+  "pool": "heldout"
+ },
+ {
+  "id": "forms_003",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "My boss will not accept a phone call as proof of anything, he wants a proper work note from the doctor about the days I was out near {pdate}, so I am hoping someone at the office can write that up and put it in the portal for me.",
+  "register": "rambling",
+  "notes": "rambling work note",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_004",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Please I need a work note from doctor for my job about days I miss work near {pdate}. Send to me in portal. Thank you.",
+  "register": "esl",
+  "notes": "esl work note",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_005",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "hey i need the work note from the doctor about the days i was out around {pdate} my manager keeps asking for it",
+  "register": "voice_to_text",
+  "notes": "transcribed work note",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_006",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "I have asked for a work note for {pdate} twice already through this portal. My job will fire me without it. Please send it today.",
+  "register": "frustrated",
+  "notes": "frustrated work note",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_007",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Dear Office, Would you kindly provide a work note concerning my absence from employment in the week of {pdate}? My employer insists upon it. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "elderly formal work note",
+  "pool": "heldout"
+ },
+ {
+  "id": "forms_008",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "Can your office fill out my FMLA paperwork? I have the employer form, I just need the clinic part done.",
+  "register": "casual",
+  "notes": "FMLA form",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_009",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "Kindly complete the enclosed FMLA certification form and return it to my employer's human resources department.",
+  "register": "formal",
+  "notes": "formal FMLA",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_010",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "FMLA paperwork needs the clinic part filled out. Form is with your office. Please finish it.",
+  "register": "terse",
+  "notes": "terse FMLA",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_011",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "The people at work gave me this long form that the doctor has to fill out for the FMLA leave, and I filled in my parts already, so I dropped the whole packet off at your front desk last week and I am checking whether someone has finished their portion yet.",
+  "register": "rambling",
+  "notes": "rambling FMLA",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_012",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "I bring FMLA form for leave from my job. Doctor part is empty. Please fill and send to my company. Thank you.",
+  "register": "esl",
+  "notes": "esl FMLA",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_013",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "so hr needs the fmla paperwork done by the end of the month can someone at the office please finish the doctor part and send it over",
+  "register": "voice_to_text",
+  "notes": "transcribed FMLA",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_014",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "Third time I am writing about the disability form. It has sat at your office for two weeks and my benefits are on hold because of it.",
+  "register": "frustrated",
+  "notes": "frustrated disability form",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_015",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "Third time I am writing about the disability form. It has sat at your office for two weeks and my benefits are on hold because of it.",
+  "register": "elderly_formal",
+  "notes": "elderly formal disability form",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_016",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "I need help with my disability form. The clinic has to fill in their section before I can submit anything.",
+  "register": "casual",
+  "notes": "disability form",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_017",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "Please complete the provider section of my disability form for the long-term claim, which I submitted through the portal last month.",
+  "register": "formal",
+  "notes": "formal disability form",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_018",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "Disability form needs the clinic section filled in. Please finish and return it.",
+  "register": "terse",
+  "notes": "terse disability form",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_019",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "There is a stack of papers from the disability office that supposedly came back to your clinic because something was missing from the disability form the doctor fills in, and nobody has explained what is actually needed, so could someone please look at the forms and finish whatever section is blank.",
+  "register": "rambling",
+  "notes": "rambling disability form",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_020",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "Disability office send back my disability form. They say doctor part not finish. Please finish and send again.",
+  "register": "esl",
+  "notes": "esl disability form",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_021",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "the disability form came back again saying the provider part wasnt done can your office complete that section and mail it back to them",
+  "register": "voice_to_text",
+  "notes": "transcribed disability form",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_022",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "Is anyone actually working on my FMLA paperwork? It was dropped off two weeks ago and my employer is now asking me daily.",
+  "register": "frustrated",
+  "notes": "frustrated FMLA status",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_023",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "Dear Staff, I inquire whether the leave paperwork left with your office has been completed, as my employer awaits the documents. Respectfully yours.",
+  "register": "elderly_formal",
+  "notes": "elderly formal FMLA status",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_024",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "My son's school wants a school note about the appointment he had at your clinic on {pdate}. Can you send one?",
+  "register": "casual",
+  "notes": "school note for child",
+  "pool": "heldout"
+ },
+ {
+  "id": "forms_025",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Kindly provide a school note suitable for my child's school regarding the appointment of {pdate}.",
+  "register": "formal",
+  "notes": "formal school note",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_026",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Need school note for my kid's {pdate} appointment. Please send it.",
+  "register": "terse",
+  "notes": "terse school note",
+  "pool": "heldout"
+ },
+ {
+  "id": "forms_027",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "The school will not excuse the absence without a school note in writing from your office about the visit my daughter had there on {pdate}, and the attendance clerk says they need it by the end of the week, so I would appreciate whatever note you can send.",
+  "register": "rambling",
+  "notes": "rambling school note",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_028",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "My son school need school note from clinic for {pdate} visit. Please write and send. Thank you.",
+  "register": "esl",
+  "notes": "esl school note",
+  "pool": "shared"
+ },
+ {
+  "id": "forms_029",
+  "kind": "inbox_request",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "can you send a school note to my kids school about their appointment on {pdate} the front office keeps calling me about it",
+  "register": "voice_to_text",
+  "notes": "transcribed school note",
+  "pool": "shared"
+ }
+]

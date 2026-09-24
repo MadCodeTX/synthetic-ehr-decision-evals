@@ -1,0 +1,346 @@
+[
+ {
+  "id": "cc_000",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "I need a walker for use at home after my upcoming appointment. Can someone help me get one ordered?",
+  "register": "casual",
+  "notes": "equipment request",
+  "pool": "heldout"
+ },
+ {
+  "id": "cc_001",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "I am writing to request assistance obtaining durable medical equipment, specifically a walker, for use in my home.",
+  "register": "formal",
+  "notes": "formal equipment",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_002",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "Need a walker at home. Who arranges this?",
+  "register": "terse",
+  "notes": "terse equipment",
+  "pool": "heldout"
+ },
+ {
+  "id": "cc_003",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "My son keeps telling me I should not be going up and down the stairs without something to hold on to, and he thinks a walker might be the thing to ask about, so I wanted to see whether the clinic could help me get one for the house.",
+  "register": "rambling",
+  "notes": "rambling equipment",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_004",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "I need help to get walker for my home. Please who can help me order this.",
+  "register": "esl",
+  "notes": "esl equipment",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_005",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "hi so i think i need a walker for around the house can somebody here help me get that set up",
+  "register": "voice_to_text",
+  "notes": "transcribed equipment",
+  "pool": "heldout"
+ },
+ {
+  "id": "cc_006",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "I have asked the hospital, the insurance and now you about getting a walker for my home, and nobody will just tell me who orders it. Please point me to the right person.",
+  "register": "frustrated",
+  "notes": "frustrated equipment",
+  "pool": "heldout"
+ },
+ {
+  "id": "cc_007",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "Dear Care Coordinators, Might your office assist me in obtaining a walker for use at my residence? I would be very thankful. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "elderly formal equipment",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_008",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Can someone arrange a ride to my appointment on {fdate}? I do not drive anymore.",
+  "register": "casual",
+  "notes": "transportation",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_009",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "I would be grateful for assistance arranging transportation to my appointment scheduled for {fdate}, as I no longer operate a vehicle.",
+  "register": "formal",
+  "notes": "formal transportation",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_010",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Need a ride to my appointment on {fdate}. Please help set up transport.",
+  "register": "terse",
+  "notes": "terse transportation",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_011",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "The bus does not go anywhere near the clinic and my neighbor who usually drives me just had something come up, so I am not sure how I will get there, and I was told maybe this office could arrange a ride for me.",
+  "register": "rambling",
+  "notes": "rambling transportation",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_012",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "I have appointment on {fdate} but I have no car. Can clinic arrange a ride for me please.",
+  "register": "esl",
+  "notes": "esl transportation",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_013",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "i cant drive anymore so is there some way to arrange a ride to my appointment on {fdate}",
+  "register": "voice_to_text",
+  "notes": "transcribed transportation",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_014",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "I almost missed my last appointment because my ride canceled on me. Please help me arrange a ride to my appointment on {fdate} so this does not happen again.",
+  "register": "frustrated",
+  "notes": "frustrated transportation",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_015",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Dear Coordinators, Would it be possible for your office to arrange a ride to my appointment on {fdate}? I no longer drive. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "elderly formal transportation",
+  "pool": "heldout"
+ },
+ {
+  "id": "cc_016",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "I am coming home from the hospital soon and I think I need a shower chair and maybe a raised toilet seat. Who helps with that?",
+  "register": "casual",
+  "notes": "home equipment set",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_017",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "Upon returning home I will require a shower chair and a raised toilet seat. Please advise on the process for obtaining this equipment.",
+  "register": "formal",
+  "notes": "formal equipment set",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_018",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "Need shower chair and raised toilet seat at home. Please help order.",
+  "register": "terse",
+  "notes": "terse equipment set",
+  "pool": "heldout"
+ },
+ {
+  "id": "cc_019",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "The therapist who came to see me said a shower chair would make things a lot safer for me, and maybe one of those raised toilet seats too, so I wanted to ask whether someone at the clinic could help me actually get those ordered instead of just saying they are a good idea.",
+  "register": "rambling",
+  "notes": "rambling equipment set",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_020",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "Therapist say I need a shower chair and a raised toilet seat. Please help me get this things.",
+  "register": "esl",
+  "notes": "esl equipment set",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_021",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "so i am going to need a shower chair and the raised toilet seat thing who at the office helps with ordering stuff like that",
+  "register": "voice_to_text",
+  "notes": "transcribed equipment set",
+  "pool": "heldout"
+ },
+ {
+  "id": "cc_022",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "Everyone agrees I need a shower chair at home and yet here I am three weeks later with nothing. Can someone actually place the order?",
+  "register": "frustrated",
+  "notes": "frustrated equipment set",
+  "pool": "heldout"
+ },
+ {
+  "id": "cc_023",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "Dear Staff, It was suggested that a shower chair would be of benefit to me at home. Would you kindly assist with arranging one? Thank you most sincerely.",
+  "register": "elderly_formal",
+  "notes": "elderly formal equipment set",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_024",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "Can you help me set up home health visits? I have nobody at home during the day to help me out.",
+  "register": "casual",
+  "notes": "home health",
+  "pool": "heldout"
+ },
+ {
+  "id": "cc_025",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "I would like to inquire about arranging home health support, as I live alone and require assistance with daily activities.",
+  "register": "formal",
+  "notes": "formal home health",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_026",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "Home health visits needed. Please start the paperwork.",
+  "register": "terse",
+  "notes": "terse home health",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_027",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "Since I came back from the facility my daughter has been trying to help but she works most days, and I think what they called home health might be the right thing to ask about, so could your office point me in the right direction for getting that started.",
+  "register": "rambling",
+  "notes": "rambling home health",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_028",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "I live alone and need some helper at my home. My doctor say ask about home health. Please help me.",
+  "register": "esl",
+  "notes": "esl home health",
+  "pool": "shared"
+ },
+ {
+  "id": "cc_029",
+  "kind": "inbox_request",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "im on my own at home now and i keep hearing about home health services can you guys help me get signed up for that",
+  "register": "voice_to_text",
+  "notes": "transcribed home health",
+  "pool": "shared"
+ }
+]

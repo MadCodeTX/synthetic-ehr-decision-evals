@@ -1,0 +1,378 @@
+[
+ {
+  "id": "roi_000",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Please send me a copy of my records from my {pdate} visit through the portal.",
+  "register": "casual",
+  "notes": "copy of records",
+  "pool": "heldout"
+ },
+ {
+  "id": "roi_001",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [],
+  "text": "I would like a copy of my immunization record for my own files.",
+  "register": "terse",
+  "notes": "immunization copy",
+  "pool": "shared"
+ },
+ {
+  "id": "roi_002",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "I am writing to request a copy of my records from the appointment on {pdate}.",
+  "register": "formal",
+  "notes": "formal records copy",
+  "pool": "heldout"
+ },
+ {
+  "id": "roi_003",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Hello, I am trying to keep all my health papers together in one folder since the new year, and I am missing everything from the visit on {pdate} - the note the doctor typed, whatever was in the chart - and I would very much like a copy of my records for my own keeping, I am not sending it to anyone, just me keeping it at home.",
+  "register": "rambling",
+  "notes": "rambling own-records copy",
+  "pool": "heldout"
+ },
+ {
+  "id": "roi_004",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Please, I need a copy of my records from the visit on {pdate}. Copy for me. Thank you.",
+  "register": "esl",
+  "notes": "esl copy request",
+  "pool": "heldout"
+ },
+ {
+  "id": "roi_005",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "hi I need a copy of my chart notes from the {pdate} appointment sent to me please",
+  "register": "voice_to_text",
+  "notes": "transcribed chart copy",
+  "pool": "shared"
+ },
+ {
+  "id": "roi_006",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [],
+  "text": "I have asked twice for a copy of my records and received nothing. Please send them this time.",
+  "register": "frustrated",
+  "notes": "frustrated records copy",
+  "pool": "heldout"
+ },
+ {
+  "id": "roi_007",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Dear Records Department, I should be grateful for a copy of my chart relating to the consultation of {pdate}. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "elderly formal records copy",
+  "pool": "shared"
+ },
+ {
+  "id": "roi_008",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Could I get a printout of my chart from the {pdate} visit? I like keeping my own file at home.",
+  "register": "casual",
+  "notes": "paraphrase printout",
+  "pool": "heldout"
+ },
+ {
+  "id": "roi_009",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [],
+  "text": "I would like a copy of my immunization record, please - the daycare form asks for them.",
+  "register": "casual",
+  "notes": "shot records for daycare form, single request",
+  "pool": "heldout"
+ },
+ {
+  "id": "roi_010",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "The paperwork from my {pdate} stay was never mailed to me as promised. Please send my records, the whole chart copy.",
+  "register": "casual",
+  "notes": "chart copy promised",
+  "pool": "shared"
+ },
+ {
+  "id": "roi_011",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [],
+  "text": "Kindly provide a full copy of my medical record as I am entitled to under my rights.",
+  "register": "formal",
+  "notes": "formal full record copy",
+  "pool": "shared"
+ },
+ {
+  "id": "roi_012",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "copy of my records from the {pdate} visit please",
+  "register": "terse",
+  "notes": "telegraphic copy",
+  "pool": "shared"
+ },
+ {
+  "id": "roi_013",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "I am not one to make a fuss, but when I was in on {pdate} I was told the notes would be in the portal by now, and I cannot find them anywhere, and at my age squinting at that little search box is a chore - so I would be much obliged if someone could print me a proper copy of my records and let me know when it is ready to collect. Thank you kindly.",
+  "register": "elderly_formal",
+  "notes": "rambling elderly copy request",
+  "pool": "heldout"
+ },
+ {
+  "id": "roi_014",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Hello, I lose my paper from {pdate}. Can you send me a copy of my records? Thank you.",
+  "register": "esl",
+  "notes": "esl lost copy",
+  "pool": "shared"
+ },
+ {
+  "id": "roi_015",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "need a copy of my chart from the {pdate} visit mailed to me",
+  "register": "terse",
+  "notes": "terse mail copy",
+  "pool": "shared"
+ },
+ {
+  "id": "roi_016",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "I would like a copy of my chart notes from {pdate} - just that visit, nothing else.",
+  "register": "casual",
+  "notes": "single visit notes",
+  "pool": "shared"
+ },
+ {
+  "id": "roi_017",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [],
+  "text": "I should like a printout of my chart, please, for my own keeping. Yours faithfully.",
+  "register": "elderly_formal",
+  "notes": "elderly printout",
+  "pool": "shared"
+ },
+ {
+  "id": "roi_018",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "send my records from {pdate} to me please",
+  "register": "terse",
+  "notes": "telegraphic",
+  "pool": "shared"
+ },
+ {
+  "id": "roi_019",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Hi! My insurance asked me to have the visit summary from {pdate} on hand for the claim - could you send me a copy of my records?",
+  "register": "casual",
+  "notes": "copy for insurance claim, single request",
+  "pool": "shared"
+ },
+ {
+  "id": "roi_020",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Good morning. Kindly furnish me with a copy of my records from the {pdate} attendance. Many thanks.",
+  "register": "elderly_formal",
+  "notes": "formal duplicate notes",
+  "pool": "heldout"
+ },
+ {
+  "id": "roi_021",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [],
+  "text": "Still no records. I requested a copy of my records a month ago. This is the third request - send them.",
+  "register": "frustrated",
+  "notes": "frustrated third request",
+  "pool": "shared"
+ },
+ {
+  "id": "roi_022",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Please provide a copy of my records, including all results and notes associated with my {pdate} visit.",
+  "register": "formal",
+  "notes": "formal copies",
+  "pool": "shared"
+ },
+ {
+  "id": "roi_023",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "um hello I want a copy of my records from the visit on {pdate} the one the doctor writes to keep",
+  "register": "voice_to_text",
+  "notes": "transcribed copy request",
+  "pool": "shared"
+ },
+ {
+  "id": "roi_024",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [],
+  "text": "I have now asked at the desk, by phone, and by this portal for a copy of my records. Send it. Today.",
+  "register": "frustrated",
+  "notes": "frustrated escalation of tone, still one request",
+  "pool": "heldout"
+ },
+ {
+  "id": "roi_025",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Hello, can I get a copy of my records from {pdate}? The record paper. I show to new employer. Thank you.",
+  "register": "esl",
+  "notes": "esl copy request",
+  "pool": "heldout"
+ },
+ {
+  "id": "roi_026",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "A copy of my records from the {pdate} visit, printed and mailed, would make my year.",
+  "register": "casual",
+  "notes": "casual copy paraphrase",
+  "pool": "shared"
+ },
+ {
+  "id": "roi_027",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Re: records access request. Please release a copy of my chart documents from {pdate} to me, the patient, per standing procedure.",
+  "register": "formal",
+  "notes": "bureaucratic release request",
+  "pool": "shared"
+ },
+ {
+  "id": "roi_028",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "yes hello this is about the visit records from {pdate} I want a copy of my records sent to my house because the portal confuses me",
+  "register": "voice_to_text",
+  "notes": "transcribed, one request",
+  "pool": "shared"
+ },
+ {
+  "id": "roi_029",
+  "kind": "inbox_request",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "I do apologize for troubling you with this, but I am trying to gather my papers for the accountant of all people - something about itemized visits for the year - and what I need from your office is simply a copy of my chart notes from the {pdate} visit, nothing more complicated than that, though if there is a form to sign I will happily come in and sign it in person. Thank you so much for any help.",
+  "register": "rambling",
+  "notes": "long rambling own copy, one request",
+  "pool": "heldout"
+ }
+]

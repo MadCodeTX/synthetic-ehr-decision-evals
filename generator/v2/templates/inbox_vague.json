@@ -1,0 +1,302 @@
+[
+ {
+  "id": "vag_000",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "Can someone take care of this please?",
+  "register": "casual",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_001",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "I write to inquire about the matter previously discussed.",
+  "register": "formal",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_002",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "Following up.",
+  "register": "terse",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_003",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "I am following up on what we talked about the other day, or maybe it was the week before, anyway you know the thing I mean, and I just wanted to make sure it is moving along however it is supposed to.",
+  "register": "rambling",
+  "notes": "no request stated",
+  "pool": "heldout"
+ },
+ {
+  "id": "vag_004",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "Hello, I follow up about the thing from before. Please check. Thank you.",
+  "register": "esl",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_005",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "hey just checking in about that thing we discussed let me know whats happening",
+  "register": "voice_to_text",
+  "notes": "no request stated",
+  "pool": "heldout"
+ },
+ {
+  "id": "vag_006",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "Nobody ever gets back to me about anything in this place. You know what this is about.",
+  "register": "frustrated",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_007",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "Dear Office, Further to our recent discussion, I await your response in due course. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_008",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "Is this something you can handle? Thanks.",
+  "register": "casual",
+  "notes": "no request stated",
+  "pool": "heldout"
+ },
+ {
+  "id": "vag_009",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "Please see below. Kindly advise accordingly.",
+  "register": "formal",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_010",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "See below. Please handle.",
+  "register": "terse",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_011",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "So my daughter was supposed to put the details in this message for me before she went to work but she had to leave early, so all I can tell you is it is the same thing from last time and I would like it sorted out the same way if possible.",
+  "register": "rambling",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_012",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "Please see below. The same as before. Handle please.",
+  "register": "esl",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_013",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "quick one, same thing as my last message, do the usual please",
+  "register": "voice_to_text",
+  "notes": "no request stated",
+  "pool": "heldout"
+ },
+ {
+  "id": "vag_014",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "This is my third message about this and every time I am told to send it again. Just look at my history, you will see what I mean.",
+  "register": "frustrated",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_015",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "Dear Office, I refer to my earlier correspondence, which appears to have gone unaddressed. Kindly advise. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "no request stated",
+  "pool": "heldout"
+ },
+ {
+  "id": "vag_016",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "You know what to do.",
+  "register": "terse",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_017",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "I would be obliged if the office would attend to the outstanding matter at its convenience.",
+  "register": "formal",
+  "notes": "no request stated",
+  "pool": "heldout"
+ },
+ {
+  "id": "vag_018",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "Checking in again on my thing. Let me know.",
+  "register": "casual",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_019",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "My son usually handles all of this online stuff for me and he is away on business, so I am writing even though I am not entirely sure what to ask for, only that something was supposed to happen by now and it has not.",
+  "register": "rambling",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_020",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "Please check my file and do what is needed. I come back later. Thank you.",
+  "register": "esl",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_021",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "just still waiting on that thing from last time let me know when its done",
+  "register": "voice_to_text",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_022",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "I called, I wrote, I called again. Nothing. Do what needs doing.",
+  "register": "frustrated",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_023",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "Dear Sir or Madam, The matter remains outstanding. I should be grateful for your attention. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "no request stated",
+  "pool": "heldout"
+ },
+ {
+  "id": "vag_024",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "Just bumping this up in case it got lost.",
+  "register": "casual",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_025",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "Kindly treat this message as a reminder concerning the pending matter.",
+  "register": "formal",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_026",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "Reminder. The pending matter.",
+  "register": "terse",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_027",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "Time keeps going by and whatever was supposed to be arranged still has not been, and honestly at my age I cannot keep track of which office handles what, so I am sending this to you in the hopes you can point it in the right direction.",
+  "register": "rambling",
+  "notes": "no request stated",
+  "pool": "shared"
+ },
+ {
+  "id": "vag_028",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "Still nothing happen from last message. Please do the needful.",
+  "register": "esl",
+  "notes": "no request stated",
+  "pool": "heldout"
+ },
+ {
+  "id": "vag_029",
+  "kind": "inbox_vague",
+  "sender": "patient",
+  "slots": [],
+  "text": "bumping my last message in case it got buried whatever we talked about still needs doing",
+  "register": "voice_to_text",
+  "notes": "no request stated",
+  "pool": "heldout"
+ }
+]

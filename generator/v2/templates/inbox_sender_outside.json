@@ -1,0 +1,397 @@
+[
+ {
+  "id": "sndout_000",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Enclosed are the therapy notes from {facility} for the patient referenced above. Please file them appropriately.",
+  "register": "formal",
+  "notes": "therapy notes",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_001",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Therapy notes from {facility} attached. File to chart.",
+  "register": "terse",
+  "notes": "terse therapy notes",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndout_002",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Hi, we are sending over the therapy notes from {facility} for your patient. Let us know if the file did not come through.",
+  "register": "casual",
+  "notes": "casual therapy notes",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_003",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Please find attached the complete sleep study report conducted at {facility}, forwarded for the patient's record.",
+  "register": "formal",
+  "notes": "sleep study",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_004",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Sleep study report from {facility} attached. File it with the rest of the patient's packet.",
+  "register": "terse",
+  "notes": "terse sleep study",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_005",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "hey all the sleep study report from {facility} just came through our system for your patient should be attached let me know if anything is missing",
+  "register": "voice_to_text",
+  "notes": "transmitted sleep study",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndout_006",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "The cardiology summary dictated at {facility} is attached. Please add it to the records packet the patient requested.",
+  "register": "formal",
+  "notes": "cardiology summary",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_007",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Cardiology summary from {facility} enclosed for the records packet.",
+  "register": "terse",
+  "notes": "terse cardiology",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndout_008",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility",
+   "pdate"
+  ],
+  "text": "Attached is the emergency department record from {facility}, visit date {pdate}, forwarded for continuity of care.",
+  "register": "formal",
+  "notes": "emergency record",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndout_009",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility",
+   "pdate"
+  ],
+  "text": "Emergency department record from {facility}, seen {pdate}, attached. File to chart.",
+  "register": "terse",
+  "notes": "terse emergency record",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_010",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility",
+   "pdate"
+  ],
+  "text": "Hello, the visit your patient made to our department at {facility} on {pdate} is documented in the attached packet. Please acknowledge filing when complete.",
+  "register": "casual",
+  "notes": "casual emergency record",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndout_011",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility",
+   "pdate"
+  ],
+  "text": "We are forwarding everything from the emergency visit at {facility} on {pdate}, which was the physician note, the nursing flowsheet, and the discharge instructions, so your chart has the whole encounter and not just the pieces that usually get scanned.",
+  "register": "rambling",
+  "notes": "rambling full encounter",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_012",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility",
+   "pdate"
+  ],
+  "text": "Emergency visit paper from {facility} on {pdate} attached. All pages included this time. Please put in file.",
+  "register": "esl",
+  "notes": "esl emergency record",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_013",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Physical therapy evaluation from {facility} is attached in two parts; the second part follows by courier tomorrow.",
+  "register": "formal",
+  "notes": "two part therapy",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_014",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "PT evaluation from {facility} attached, part two comes by courier tomorrow.",
+  "register": "terse",
+  "notes": "terse two part",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_015",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Your patient completed their program with us at {facility}, and the graduation summary plus the home exercise plan are attached for your records.",
+  "register": "casual",
+  "notes": "program completion",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_016",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "The home exercise plan and program summary from {facility} are attached for your records.",
+  "register": "formal",
+  "notes": "formal exercise plan",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_017",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Program summary and home exercise plan from {facility} attached. File to chart.",
+  "register": "terse",
+  "notes": "terse program",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_018",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Sending the wound care flow sheets from {facility} today as requested by your nursing team last week.",
+  "register": "formal",
+  "notes": "wound care sheets",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndout_019",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Wound care flow sheets from {facility} attached, as your nursing team requested last week.",
+  "register": "terse",
+  "notes": "terse wound care",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_020",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "hi the wound care sheets your nurses asked about last week are attached now from {facility} sorry for the delay our scanner was down",
+  "register": "voice_to_text",
+  "notes": "transmitted wound care",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_021",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "We are sending the medication administration records from {facility} covering the recent stay, as your pharmacy team requested them for review.",
+  "register": "formal",
+  "notes": "medication records",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_022",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Medication administration records from {facility} attached, per your pharmacy team's request.",
+  "register": "terse",
+  "notes": "terse medication records",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_023",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Attached are the audiology results from {facility}, including both ears tested separately as your office asked the first time.",
+  "register": "formal",
+  "notes": "audiology results",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_024",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Audiology results from {facility} attached, both ears tested separately this time.",
+  "register": "terse",
+  "notes": "terse audiology",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_025",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "The audiology clinic at {facility} finally sent over the results with both ears documented separately like your office wanted, so the packet is complete now and attached here for your filing.",
+  "register": "rambling",
+  "notes": "rambling audiology",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_026",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Enclosed is the nutrition consult note from {facility} for the above patient, forwarded with their consent.",
+  "register": "formal",
+  "notes": "nutrition consult",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_027",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Nutrition consult from {facility} attached. File with patient consent form on your end.",
+  "register": "terse",
+  "notes": "terse nutrition",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_028",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Please accept the attached respiratory therapy flowsheets from {facility} for inclusion in the patient's ongoing record.",
+  "register": "formal",
+  "notes": "respiratory flowsheets",
+  "pool": "shared"
+ },
+ {
+  "id": "sndout_029",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "respiratory therapy flowsheets from {facility} are attached please add them to the patients ongoing record thanks",
+  "register": "voice_to_text",
+  "notes": "transmitted respiratory",
+  "pool": "heldout"
+ }
+]

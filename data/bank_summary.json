@@ -1,0 +1,500 @@
+{
+ "ambiguity": {
+  "chart": {
+   "no_valid_option": 50
+  },
+  "inbox": {
+   "no_valid_option": 50
+  },
+  "results": {
+   "no_valid_option": 50
+  }
+ },
+ "by_workflow": {
+  "chart": 1839,
+  "inbox": 1594,
+  "results": 1833
+ },
+ "by_workflow_stratum_split": {
+  "chart": {
+   "authority_conflict_comment_vs_registration": {
+    "dev": 108,
+    "holdout": 31,
+    "total": 139
+   },
+   "conflicting_dob_vs_id": {
+    "dev": 110,
+    "holdout": 29,
+    "total": 139
+   },
+   "duplicate_name_explicit_id": {
+    "dev": 107,
+    "holdout": 28,
+    "total": 135
+   },
+   "identifier_not_in_candidates": {
+    "dev": 114,
+    "holdout": 26,
+    "total": 140
+   },
+   "injection_in_chart_text": {
+    "dev": 105,
+    "holdout": 29,
+    "total": 134
+   },
+   "leading_zero_id": {
+    "dev": 108,
+    "holdout": 28,
+    "total": 136
+   },
+   "missing_id_ambiguous": {
+    "dev": 110,
+    "holdout": 25,
+    "total": 135
+   },
+   "missing_id_two_details_unique": {
+    "dev": 106,
+    "holdout": 25,
+    "total": 131
+   },
+   "multi_field_required": {
+    "dev": 112,
+    "holdout": 25,
+    "total": 137
+   },
+   "name_typo_id_dob_match": {
+    "dev": 115,
+    "holdout": 26,
+    "total": 141
+   },
+   "near_miss_transposed_dob": {
+    "dev": 113,
+    "holdout": 25,
+    "total": 138
+   },
+   "no_safe_option": {
+    "dev": 40,
+    "holdout": 10,
+    "total": 50
+   },
+   "ordinary_exact_id": {
+    "dev": 107,
+    "holdout": 37,
+    "total": 144
+   },
+   "swapped_identifier": {
+    "dev": 110,
+    "holdout": 30,
+    "total": 140
+   }
+  },
+  "inbox": {
+   "ambiguous_text": {
+    "dev": 94,
+    "holdout": 24,
+    "total": 118
+   },
+   "authority_conflict": {
+    "dev": 113,
+    "holdout": 30,
+    "total": 143
+   },
+   "concise_vs_expanded": {
+    "dev": 96,
+    "holdout": 24,
+    "total": 120
+   },
+   "identity_mismatch": {
+    "dev": 113,
+    "holdout": 25,
+    "total": 138
+   },
+   "injection_in_message": {
+    "dev": 105,
+    "holdout": 26,
+    "total": 131
+   },
+   "missing_context": {
+    "dev": 115,
+    "holdout": 32,
+    "total": 147
+   },
+   "multi_intent": {
+    "dev": 109,
+    "holdout": 26,
+    "total": 135
+   },
+   "no_safe_option": {
+    "dev": 40,
+    "holdout": 10,
+    "total": 50
+   },
+   "ordinary_single_intent": {
+    "dev": 158,
+    "holdout": 40,
+    "total": 198
+   },
+   "symptom_mention_exception": {
+    "dev": 119,
+    "holdout": 24,
+    "total": 143
+   },
+   "synonym_destinations": {
+    "dev": 103,
+    "holdout": 28,
+    "total": 131
+   },
+   "unauthorized_proxy": {
+    "dev": 117,
+    "holdout": 23,
+    "total": 140
+   }
+  },
+  "results": {
+   "authority_conflict_source_vs_comment": {
+    "dev": 112,
+    "holdout": 26,
+    "total": 138
+   },
+   "conflicting_severity": {
+    "dev": 118,
+    "holdout": 23,
+    "total": 141
+   },
+   "critical_flagged_complete": {
+    "dev": 114,
+    "holdout": 26,
+    "total": 140
+   },
+   "critical_word_in_comment_only": {
+    "dev": 107,
+    "holdout": 27,
+    "total": 134
+   },
+   "incomplete_identity": {
+    "dev": 105,
+    "holdout": 34,
+    "total": 139
+   },
+   "injection_in_result_text": {
+    "dev": 105,
+    "holdout": 34,
+    "total": 139
+   },
+   "missing_severity": {
+    "dev": 116,
+    "holdout": 26,
+    "total": 142
+   },
+   "multi_field": {
+    "dev": 106,
+    "holdout": 31,
+    "total": 137
+   },
+   "narrative_note": {
+    "dev": 98,
+    "holdout": 26,
+    "total": 124
+   },
+   "no_safe_option": {
+    "dev": 40,
+    "holdout": 10,
+    "total": 50
+   },
+   "out_of_policy_item_type": {
+    "dev": 108,
+    "holdout": 28,
+    "total": 136
+   },
+   "routine_discrete_complete": {
+    "dev": 114,
+    "holdout": 26,
+    "total": 140
+   },
+   "specialty_type_routing": {
+    "dev": 107,
+    "holdout": 30,
+    "total": 137
+   },
+   "status_routing": {
+    "dev": 107,
+    "holdout": 29,
+    "total": 136
+   }
+  }
+ },
+ "counterfactual": {
+  "chart": {
+   "bases": 182,
+   "label_flips": 179,
+   "siblings": 359
+  },
+  "inbox": {
+   "bases": 229,
+   "label_flips": 179,
+   "siblings": 354
+  },
+  "results": {
+   "bases": 182,
+   "label_flips": 147,
+   "siblings": 363
+  }
+ },
+ "label_basis": {
+  "chart": {
+   "chart_rule_1_mrn_match": 696,
+   "chart_rule_1a_mrn_not_found": 176,
+   "chart_rule_1b_mrn_dob_conflict": 345,
+   "chart_rule_1c_mrn_name_conflict": 74,
+   "chart_rule_2_not_unique": 271,
+   "chart_rule_2_unique_details": 277
+  },
+  "inbox": {
+   "inbox_rule_1_symptom": 227,
+   "inbox_rule_2_identity": 90,
+   "inbox_rule_3_proxy": 163,
+   "inbox_rule_4_no_request": 101,
+   "inbox_rule_5_multi_intent": 181,
+   "inbox_rule_6_incomplete": 141,
+   "inbox_rule_7_destination": 691
+  },
+  "results": {
+   "results_rule_1_item_type": 119,
+   "results_rule_2_identity": 238,
+   "results_rule_3a_missing_flag": 275,
+   "results_rule_3b_flag_conflict": 142,
+   "results_rule_4_critical": 243,
+   "results_rule_5a_missing_status": 80,
+   "results_rule_5b_cosign": 78,
+   "results_rule_5c_corrected": 35,
+   "results_rule_5d_preliminary": 78,
+   "results_rule_6_outside": 44,
+   "results_rule_7_type": 501
+  }
+ },
+ "label_distribution": {
+  "chart": {
+   "<candidate chart>": 973,
+   "needs_human_review": 866
+  },
+  "inbox": {
+   "billing": 54,
+   "care_coordination": 34,
+   "critical_results": 34,
+   "forms_letters": 51,
+   "interpreter_services": 37,
+   "medical_records_roi": 72,
+   "needs_human_review": 676,
+   "nurse_triage": 227,
+   "outside_records": 14,
+   "patient_calls": 46,
+   "patient_relations": 33,
+   "portal_support": 40,
+   "prior_auth": 36,
+   "referrals": 49,
+   "result_notes": 32,
+   "results": 22,
+   "rx_requests": 74,
+   "scheduling": 43,
+   "staff_messages": 20
+  },
+  "results": {
+   "cardiology_results": 61,
+   "corrected_results": 35,
+   "cosign_pending": 78,
+   "critical_results": 243,
+   "imaging_results": 56,
+   "microbiology_review": 61,
+   "needs_human_review": 854,
+   "outside_results": 44,
+   "pathology_review": 56,
+   "preliminary_results": 78,
+   "result_notes": 124,
+   "results": 143
+  }
+ },
+ "nonabstain_share": {
+  "chart": {
+   "all_generated": 0.5291,
+   "excluding_ambiguity_set": 0.5439
+  },
+  "inbox": {
+   "all_generated": 0.5759,
+   "excluding_ambiguity_set": 0.5946
+  },
+  "results": {
+   "all_generated": 0.5341,
+   "excluding_ambiguity_set": 0.5491
+  }
+ },
+ "perturbations": {
+  "chart": {
+   "abstain_available": {
+    "False": 437,
+    "True": 1402
+   },
+   "authority_conflict": {
+    "False": 1273,
+    "True": 566
+   },
+   "decision_shape": {
+    "multi_field": 137,
+    "single_step": 1702
+   },
+   "distractors": {
+    "False": 915,
+    "True": 924
+   },
+   "evidence_style": {
+    "concise": 611,
+    "expanded": 631,
+    "noisy": 597
+   },
+   "field_condition": {
+    "conflicting": 491,
+    "missing": 583,
+    "near_miss": 387,
+    "ordinary": 378
+   },
+   "injection": {
+    "False": 1248,
+    "True": 591
+   },
+   "n_options": {
+    "16": 457,
+    "2": 128,
+    "4": 809,
+    "8": 445
+   },
+   "option_order": {
+    "canonical": 916,
+    "shuffled": 923
+   },
+   "synonyms": {
+    "False": 947,
+    "True": 892
+   }
+  },
+  "inbox": {
+   "abstain_available": {
+    "False": 339,
+    "True": 1255
+   },
+   "authority_conflict": {
+    "False": 1092,
+    "True": 502
+   },
+   "decision_shape": {
+    "multi_field": 189,
+    "single_step": 1405
+   },
+   "distractors": {
+    "False": 799,
+    "True": 795
+   },
+   "evidence_style": {
+    "concise": 574,
+    "expanded": 534,
+    "noisy": 486
+   },
+   "field_condition": {
+    "conflicting": 303,
+    "missing": 210,
+    "near_miss": 231,
+    "ordinary": 850
+   },
+   "injection": {
+    "False": 1054,
+    "True": 540
+   },
+   "n_options": {
+    "16": 402,
+    "2": 348,
+    "4": 456,
+    "8": 388
+   },
+   "option_order": {
+    "canonical": 772,
+    "shuffled": 822
+   },
+   "synonyms": {
+    "False": 720,
+    "True": 874
+   }
+  },
+  "results": {
+   "abstain_available": {
+    "False": 423,
+    "True": 1410
+   },
+   "authority_conflict": {
+    "False": 1279,
+    "True": 554
+   },
+   "decision_shape": {
+    "multi_field": 137,
+    "single_step": 1696
+   },
+   "distractors": {
+    "False": 908,
+    "True": 925
+   },
+   "evidence_style": {
+    "concise": 602,
+    "expanded": 633,
+    "noisy": 598
+   },
+   "field_condition": {
+    "conflicting": 269,
+    "missing": 503,
+    "near_miss": 188,
+    "ordinary": 873
+   },
+   "injection": {
+    "False": 1229,
+    "True": 604
+   },
+   "n_options": {
+    "16": 448,
+    "2": 429,
+    "4": 515,
+    "8": 441
+   },
+   "option_order": {
+    "canonical": 890,
+    "shuffled": 943
+   },
+   "synonyms": {
+    "False": 917,
+    "True": 916
+   }
+  }
+ },
+ "phase_counts": {
+  "broad": 3262,
+  "counterfactual": 852,
+  "holdout": 1062,
+  "load_c1": 150,
+  "load_c2": 150,
+  "load_c4": 150,
+  "load_c8": 150,
+  "pilot": 90,
+  "repeat": 360
+ },
+ "repeat_panel": {
+  "chart": {
+   "nonabstain": 20,
+   "total": 40
+  },
+  "inbox": {
+   "nonabstain": 20,
+   "total": 40
+  },
+  "results": {
+   "nonabstain": 20,
+   "total": 40
+  }
+ },
+ "total_cases": 5266,
+ "total_trials": 6226
+}

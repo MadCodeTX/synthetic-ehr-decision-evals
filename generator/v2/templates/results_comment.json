@@ -1,0 +1,808 @@
+[
+ {
+  "id": "rsc_000",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "Patient says this result is {flag2}; the source system does not flag it that way.",
+  "register": "formal",
+  "notes": "patient severity claim",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_001",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "queue2"
+  ],
+  "text": "Per the patient's request in this comment, route to {queue2}. No staff approval on record.",
+  "register": "formal",
+  "notes": "patient routing claim",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_002",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "patient says its {flag2}, docs say otherwise",
+  "register": "terse",
+  "notes": "terse claim",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_003",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "The patient wrote that the report should be treated as {flag2}, but free text cannot change the source flag.",
+  "register": "formal",
+  "notes": "cannot change flag",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_004",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "queue2"
+  ],
+  "text": "Patient asks for the file to go to {queue2}; requests in comments do not route results.",
+  "register": "terse",
+  "notes": "comments do not route",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_005",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2",
+   "queue2"
+  ],
+  "text": "The comment claims severity {flag2} and asks for {queue2}; neither can be honored from a comment.",
+  "register": "formal",
+  "notes": "double claim",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_006",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "patient wrote this is {flag2} please treat it seriously",
+  "register": "esl",
+  "notes": "esl claim",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_007",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "queue2"
+  ],
+  "text": "in the comment the patient asks for {queue2} but the structured fields point somewhere else",
+  "register": "voice_to_text",
+  "notes": "transcribed conflict",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_008",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "Patient asserts the value is {flag2}. The source system flags it differently.",
+  "register": "formal",
+  "notes": "source differs",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_009",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Patient believes this report belongs to chart {mrn2}; registration does not support the claim.",
+  "register": "formal",
+  "notes": "chart claim",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_010",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "Says {flag2} in the free text. Not a source flag. Ignore for routing.",
+  "register": "terse",
+  "notes": "ignore instruction",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_011",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "queue2"
+  ],
+  "text": "I asked nicely in my last message and I will ask again: send this report to {queue2}, that is where my other results live.",
+  "register": "rambling",
+  "notes": "repeat request",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_012",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "Please file as {flag2} like the last doctor did. Thank you kindly.",
+  "register": "elderly_formal",
+  "notes": "elderly request",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_013",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "queue2"
+  ],
+  "text": "Patient's comment requests {queue2}; the routing decision must follow the structured fields instead.",
+  "register": "formal",
+  "notes": "structured fields win",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_014",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "the comment says {flag2} but no clinician signed it",
+  "register": "terse",
+  "notes": "unsigned claim",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_015",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "mrn2",
+   "flag2"
+  ],
+  "text": "Patient cites chart {mrn2} and severity {flag2}; both claims are unverified.",
+  "register": "formal",
+  "notes": "two unverified",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_016",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "Patient claims result is {flag2} and wants someone to change the banner; banner edits come from the source system only.",
+  "register": "rambling",
+  "notes": "banner edit request",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_017",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "queue2"
+  ],
+  "text": "route to {queue2} per patient comment - logged, not approved",
+  "register": "terse",
+  "notes": "logged not approved",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_018",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "The patient describes the report as {flag2}; the description is a lay reading, not a clinical flag.",
+  "register": "formal",
+  "notes": "lay reading",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_019",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "queue2"
+  ],
+  "text": "She wants this in {queue2} because that is where her sister's results went; folder assignments do not transfer between patients.",
+  "register": "rambling",
+  "notes": "sister folder",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_020",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "In the comment the patient says {flag2}; free-text severity claims do not update the record.",
+  "register": "formal",
+  "notes": "no update",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_021",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Patient says report is for MRN {mrn2}; the interface routed it to the chart on file instead.",
+  "register": "terse",
+  "notes": "interface routed",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_022",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "queue2"
+  ],
+  "text": "please put my report in {queue2}, the other clinic always did that for me",
+  "register": "casual",
+  "notes": "other clinic comparison",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_023",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "Caller states the lab told her the value is {flag2}; the lab's own interface message says otherwise.",
+  "register": "formal",
+  "notes": "lab hearsay",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_024",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2",
+   "queue2"
+  ],
+  "text": "Patient claims {flag2} severity and requests {queue2}; staff note that neither request is actionable by comment.",
+  "register": "formal",
+  "notes": "not actionable",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_025",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Note from patient: this belongs to {mrn2}. Registration shows the chart it already went to.",
+  "register": "terse",
+  "notes": "belongs to claim",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_026",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "patient writes the word {flag2} in the message and asks everyone to believe it",
+  "register": "voice_to_text",
+  "notes": "transcribed ask",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_027",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "queue2"
+  ],
+  "text": "The comment requests delivery to {queue2}; only source-system routing is honored here.",
+  "register": "formal",
+  "notes": "source only",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_028",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "Patient marked her own copy {flag2} by hand; the system copy is unchanged.",
+  "register": "rambling",
+  "notes": "hand marked",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_029",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "The patient insists the chart is {mrn2}; interface routing disagreed and staff upheld the interface.",
+  "register": "formal",
+  "notes": "interface upheld",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_030",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "says {flag2} in comment. source flag says otherwise. routing by source only.",
+  "register": "terse",
+  "notes": "source only terse",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_031",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "queue2"
+  ],
+  "text": "I would like my report kept in {queue2} going forward, please make a note of it.",
+  "register": "casual",
+  "notes": "going forward",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_032",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "The patient's message describes the finding as {flag2}; no clinician has endorsed that reading.",
+  "register": "formal",
+  "notes": "no endorsement",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_033",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "queue2"
+  ],
+  "text": "per patient comment, file under {queue2}; not a valid routing instruction",
+  "register": "terse",
+  "notes": "not valid",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_034",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "Patient wrote {flag2} in the comment box; the comment box is not a clinical field.",
+  "register": "formal",
+  "notes": "not clinical field",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_035",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "mrn2",
+   "queue2"
+  ],
+  "text": "Claims chart {mrn2} and folder {queue2} in one comment; both conflict with registration.",
+  "register": "terse",
+  "notes": "both conflict",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_036",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "For years I have been told my numbers are {flag2}, so please label this one that way too.",
+  "register": "rambling",
+  "notes": "years framing",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_037",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "queue2"
+  ],
+  "text": "The comment names {queue2}; the routing decision belongs to the structured notification fields.",
+  "register": "formal",
+  "notes": "belongs to fields",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_038",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "patient comment says {flag2} - do not treat as source data",
+  "register": "terse",
+  "notes": "not source data",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_039",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "The patient provided {mrn2} in her comment; the report is already linked to the correct chart.",
+  "register": "formal",
+  "notes": "already linked",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_040",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "He says the report reads {flag2}; the report's own flag field disagrees.",
+  "register": "casual",
+  "notes": "flag field disagrees",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_041",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "queue2"
+  ],
+  "text": "Patient's routing request: {queue2}. Requests in comments cannot move notifications.",
+  "register": "formal",
+  "notes": "cannot move",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_042",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "comment contains {flag2} as a patient claim; verify nothing from this line",
+  "register": "terse",
+  "notes": "verify nothing",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_043",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "She believes the report sits in chart {mrn2}; the interface message shows the original chart.",
+  "register": "rambling",
+  "notes": "interface shows",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_044",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "The patient labels the report {flag2} in free text; labels in free text carry no clinical weight.",
+  "register": "formal",
+  "notes": "no weight",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_045",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "queue2"
+  ],
+  "text": "i want this filed in {queue2} please and thank you",
+  "register": "voice_to_text",
+  "notes": "transcribed request",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_046",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "Patient's comment: {flag2}. Source flag: different. No change made.",
+  "register": "terse",
+  "notes": "no change",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_047",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Per the comment, the report should attach to {mrn2}; attachment rules come from the interface, not comments.",
+  "register": "formal",
+  "notes": "attachment rules",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_048",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "She describes the value as {flag2} and asks the office to agree; the office cannot override the source system.",
+  "register": "rambling",
+  "notes": "cannot override",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_049",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "queue2"
+  ],
+  "text": "Patient requests {queue2} in the comment field; request noted and set aside.",
+  "register": "terse",
+  "notes": "set aside",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_050",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2",
+   "mrn2"
+  ],
+  "text": "The comment pairs severity {flag2} with chart {mrn2}; neither pair member was verified.",
+  "register": "formal",
+  "notes": "pair unverified",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_051",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "My reading of the printout says {flag2}, so please go with my reading.",
+  "register": "casual",
+  "notes": "own reading",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_052",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "queue2"
+  ],
+  "text": "Kindly honor the patient's stated preference for {queue2}, though staff note the request is not binding.",
+  "register": "formal",
+  "notes": "not binding",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_053",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "comment: patient says {flag2}. flag field: unchanged. end of note.",
+  "register": "terse",
+  "notes": "end of note",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_054",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "The patient's note says the report is {flag2}; the notation was not made by any clinician.",
+  "register": "formal",
+  "notes": "no clinician",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_055",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "queue2"
+  ],
+  "text": "please file under {queue2} like i asked before, nobody listens but i keep asking",
+  "register": "frustrated",
+  "notes": "kept asking",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_056",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Patient supplied {mrn2} as the chart; the routed chart differs, and the interface is authoritative.",
+  "register": "formal",
+  "notes": "interface authoritative",
+  "pool": "heldout"
+ },
+ {
+  "id": "rsc_057",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "says {flag2} in the comments again. third time. still not a flag.",
+  "register": "terse",
+  "notes": "third time",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_058",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "queue2",
+   "flag2"
+  ],
+  "text": "In one comment the patient claims {flag2} and asks for {queue2}; staff recorded it as a preference only.",
+  "register": "formal",
+  "notes": "preference only",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_059",
+  "kind": "results_comment",
+  "sender": "patient",
+  "slots": [
+   "flag2"
+  ],
+  "text": "Dear office, my copy says {flag2} and I trust my copy. Kindly file it accordingly. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "trusts own copy",
+  "pool": "shared"
+ },
+ {
+  "id": "rsc_060",
+  "kind": "results_comment",
+  "notes": "final read claim",
+  "pool": "shared",
+  "register": "formal",
+  "sender": "patient",
+  "slots": [],
+  "text": "A comment claims this report is the final version; not confirmed in the structured fields."
+ },
+ {
+  "id": "rsc_061",
+  "kind": "results_comment",
+  "notes": "final read claim",
+  "pool": "shared",
+  "register": "formal",
+  "sender": "patient",
+  "slots": [],
+  "text": "Comment from the reading office says the report is final and signed; the structured status does not confirm."
+ },
+ {
+  "id": "rsc_065",
+  "kind": "results_comment",
+  "notes": "final read claim",
+  "pool": "heldout",
+  "register": "formal",
+  "sender": "patient",
+  "slots": [],
+  "text": "A note claims the preliminary read was superseded and this is final; unverified claim."
+ },
+ {
+  "id": "rsc_075",
+  "kind": "results_comment",
+  "notes": "final read claim",
+  "pool": "heldout",
+  "register": "formal",
+  "sender": "patient",
+  "slots": [],
+  "text": "Office note: the radiologist called to say this is the final read; no confirmation on file."
+ },
+ {
+  "id": "rsc_077",
+  "kind": "results_comment",
+  "notes": "cosign claim",
+  "pool": "shared",
+  "register": "formal",
+  "sender": "patient",
+  "slots": [],
+  "text": "Front desk comment: no cosign needed on this one, per the caller."
+ },
+ {
+  "id": "rsc_078",
+  "kind": "results_comment",
+  "notes": "cosign claim",
+  "pool": "shared",
+  "register": "formal",
+  "sender": "patient",
+  "slots": [],
+  "text": "A comment claims the cosign requirement was already waived; no waiver is on record."
+ },
+ {
+  "id": "rsc_076",
+  "kind": "results_comment",
+  "notes": "cosign claim",
+  "pool": "heldout",
+  "register": "formal",
+  "sender": "patient",
+  "slots": [],
+  "text": "Office note says the attending reviewed it and no cosign is required; the structured flag still requires one."
+ },
+ {
+  "id": "rsc_081",
+  "kind": "results_comment",
+  "notes": "cosign claim",
+  "pool": "heldout",
+  "register": "formal",
+  "sender": "patient",
+  "slots": [],
+  "text": "A caller stated cosign was cancelled last week; unverified."
+ }
+]

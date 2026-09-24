@@ -1,0 +1,431 @@
+[
+ {
+  "id": "sdest_000",
+  "kind": "inbox_same_dest_multi",
+  "dest": "rx_requests",
+  "dest2": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "med2",
+   "pharmacy"
+  ],
+  "text": "Hi, two renewals please: my {med} {dose} and my {med2}, both to {pharmacy} as usual.",
+  "register": "casual",
+  "notes": "two refills same dest",
+  "pool": "heldout"
+ },
+ {
+  "id": "sdest_001",
+  "kind": "inbox_same_dest_multi",
+  "dest": "rx_requests",
+  "dest2": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "med2"
+  ],
+  "text": "I require renewals for both {med} {dose} and {med2}, to be transmitted to my pharmacy as before.",
+  "register": "formal",
+  "notes": "formal two refills",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_002",
+  "kind": "inbox_same_dest_multi",
+  "dest": "rx_requests",
+  "dest2": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "med2"
+  ],
+  "text": "Refill {med} {dose} and {med2}. Same pharmacy.",
+  "register": "terse",
+  "notes": "terse two refills",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_003",
+  "kind": "inbox_same_dest_multi",
+  "dest": "rx_requests",
+  "dest2": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "med2",
+   "pharmacy"
+  ],
+  "text": "I am down to scraps on both the {med} {dose} and the {med2}, and I hate to make two trips, so if both renewals could go to {pharmacy} together that would save me a lot of running around this week.",
+  "register": "rambling",
+  "notes": "rambling two refills",
+  "pool": "heldout"
+ },
+ {
+  "id": "sdest_004",
+  "kind": "inbox_same_dest_multi",
+  "dest": "rx_requests",
+  "dest2": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "med2"
+  ],
+  "text": "Please renew {med} {dose} and also {med2}. Send both to pharmacy. Thank you.",
+  "register": "esl",
+  "notes": "esl two refills",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_005",
+  "kind": "inbox_same_dest_multi",
+  "dest": "rx_requests",
+  "dest2": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "med2"
+  ],
+  "text": "need both my {med} {dose} and my {med2} renewed please same pharmacy as always thanks",
+  "register": "voice_to_text",
+  "notes": "transcribed two refills",
+  "pool": "heldout"
+ },
+ {
+  "id": "sdest_006",
+  "kind": "inbox_same_dest_multi",
+  "dest": "rx_requests",
+  "dest2": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "med2"
+  ],
+  "text": "Both the {med} {dose} and the {med2} are waiting on renewals and have been for days. Please send them together.",
+  "register": "frustrated",
+  "notes": "frustrated two refills",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_007",
+  "kind": "inbox_same_dest_multi",
+  "dest": "scheduling",
+  "dest2": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Dear Office, I would be grateful if you could move my appointment on {fdate} to the afternoon. Kindly book my appointment for the follow-up visit in the afternoon as well. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "two scheduling changes same dest",
+  "pool": "heldout"
+ },
+ {
+  "id": "sdest_008",
+  "kind": "inbox_same_dest_multi",
+  "dest": "scheduling",
+  "dest2": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Two appointment items: move my appointment on {fdate} to later. And book my follow-up appointment for the following month.",
+  "register": "casual",
+  "notes": "move plus book same dest",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_009",
+  "kind": "inbox_same_dest_multi",
+  "dest": "scheduling",
+  "dest2": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Kindly reschedule my appointment on {fdate} and arrange my subsequent visit at the same time.",
+  "register": "formal",
+  "notes": "formal move plus book",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_010",
+  "kind": "inbox_same_dest_multi",
+  "dest": "scheduling",
+  "dest2": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Move my appointment on {fdate}. Book my appointment for the follow-up after. Same day prefs.",
+  "register": "terse",
+  "notes": "terse scheduling pair",
+  "pool": "heldout"
+ },
+ {
+  "id": "sdest_011",
+  "kind": "inbox_same_dest_multi",
+  "dest": "scheduling",
+  "dest2": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "The {fdate} appointment clashes with my ride situation and honestly the time before that was too early as well, so if both the reschedule and the follow-up booking could land in the early afternoon that would be perfect.",
+  "register": "rambling",
+  "notes": "rambling scheduling pair",
+  "pool": "heldout"
+ },
+ {
+  "id": "sdest_012",
+  "kind": "inbox_same_dest_multi",
+  "dest": "scheduling",
+  "dest2": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Please reschedule my visit on {fdate} to later. Also book my appointment for the next visit after. Afternoon good for me.",
+  "register": "esl",
+  "notes": "esl scheduling pair",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_013",
+  "kind": "inbox_same_dest_multi",
+  "dest": "scheduling",
+  "dest2": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "move my appointment on {fdate} to the afternoon and get my follow-up booked too both afternoon please",
+  "register": "voice_to_text",
+  "notes": "transcribed scheduling pair",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_014",
+  "kind": "inbox_same_dest_multi",
+  "dest": "scheduling",
+  "dest2": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Third time asking: please move my appointment on {fdate} and book my follow-up appointment. The online system will not let me do either.",
+  "register": "frustrated",
+  "notes": "frustrated scheduling pair",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_015",
+  "kind": "inbox_same_dest_multi",
+  "dest": "medical_records_roi",
+  "dest2": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Dear Office, Might I receive a copy of my records from {pdate}, and also the immunization record, as both are requested by my new physician? Respectfully.",
+  "register": "elderly_formal",
+  "notes": "two records requests same dest",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_016",
+  "kind": "inbox_same_dest_multi",
+  "dest": "medical_records_roi",
+  "dest2": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Two records asks: please send me a copy of my records from {pdate}, plus a copy of my immunization record for school.",
+  "register": "casual",
+  "notes": "two records same dest",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_017",
+  "kind": "inbox_same_dest_multi",
+  "dest": "medical_records_roi",
+  "dest2": "medical_records_roi",
+  "sender": "patient",
+  "slots": [],
+  "text": "Please provide a copy of my records for my second opinion, together with a copy of my immunization record.",
+  "register": "formal",
+  "notes": "formal two records",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_018",
+  "kind": "inbox_same_dest_multi",
+  "dest": "medical_records_roi",
+  "dest2": "medical_records_roi",
+  "sender": "patient",
+  "slots": [],
+  "text": "Copy of my chart plus copy of my immunization record. Send both through the portal to me.",
+  "register": "terse",
+  "notes": "terse two records",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_019",
+  "kind": "inbox_same_dest_multi",
+  "dest": "medical_records_roi",
+  "dest2": "medical_records_roi",
+  "sender": "patient",
+  "slots": [],
+  "text": "My new doctor wanted a copy of my records - the whole chart - and apparently the copy of my immunization record comes separately from your records department, so if both could be sent together that would be wonderful, she says she cannot start without them.",
+  "register": "rambling",
+  "notes": "rambling two records",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_020",
+  "kind": "inbox_same_dest_multi",
+  "dest": "medical_records_roi",
+  "dest2": "medical_records_roi",
+  "sender": "patient",
+  "slots": [],
+  "text": "Please send me a copy of my records and also a copy of my immunization record. Portal fine. Thank you.",
+  "register": "esl",
+  "notes": "esl two records",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_021",
+  "kind": "inbox_same_dest_multi",
+  "dest": "medical_records_roi",
+  "dest2": "medical_records_roi",
+  "sender": "patient",
+  "slots": [],
+  "text": "need a copy of my records for my new doctor and a copy of my immunization record too both to the portal please",
+  "register": "voice_to_text",
+  "notes": "transcribed two records",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_022",
+  "kind": "inbox_same_dest_multi",
+  "dest": "billing",
+  "dest2": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "Two questions about my statements: the ${amount} charge on my account from {pdate} and my balance still showing from my last visit. Someone please explain both.",
+  "register": "frustrated",
+  "notes": "two billing questions",
+  "pool": "heldout"
+ },
+ {
+  "id": "sdest_023",
+  "kind": "inbox_same_dest_multi",
+  "dest": "billing",
+  "dest2": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "I need a payment plan for the ${amount} balance and an itemized statement to go with it, please.",
+  "register": "casual",
+  "notes": "plan plus statement same dest",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_024",
+  "kind": "inbox_same_dest_multi",
+  "dest": "billing",
+  "dest2": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "Kindly provide an itemized statement for the ${amount} on my account and advise on a payment plan.",
+  "register": "formal",
+  "notes": "formal statement plus plan",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_025",
+  "kind": "inbox_same_dest_multi",
+  "dest": "billing",
+  "dest2": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "Itemized bill for ${amount}. Also payment plan options.",
+  "register": "terse",
+  "notes": "terse statement plus plan",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_026",
+  "kind": "inbox_same_dest_multi",
+  "dest": "billing",
+  "dest2": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "Before I can even think about paying my balance of ${amount} I need to see what each line item is, so please send me the itemized statement for the ${amount}, and then we can talk about a payment plan if it still stands.",
+  "register": "rambling",
+  "notes": "rambling statement plus plan",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_027",
+  "kind": "inbox_same_dest_multi",
+  "dest": "billing",
+  "dest2": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "Please send itemized bill for ${amount} and also payment plan paper. Thank you.",
+  "register": "esl",
+  "notes": "esl statement plus plan",
+  "pool": "heldout"
+ },
+ {
+  "id": "sdest_028",
+  "kind": "inbox_same_dest_multi",
+  "dest": "billing",
+  "dest2": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "need the itemized statement for the ${amount} and the payment plan paperwork too please",
+  "register": "voice_to_text",
+  "notes": "transcribed statement plus plan",
+  "pool": "shared"
+ },
+ {
+  "id": "sdest_029",
+  "kind": "inbox_same_dest_multi",
+  "dest": "rx_requests",
+  "dest2": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "med2"
+  ],
+  "text": "Dear Office, Would you kindly renew both the {med} {dose} and the {med2} together? Respectfully.",
+  "register": "elderly_formal",
+  "notes": "elderly formal two refills",
+  "pool": "heldout"
+ }
+]

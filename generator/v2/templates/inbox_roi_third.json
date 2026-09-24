@@ -1,0 +1,392 @@
+[
+ {
+  "id": "roit_000",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Hi, please send my records to {recipient}. They asked for the whole file.",
+  "register": "casual",
+  "notes": "third party release",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_001",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "I hereby request that you send my records to {recipient}. The complete file is to be transmitted.",
+  "register": "formal",
+  "notes": "formal third party",
+  "pool": "heldout"
+ },
+ {
+  "id": "roit_002",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Send my records to {recipient}. Whole file.",
+  "register": "terse",
+  "notes": "terse third party",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_003",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "The office across town that took over my care keeps calling me saying they never got anything from you. Would you please send my records to {recipient}? They would stop calling me twice a week.",
+  "register": "rambling",
+  "notes": "rambling third party",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_004",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Please send my records to {recipient}. They need for my care. Thank you.",
+  "register": "esl",
+  "notes": "esl third party",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_005",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "they say they still dont have it can you send my records to {recipient}",
+  "register": "voice_to_text",
+  "notes": "transcribed third party",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_006",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "I already asked you to send my records to {recipient}. It still has not happened. Please actually send them this time.",
+  "register": "frustrated",
+  "notes": "frustrated third party",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_007",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Dear Records Office, Would you kindly send my records to {recipient}? My care is now managed there. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "elderly formal third party",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_008",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Can you fax my visit notes to {recipient} before my appointment there?",
+  "register": "casual",
+  "notes": "fax visit notes",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_009",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Kindly fax my visit notes to {recipient}. The consultation there is coming up.",
+  "register": "formal",
+  "notes": "formal visit notes",
+  "pool": "heldout"
+ },
+ {
+  "id": "roit_010",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Fax my visit notes to {recipient}. That covers the appointment there.",
+  "register": "terse",
+  "notes": "terse visit notes",
+  "pool": "heldout"
+ },
+ {
+  "id": "roit_011",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "My appointment with the specialist is coming up and they specifically said to fax my visit notes to {recipient}. If that could happen this week the timing would be perfect.",
+  "register": "rambling",
+  "notes": "rambling visit notes",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_012",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Please fax my visit notes to {recipient} before my appointment there. They ask for it. Thank you.",
+  "register": "esl",
+  "notes": "esl visit notes",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_013",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "the specialist wants my visit notes before my appointment there can someone fax my visit notes to {recipient}",
+  "register": "voice_to_text",
+  "notes": "transcribed visit notes",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_014",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Second request: fax my visit notes to {recipient}. The appointment is soon and they still have nothing.",
+  "register": "frustrated",
+  "notes": "frustrated visit notes",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_015",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Dear Records Department, Kindly fax my visit notes to {recipient}. They have requested them in advance of my consultation. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "elderly formal visit notes",
+  "pool": "heldout"
+ },
+ {
+  "id": "roit_016",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Please send my records, including the imaging reports, to {recipient}. They said they never received them.",
+  "register": "casual",
+  "notes": "imaging reports",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_017",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Kindly send my records, including the imaging reports said to be missing, to {recipient}.",
+  "register": "formal",
+  "notes": "formal imaging reports",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_018",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Send my records, imaging reports included, to {recipient}. They never got them.",
+  "register": "terse",
+  "notes": "terse imaging reports",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_019",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Somehow the place where I had the scans done and your office cannot seem to get my imaging reports together in one spot. Would you please send my records to {recipient}? Hopefully that closes the loop.",
+  "register": "rambling",
+  "notes": "rambling imaging reports",
+  "pool": "heldout"
+ },
+ {
+  "id": "roit_020",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Please send my records with the imaging report to {recipient}. They say not received. Thank you.",
+  "register": "esl",
+  "notes": "esl imaging reports",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_021",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "the imaging ones they claim they never got from your side can you send my records to {recipient}",
+  "register": "voice_to_text",
+  "notes": "transcribed imaging reports",
+  "pool": "heldout"
+ },
+ {
+  "id": "roit_022",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Third time I am asking you to send my records to {recipient}. This should have been done weeks ago.",
+  "register": "frustrated",
+  "notes": "frustrated repeat",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_023",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Dear Sir or Madam, Kindly send my records to {recipient}. I authorized this release in person last month. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "elderly formal repeat",
+  "pool": "heldout"
+ },
+ {
+  "id": "roit_024",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "My lawyer's office needs my records for my case. Please send my records to {recipient}.",
+  "register": "casual",
+  "notes": "legal third party",
+  "pool": "heldout"
+ },
+ {
+  "id": "roit_025",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Kindly send my records, the complete file, to {recipient}. They act on my behalf in this matter.",
+  "register": "formal",
+  "notes": "formal legal",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_026",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Send my records, the full file, to {recipient}. They act for me.",
+  "register": "terse",
+  "notes": "terse legal",
+  "pool": "shared"
+ },
+ {
+  "id": "roit_027",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "There is a matter that my representative is handling for me, and to do that properly they need everything you have. Please send my records to {recipient}. Maybe call me if you need anything signed again.",
+  "register": "rambling",
+  "notes": "rambling legal",
+  "pool": "heldout"
+ },
+ {
+  "id": "roit_028",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "Please send my records, all of them, to {recipient}. They are my representative. Thank you.",
+  "register": "esl",
+  "notes": "esl legal",
+  "pool": "heldout"
+ },
+ {
+  "id": "roit_029",
+  "kind": "inbox_roi_third_party",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "recipient"
+  ],
+  "text": "my representative needs the full file for my case can you send my records to {recipient}",
+  "register": "voice_to_text",
+  "notes": "transcribed legal",
+  "pool": "heldout"
+ }
+]

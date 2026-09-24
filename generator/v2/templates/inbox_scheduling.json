@@ -1,0 +1,406 @@
+[
+ {
+  "id": "sch_000",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate",
+   "provider"
+  ],
+  "text": "I need to move my appointment on {fdate} with {provider} to later in the week. Mornings work best.",
+  "register": "casual",
+  "notes": "reschedule request",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_001",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Please cancel my appointment on {fdate}. I will rebook later.",
+  "register": "terse",
+  "notes": "cancellation",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_002",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "month",
+   "provider"
+  ],
+  "text": "I would like to book my annual physical with {provider} sometime in {month}, if the calendar allows.",
+  "register": "formal",
+  "notes": "book annual physical",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_003",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate",
+   "provider"
+  ],
+  "text": "Hello, it is that time again - my visit with {provider} is on the books for {fdate}, but my daughter has a school thing that morning I completely forgot about, so I need to reschedule to another morning, any morning really that week, and I am so sorry for the trouble, they really should send reminders earlier.",
+  "register": "rambling",
+  "notes": "rambling reschedule, one request",
+  "pool": "heldout"
+ },
+ {
+  "id": "sch_004",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Please, my appointment day {fdate} is not possible for me. Can you reschedule me to another day? Thank you.",
+  "register": "esl",
+  "notes": "esl reschedule",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_005",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "hi cant make the {fdate} one can you reschedule me to a different day thanks",
+  "register": "voice_to_text",
+  "notes": "transcribed reschedule",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_006",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "I have asked twice already to move my appointment on {fdate}. Nobody has changed it. Please move it to next week.",
+  "register": "frustrated",
+  "notes": "frustrated reschedule",
+  "pool": "heldout"
+ },
+ {
+  "id": "sch_007",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate",
+   "provider"
+  ],
+  "text": "Dear Scheduling, I find I am unable to keep my appointment with {provider} on {fdate} and would appreciate it if you could reschedule me for the following week, at your convenience. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "elderly formal reschedule",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_008",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate",
+   "provider"
+  ],
+  "text": "Can we reschedule my visit with {provider}? {fdate} that morning stopped working for me.",
+  "register": "casual",
+  "notes": "paraphrase, no keyword",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_009",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "provider"
+  ],
+  "text": "When does {provider} have anything open in the next few weeks? I would like to schedule an appointment.",
+  "register": "casual",
+  "notes": "paraphrase booking",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_010",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Something came up and I cannot be there on {fdate}. Please move my appointment to another slot.",
+  "register": "casual",
+  "notes": "paraphrase reschedule",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_011",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "provider",
+   "month"
+  ],
+  "text": "Kindly book my appointment with {provider} for {month}, as a follow-up, at the earliest available hour.",
+  "register": "formal",
+  "notes": "formal booking",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_012",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "move my appointment on {fdate} one week later please",
+  "register": "terse",
+  "notes": "terse telegraphic",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_013",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate",
+   "provider"
+  ],
+  "text": "I am writing about my appointment on {fdate}. I no longer require it, as {provider} and I agreed I am doing well enough to wait until next year. Please cancel my appointment for that day, and I will telephone nearer the time to book my next appointment. Thank you kindly for your patience with an old man's calendar.",
+  "register": "elderly_formal",
+  "notes": "rambling cancellation",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_014",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Hello, I must cancel my appointment on {fdate}. My work change the shift. Sorry for short notice. I will book a new appointment later.",
+  "register": "esl",
+  "notes": "esl cancellation",
+  "pool": "heldout"
+ },
+ {
+  "id": "sch_015",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "need to reschedule before {fdate} can you squeeze me in any earlier that week",
+  "register": "terse",
+  "notes": "terse earlier slot request",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_016",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate",
+   "provider"
+  ],
+  "text": "Is there any way to reschedule with {provider} sooner than {fdate}? If a slot opens up I will take it on short notice.",
+  "register": "casual",
+  "notes": "earlier slot, one request",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_017",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate",
+   "provider"
+  ],
+  "text": "I should be obliged if you could reschedule my consultation with {provider}, presently set for {fdate}, to the afternoon hours. Yours faithfully.",
+  "register": "elderly_formal",
+  "notes": "elderly formal time change",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_018",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "cancel my appointment on {fdate} and rebook me next month",
+  "register": "terse",
+  "notes": "telegraphic cancel and rebook intent",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_019",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "provider",
+   "fdate"
+  ],
+  "text": "Hi! {provider} told me at my last visit to come back in a few weeks, so I would like to book my visit. {fdate} was the day mentioned - does that still work? Happy to adjust if not.",
+  "register": "casual",
+  "notes": "follow-up booking",
+  "pool": "heldout"
+ },
+ {
+  "id": "sch_020",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate",
+   "provider"
+  ],
+  "text": "Good morning. My daughter will be driving me now, so I no longer need the early bus times. Please move my appointment on {fdate} with {provider} to the afternoon. Many thanks.",
+  "register": "elderly_formal",
+  "notes": "time-of-day change",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_021",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "the {fdate} day is my bowling league day and I forgot when I booked it, can we reschedule to another day",
+  "register": "casual",
+  "notes": "casual reschedule with life detail",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_022",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "provider"
+  ],
+  "text": "Please advise the next available opening with {provider}; I wish to schedule an appointment.",
+  "register": "formal",
+  "notes": "formal booking request",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_023",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "um yes I need to change the visit the {fdate} one I think it is that day anyway somewhere around then whatever it is please reschedule me to the afternoon",
+  "register": "voice_to_text",
+  "notes": "transcribed vague day reschedule",
+  "pool": "heldout"
+ },
+ {
+  "id": "sch_024",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "I submitted this through the portal twice with no reply. My {fdate} appointment does not work anymore. Please move my appointment, this time with a reply.",
+  "register": "frustrated",
+  "notes": "frustrated repeat reschedule",
+  "pool": "heldout"
+ },
+ {
+  "id": "sch_025",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "provider",
+   "fdate"
+  ],
+  "text": "Hello, I want a new appointment with {provider}. The {fdate} is impossible because my son have wedding that day. Please give other day. Thank you very much.",
+  "register": "esl",
+  "notes": "esl reschedule with life detail",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_026",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Please cancel my appointment on {fdate} - I will call when I know my new work schedule.",
+  "register": "casual",
+  "notes": "paraphrase cancellation",
+  "pool": "heldout"
+ },
+ {
+  "id": "sch_027",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate",
+   "provider"
+  ],
+  "text": "Re: upcoming appointment. Request to reschedule the {fdate} session with {provider} for the subsequent week, same hour if feasible.",
+  "register": "formal",
+  "notes": "bureaucratic reschedule",
+  "pool": "heldout"
+ },
+ {
+  "id": "sch_028",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "just realized the {fdate} slot is right when I pick up my grandkids every week can you reschedule me to a different time",
+  "register": "voice_to_text",
+  "notes": "transcribed reschedule",
+  "pool": "shared"
+ },
+ {
+  "id": "sch_029",
+  "kind": "inbox_request",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate",
+   "provider"
+  ],
+  "text": "I hope I am writing to the right place for this. My appointment with {provider} on {fdate} - well, my neighbor usually drives me, and she has her cataract surgery that week of all things, so I cannot make that morning, and I was hoping very much that someone could reschedule me to another morning the following week instead. I do apologize for the inconvenience and thank you ever so much for looking into it.",
+  "register": "rambling",
+  "notes": "long rambling reschedule, one request",
+  "pool": "shared"
+ }
+]

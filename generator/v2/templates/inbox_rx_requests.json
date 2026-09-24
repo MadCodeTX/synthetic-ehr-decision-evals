@@ -1,0 +1,452 @@
+[
+ {
+  "id": "rxq_000",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Hi, my {med} {dose} is running low. Could you refill the {med} {dose} and send the script to {pharmacy}? Thanks!",
+  "register": "casual",
+  "notes": "one request, named medication",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_001",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "{med} {dose} - need a refill sent to {pharmacy}.",
+  "register": "terse",
+  "notes": "terse renewal request",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_002",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "I am writing to request a renewal of my {med} {dose}. Please transmit it to {pharmacy} at your earliest convenience.",
+  "register": "formal",
+  "notes": "formal renewal",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_003",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Hello again, I was counting the bottle this morning and I have maybe a week of the {med} {dose} left, so could the office renew it and send it over to {pharmacy} like last time, that would be a great help.",
+  "register": "rambling",
+  "notes": "rambling renewal, single request",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_004",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Please, I need a refill of my {med} {dose}. I have only a little left. Send to {pharmacy}. Thank you much.",
+  "register": "esl",
+  "notes": "esl renewal",
+  "pool": "heldout"
+ },
+ {
+  "id": "rxq_005",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Hi this is a voice message I need a refill on my {med} {dose} sent to {pharmacy} again sorry about the typos",
+  "register": "voice_to_text",
+  "notes": "transcribed renewal",
+  "pool": "heldout"
+ },
+ {
+  "id": "rxq_006",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Third time I am writing: please renew my {med} {dose} at {pharmacy}. I am nearly out of this one.",
+  "register": "frustrated",
+  "notes": "frustrated renewal",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_007",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Dear Office, I would be most grateful if my {med} {dose} could be renewed and directed to {pharmacy}, as it has been in the past. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "elderly formal renewal",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_008",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Could you renew my {med} {dose}? Send it to {pharmacy} as usual please.",
+  "register": "casual",
+  "notes": "paraphrase without the word refill",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_009",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "One for the doctor: my {med} {dose} needs a refill, same dose, to {pharmacy}. Thanks for taking a look.",
+  "register": "casual",
+  "notes": "paraphrase, named med",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_010",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Requesting a refill of my {med} {dose} to {pharmacy} at your earliest convenience, please and thank you.",
+  "register": "casual",
+  "notes": "paraphrase renewal",
+  "pool": "heldout"
+ },
+ {
+  "id": "rxq_011",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Kindly renew the prescription for {med} {dose} and forward it to {pharmacy}. Thank you for your assistance.",
+  "register": "formal",
+  "notes": "formal renewal",
+  "pool": "heldout"
+ },
+ {
+  "id": "rxq_012",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Hi, I am writing to ask for a renewal of my {med} {dose}, sent to {pharmacy} as before, when someone has a moment.",
+  "register": "terse",
+  "notes": "terse renewal",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_013",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Refill needed: {med} {dose} to {pharmacy}. Thank you kindly.",
+  "register": "elderly_formal",
+  "notes": "rambling elderly renewal, one request",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_014",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Hello, my {med} {dose} is nearly finished and I would be grateful if the office could renew it at {pharmacy}. Respectfully.",
+  "register": "esl",
+  "notes": "esl renewal",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_015",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "can you refill my {med} {dose} and send it over to {pharmacy} whenever someone gets a sec thanks",
+  "register": "terse",
+  "notes": "terse, no greeting",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_016",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Time to renew the {med} {dose} again - same pharmacy ({pharmacy}). Thanks so much.",
+  "register": "casual",
+  "notes": "paraphrase renewal",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_017",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Could I get a refill on the {med} {dose}? The pharmacy is {pharmacy}. I am down to my last few.",
+  "register": "elderly_formal",
+  "notes": "elderly formal paraphrase",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_018",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "refill please {med} {dose} pharmacy {pharmacy}",
+  "register": "terse",
+  "notes": "telegraphic refill",
+  "pool": "heldout"
+ },
+ {
+  "id": "rxq_019",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "I would like to request a refill of my {med} {dose}. Please transmit it to {pharmacy}.",
+  "register": "casual",
+  "notes": "renewal prompted by pharmacy",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_020",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "{med} {dose} refill to {pharmacy} please, same as last time.",
+  "register": "elderly_formal",
+  "notes": "formal supply request",
+  "pool": "heldout"
+ },
+ {
+  "id": "rxq_021",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Please renew my {med} {dose} - {pharmacy} has my file. Thank you.",
+  "register": "casual",
+  "notes": "paraphrase referencing label",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_022",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Can the doctor renew my {med} {dose} and send it to {pharmacy}? I would rather not run out over the holiday.",
+  "register": "formal",
+  "notes": "renewal with mild explanation",
+  "pool": "heldout"
+ },
+ {
+  "id": "rxq_023",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Hello, refill request for my {med} {dose} to {pharmacy}, same as every couple of months. Appreciate it.",
+  "register": "voice_to_text",
+  "notes": "transcribed, one request",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_024",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Please, a refill of my {med} {dose} would be a blessing. Send to {pharmacy}. Thank you kindly.",
+  "register": "frustrated",
+  "notes": "frustrated follow-up renewal",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_025",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "hi yes renewal for the {med} {dose} to {pharmacy} please i am almost out",
+  "register": "esl",
+  "notes": "esl renewal",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_026",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Once more: please renew my {med} {dose} at {pharmacy}. This is the third time I am asking nicely.",
+  "register": "casual",
+  "notes": "light paraphrase",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_027",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Dear Office, Might my {med} {dose} be renewed and directed to {pharmacy}, as has been done before? I remain, respectufully, your patient.",
+  "register": "formal",
+  "notes": "formal reauthorization",
+  "pool": "shared"
+ },
+ {
+  "id": "rxq_028",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Need a refill of the {med} {dose} to {pharmacy} before the weekend if possible.",
+  "register": "voice_to_text",
+  "notes": "transcribed pharmacy prompt",
+  "pool": "heldout"
+ },
+ {
+  "id": "rxq_029",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "so the {med} {dose} is nearly gone can someone renew it and send it to {pharmacy} thanks a lot",
+  "register": "rambling",
+  "notes": "rambling single renewal",
+  "pool": "heldout"
+ }
+]

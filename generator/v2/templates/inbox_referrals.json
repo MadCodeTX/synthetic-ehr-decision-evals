@@ -1,0 +1,398 @@
+[
+ {
+  "id": "ref_000",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "I need a referral to {specialty}; my insurance requires one before I can book.",
+  "register": "casual",
+  "notes": "referral required by insurance",
+  "pool": "heldout"
+ },
+ {
+  "id": "ref_001",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty",
+   "pdate"
+  ],
+  "text": "What is the status of the {specialty} referral from my {pdate} visit? I have not heard anything.",
+  "register": "casual",
+  "notes": "referral status check",
+  "pool": "heldout"
+ },
+ {
+  "id": "ref_002",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "I write to request that a referral to {specialty} be initiated on my behalf.",
+  "register": "formal",
+  "notes": "formal referral request",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_003",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty",
+   "pdate"
+  ],
+  "text": "Hello, when I was in on {pdate} the doctor mentioned sending me over to {specialty} and said the office would take care of the paperwork, and that was a while ago now, and I have not heard a thing from anyone, and I am getting a little anxious that the referral got lost in the shuffle somewhere, so I thought I would ask directly what has happened with it.",
+  "register": "rambling",
+  "notes": "rambling referral status",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_004",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Please, doctor must refer me to {specialty}. The insurance ask for paper first. Thank you.",
+  "register": "esl",
+  "notes": "esl referral",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_005",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "hi did the referral to {specialty} ever go through still waiting on it",
+  "register": "voice_to_text",
+  "notes": "transcribed referral status",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_006",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Two weeks and no referral to {specialty}. The specialist office cannot book me without it. Please send it now.",
+  "register": "frustrated",
+  "notes": "frustrated referral",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_007",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Dear Doctor, I should be most grateful if you would see fit to refer me to the {specialty} department, as my daughter insists the matter needs a specialist's eye. Respectfully yours.",
+  "register": "elderly_formal",
+  "notes": "elderly formal referral",
+  "pool": "heldout"
+ },
+ {
+  "id": "ref_008",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Can the office put in the referral so I can be seen in {specialty}? My plan will not let me book straight in.",
+  "register": "casual",
+  "notes": "paraphrase referral",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_009",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "I was told to ask your office for a referral to {specialty} - how do we get that started?",
+  "register": "casual",
+  "notes": "paraphrase how to get sent",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_010",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty",
+   "provider"
+  ],
+  "text": "At my last appointment {provider} said the next step was {specialty}. Please arrange that referral.",
+  "register": "casual",
+  "notes": "referral per provider instruction",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_011",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Kindly process the necessary documentation for my referral to {specialty}.",
+  "register": "formal",
+  "notes": "formal referral paperwork",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_012",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "referral to {specialty} needed please",
+  "register": "terse",
+  "notes": "telegraphic referral",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_013",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty",
+   "pdate"
+  ],
+  "text": "I am writing once more about the referral to {specialty} - the office said after my {pdate} visit that the papers would follow in the mail, and my neighbor checks my mailbox, and she says nothing has arrived, and I am beginning to wonder whether it was ever sent at all, so could someone look into it and let me know? I would ring, but I do not like to trouble anyone by phone. Thank you for anything you can do.",
+  "register": "elderly_formal",
+  "notes": "rambling elderly referral status",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_014",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Hello, I need the referral paper for the {specialty} doctor. My insurance say no paper, no visit. Please help.",
+  "register": "esl",
+  "notes": "esl referral",
+  "pool": "heldout"
+ },
+ {
+  "id": "ref_015",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "still no answer on {specialty} referral where is it",
+  "register": "terse",
+  "notes": "terse status",
+  "pool": "heldout"
+ },
+ {
+  "id": "ref_016",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Before I can be seen in {specialty}, they need a referral from your office first. Can you send it over?",
+  "register": "casual",
+  "notes": "paraphrase referral paperwork",
+  "pool": "heldout"
+ },
+ {
+  "id": "ref_017",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "I should be obliged if the office would forward the necessary referral for {specialty} at its earliest opportunity.",
+  "register": "elderly_formal",
+  "notes": "elderly formal",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_018",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "check referral status {specialty} please",
+  "register": "terse",
+  "notes": "telegraphic status",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_019",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty",
+   "pdate"
+  ],
+  "text": "Hi - {specialty} called me to book, but they say my referral is not in the system from the {pdate} visit. Can you push it through?",
+  "register": "casual",
+  "notes": "specialist cannot see referral",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_020",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Good day. Please expedite the pending referral to {specialty}; the season for such matters is nearly upon us. Many thanks.",
+  "register": "elderly_formal",
+  "notes": "formal expedite",
+  "pool": "heldout"
+ },
+ {
+  "id": "ref_021",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "The {specialty} referral is still not through. This is holding everything up. Fix it, please.",
+  "register": "frustrated",
+  "notes": "frustrated referral",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_022",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Please advise on the progress of my referral to {specialty}, submitted at my last consultation.",
+  "register": "formal",
+  "notes": "formal status request",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_023",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "um yes about the referral for {specialty} I do not know if it went anywhere can someone check and call or message me thanks",
+  "register": "voice_to_text",
+  "notes": "transcribed status",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_024",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Nobody answers at the referral desk. I need the {specialty} referral. Please, just send it.",
+  "register": "frustrated",
+  "notes": "frustrated, one request",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_025",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Hello, the {specialty} clinic ask me about the referral paper from your office. When it will arrive? Thank you.",
+  "register": "esl",
+  "notes": "esl referral status",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_026",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Could you point me toward whoever handles the {specialty} referral? I need to get sent over.",
+  "register": "casual",
+  "notes": "paraphrase routing request",
+  "pool": "heldout"
+ },
+ {
+  "id": "ref_027",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Re: specialty referral. Request initiation of referral to {specialty} per my insurance plan's network requirements.",
+  "register": "formal",
+  "notes": "bureaucratic referral",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_028",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "hi so the {specialty} people need the referral thing from you before I can go there please send it or tell me who sends it",
+  "register": "voice_to_text",
+  "notes": "transcribed referral",
+  "pool": "shared"
+ },
+ {
+  "id": "ref_029",
+  "kind": "inbox_request",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty",
+   "pdate"
+  ],
+  "text": "Forgive the long note, but I want to explain properly - at my {pdate} visit the doctor and I agreed that {specialty} should take a look at things, and she said a referral would be arranged through the office, and since then I have heard absolutely nothing, and my son keeps asking whether I have heard, and I keep having to say no, and it has reached the point where I simply must ask what is going on with it, one way or another. Thank you for reading.",
+  "register": "rambling",
+  "notes": "long rambling referral status, one request",
+  "pool": "shared"
+ }
+]

@@ -1,0 +1,425 @@
+[
+ {
+  "id": "sndrx_000",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Refill request from our pharmacy for {med} {dose} on behalf of the above patient. Please review and respond to the transmitting pharmacy.",
+  "register": "formal",
+  "notes": "standard refill request",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_001",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Refill request: {med} {dose} for the above patient. Please approve or deny through the e-prescribing system.",
+  "register": "terse",
+  "notes": "terse refill request",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_002",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Hi, we have a refill request waiting for {med} {dose} for your patient. Please send the prescription when you can.",
+  "register": "casual",
+  "notes": "casual refill request",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_003",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "We have the patient standing at our counter waiting on the {med} {dose} renewal that was submitted electronically this morning, so whenever your office gets a chance to authorize it they would appreciate not having to make another trip.",
+  "register": "rambling",
+  "notes": "rambling refill request",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_004",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Refill request for {med} {dose} from our counter. Patient is waiting. Please send prescription soon.",
+  "register": "esl",
+  "notes": "esl refill request",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_005",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "hey we got a refill request in the queue for your patients {med} {dose} please shoot the script over when someone has a minute",
+  "register": "voice_to_text",
+  "notes": "transcribed refill request",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_006",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Second request for the {med} {dose} renewal sent last week; our system will auto-deny if the office does not respond soon.",
+  "register": "formal",
+  "notes": "second request",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_007",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Second notice: {med} {dose} renewal pending since last week. Please respond in the system.",
+  "register": "terse",
+  "notes": "terse second request",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndrx_008",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Your patient's {med} {dose} refill has been pending twice now. Please approve it before they run out.",
+  "register": "casual",
+  "notes": "pending twice",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_009",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "This is now the third time we are writing about the {med} {dose} refill for your patient, and honestly the queue on our side is getting long, so if someone could just click approve in the system today that would solve everything.",
+  "register": "rambling",
+  "notes": "rambling third request",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_010",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Renewal request from our pharmacy for {med} {dose}; the prescription on file shows the therapy is ongoing. Please renew as appropriate.",
+  "register": "formal",
+  "notes": "ongoing therapy renewal",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndrx_011",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "{med} {dose} renewal needed. Therapy ongoing on file. Please renew.",
+  "register": "terse",
+  "notes": "terse ongoing renewal",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_012",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose",
+   "pdate"
+  ],
+  "text": "Refill request for {med} {dose}; the patient would like the same quantity as their fill on {pdate}. Please authorize the renewal.",
+  "register": "formal",
+  "notes": "same quantity refill",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_013",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose",
+   "pdate"
+  ],
+  "text": "{med} {dose} refill requested, same quantity as last fill on {pdate}. Please approve.",
+  "register": "terse",
+  "notes": "terse same quantity",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_014",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose",
+   "pdate"
+  ],
+  "text": "Hi again, the {med} {dose} refill we requested after their fill on {pdate} is still showing open on our end. Please process when possible.",
+  "register": "casual",
+  "notes": "casual open request",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndrx_015",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Our pharmacist flagged that the {med} {dose} renewal request may have gone to the wrong office the first time, so we are resending it here. Please process through the normal channel.",
+  "register": "formal",
+  "notes": "resent request",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_016",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Resending the {med} {dose} renewal; it may have gone to the wrong office the first time. Please process.",
+  "register": "terse",
+  "notes": "terse resend",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_017",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Sorry to bother you again, we think our first message about the {med} {dose} refill went to some other office, so here it is again. Please send the script when you can.",
+  "register": "esl",
+  "notes": "esl resend",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_018",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "resending the {med} {dose} renewal request because we think the first one landed at the wrong clinic please process through your normal system thanks",
+  "register": "voice_to_text",
+  "notes": "transcribed resend",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndrx_019",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Refill authorization is requested for the above patient's {med} {dose}. Our records show continued therapy with no changes from your office.",
+  "register": "formal",
+  "notes": "authorization request",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_020",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "{med} {dose} refill authorization requested. No therapy changes on file. Please renew.",
+  "register": "terse",
+  "notes": "terse authorization",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_021",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "The patient prefers the same strength of {med} {dose} they have been taking, so please renew at the current strength when you approve.",
+  "register": "casual",
+  "notes": "same strength note",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_022",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "The patient came in personally to ask us to chase this one, says the office is usually quick about it, so we told them we would send the {med} {dose} renewal request straight over and here it is.",
+  "register": "rambling",
+  "notes": "rambling patient chase",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndrx_023",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Please renew {med} {dose} for the above patient. We will contact the patient when it is ready for pickup.",
+  "register": "formal",
+  "notes": "pickup coordination",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_024",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Renew {med} {dose} for this patient please. We will call them for pickup.",
+  "register": "terse",
+  "notes": "terse pickup",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_025",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Quick one: can you renew the {med} {dose} for this patient? We will handle calling them once it is ready.",
+  "register": "casual",
+  "notes": "casual quick renewal",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndrx_026",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "The above patient's plan approved an extended supply of {med} {dose}, so the renewal request reflects the longer fill. Please authorize accordingly.",
+  "register": "formal",
+  "notes": "extended supply",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_027",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Extended supply approved by the plan for the {med} {dose} refill. Please authorize the longer fill.",
+  "register": "terse",
+  "notes": "terse extended supply",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_028",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Insurance already say yes for long supply. Please renew the refill of {med} {dose} for the long fill like the plan say.",
+  "register": "esl",
+  "notes": "esl extended supply",
+  "pool": "shared"
+ },
+ {
+  "id": "sndrx_029",
+  "kind": "inbox_request",
+  "dest": "rx_requests",
+  "sender": "pharmacy",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "the plan signed off on the extended supply for the {med} {dose} so the renewal request shows the longer fill please authorize it when you get a sec",
+  "register": "voice_to_text",
+  "notes": "transcribed extended supply",
+  "pool": "shared"
+ }
+]

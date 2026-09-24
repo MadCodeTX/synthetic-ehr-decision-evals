@@ -1,0 +1,414 @@
+[
+ {
+  "id": "pa_000",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "My pharmacy said my insurance needs a prior authorization for my {med} {dose} before they will fill it. Can your office handle that?",
+  "register": "casual",
+  "notes": "casual pa request",
+  "pool": "heldout"
+ },
+ {
+  "id": "pa_001",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "I have been informed that my insurance plan requires a prior authorization for {med} {dose}. I would appreciate it if your office could submit the necessary documentation.",
+  "register": "formal",
+  "notes": "formal pa",
+  "pool": "shared"
+ },
+ {
+  "id": "pa_002",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Insurance wants a prior authorization for {med} {dose}. Please submit.",
+  "register": "terse",
+  "notes": "terse pa",
+  "pool": "shared"
+ },
+ {
+  "id": "pa_003",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "I went to pick up my {med} {dose} at the pharmacy like always, and the pharmacist told me the insurance will not cover it until the doctor's office sends them something called a prior authorization, so I had to leave without it, and I am hoping you can get that done soon because I only have a few days left.",
+  "register": "rambling",
+  "notes": "rambling pa",
+  "pool": "heldout"
+ },
+ {
+  "id": "pa_004",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Pharmacy say my {med} {dose} need prior authorization from insurance first. Please send paper to them. I wait for medicine.",
+  "register": "esl",
+  "notes": "esl pa",
+  "pool": "shared"
+ },
+ {
+  "id": "pa_005",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "hi yes the pharmacy wont fill my {med} {dose} they said the insurance needs some kind of prior authorization first so can you guys do that please",
+  "register": "voice_to_text",
+  "notes": "transcribed pa",
+  "pool": "shared"
+ },
+ {
+  "id": "pa_006",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "This is the second month in a row my {med} {dose} is stuck waiting on a prior authorization. Please get it submitted today.",
+  "register": "frustrated",
+  "notes": "frustrated pa",
+  "pool": "heldout"
+ },
+ {
+  "id": "pa_007",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Dear Office, My pharmacy informs me that a prior authorization must be obtained for my {med} {dose}. I would be most obliged if you could attend to this matter promptly, as I have nearly finished my supply. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "elderly formal pa",
+  "pool": "heldout"
+ },
+ {
+  "id": "pa_008",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Can you start the pre-approval paperwork for my {med} {dose}? The plan will not cover it without it.",
+  "register": "casual",
+  "notes": "paraphrase, no keyword phrase",
+  "pool": "shared"
+ },
+ {
+  "id": "pa_009",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Kindly initiate the pre-approval process required by my insurer for {med} {dose} and notify me once the request has been transmitted.",
+  "register": "formal",
+  "notes": "paraphrase pre-approval",
+  "pool": "shared"
+ },
+ {
+  "id": "pa_010",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Need pre-approval for {med} {dose} from insurance. Please start it.",
+  "register": "terse",
+  "notes": "terse pre-approval",
+  "pool": "shared"
+ },
+ {
+  "id": "pa_011",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Nobody told me anything about this until I was standing at the pharmacy counter, but apparently the insurance company wants a prior authorization before they will pay for the {med} {dose}, so if your office could send whatever they need I would really appreciate it.",
+  "register": "rambling",
+  "notes": "rambling paraphrase",
+  "pool": "shared"
+ },
+ {
+  "id": "pa_012",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Insurance want paper before they pay for {med} {dose}. Please send the prior authorization paper fast. Thank you.",
+  "register": "esl",
+  "notes": "esl paraphrase",
+  "pool": "heldout"
+ },
+ {
+  "id": "pa_013",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "so i need the office to do the prior authorization for my {med} {dose} the pharmacy is holding my prescription until thats done",
+  "register": "voice_to_text",
+  "notes": "transcribed paraphrase",
+  "pool": "shared"
+ },
+ {
+  "id": "pa_014",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "I was told last week the prior authorization for my {med} {dose} would be sent, and it still has not happened. Please do not make me wait another week.",
+  "register": "frustrated",
+  "notes": "frustrated follow up",
+  "pool": "heldout"
+ },
+ {
+  "id": "pa_015",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Dear Sir or Madam, It has come to my attention that my plan requires prior authorization for my {med} {dose}. Might I ask that your office complete the required forms at your earliest convenience? With kind regards.",
+  "register": "elderly_formal",
+  "notes": "elderly formal pa",
+  "pool": "shared"
+ },
+ {
+  "id": "pa_016",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "The insurance company mailed me about a prior authorization request for {specialty} services. Can your office fill out their form?",
+  "register": "casual",
+  "notes": "specialty pa",
+  "pool": "heldout"
+ },
+ {
+  "id": "pa_017",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "My insurer has requested completion of a prior authorization questionnaire for {specialty} services. Please complete and return it to the plan.",
+  "register": "formal",
+  "notes": "formal specialty pa",
+  "pool": "heldout"
+ },
+ {
+  "id": "pa_018",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Insurance sent prior authorization paperwork for the {specialty} visit. Please complete and submit.",
+  "register": "terse",
+  "notes": "terse specialty pa",
+  "pool": "shared"
+ },
+ {
+  "id": "pa_019",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "There was a letter from my insurance in the mailbox saying they need some forms filled out before they will approve the {specialty} appointment - a prior authorization, they called it - and honestly I do not understand any of it, so I am hoping your office knows what to do with these things.",
+  "register": "rambling",
+  "notes": "rambling specialty pa",
+  "pool": "shared"
+ },
+ {
+  "id": "pa_020",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "I get letter from insurance about the {specialty} prior authorization. They want form from doctor office. Please do this for me.",
+  "register": "esl",
+  "notes": "esl specialty pa",
+  "pool": "shared"
+ },
+ {
+  "id": "pa_021",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "hi the insurance sent a letter about needing prior authorization paperwork for the {specialty} appointment can your office take care of that form",
+  "register": "voice_to_text",
+  "notes": "transcribed specialty pa",
+  "pool": "heldout"
+ },
+ {
+  "id": "pa_022",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Your office scheduled the {specialty} appointment but never told me the insurance needs a prior authorization. Now my visit is on hold. Fix this please.",
+  "register": "frustrated",
+  "notes": "frustrated specialty pa",
+  "pool": "shared"
+ },
+ {
+  "id": "pa_023",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Dear Medical Records Staff, The insurance company has asked for a prior authorization form concerning my {specialty} appointment. I would be grateful if your office would kindly complete it. Thank you kindly.",
+  "register": "elderly_formal",
+  "notes": "elderly formal specialty pa",
+  "pool": "shared"
+ },
+ {
+  "id": "pa_024",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Is the prior authorization for my {med} {dose} done yet? The pharmacy says nothing has come through.",
+  "register": "casual",
+  "notes": "status follow up",
+  "pool": "heldout"
+ },
+ {
+  "id": "pa_025",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "I am following up regarding the status of the prior authorization submitted for {med} {dose}. Please advise of any updates from the plan.",
+  "register": "formal",
+  "notes": "formal follow up",
+  "pool": "shared"
+ },
+ {
+  "id": "pa_026",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Any update on the prior authorization for my {med} {dose}? Pharmacy still waiting.",
+  "register": "terse",
+  "notes": "terse follow up",
+  "pool": "heldout"
+ },
+ {
+  "id": "pa_027",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "I checked with the pharmacy again this morning and they still have not received the prior authorization for my {med} {dose}, and it has been over a week now, so could somebody please find out what is holding it up with the insurance.",
+  "register": "rambling",
+  "notes": "rambling follow up",
+  "pool": "shared"
+ },
+ {
+  "id": "pa_028",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "One week ago I ask about the prior authorization for {med} {dose}. Pharmacy say still nothing. Please check what is happening.",
+  "register": "esl",
+  "notes": "esl follow up",
+  "pool": "heldout"
+ },
+ {
+  "id": "pa_029",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "just checking in on the prior authorization for my {med} {dose} the pharmacy says its still not there can somebody look into it thanks",
+  "register": "voice_to_text",
+  "notes": "transcribed follow up",
+  "pool": "shared"
+ }
+]

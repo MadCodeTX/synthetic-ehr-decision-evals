@@ -1,0 +1,791 @@
+{
+ "ambiguity": {
+  "chart": {
+   "no_valid_option": 500
+  },
+  "inbox": {
+   "no_valid_option": 500
+  },
+  "results": {
+   "no_valid_option": 500
+  }
+ },
+ "bank_version": "v2",
+ "by_workflow": {
+  "chart": 18762,
+  "inbox": 14877,
+  "results": 20974
+ },
+ "by_workflow_stratum_split": {
+  "chart": {
+   "authority_conflict_comment_vs_registration": {
+    "dev": 769,
+    "holdout": 194,
+    "total": 963
+   },
+   "compound_traps": {
+    "dev": 802,
+    "holdout": 185,
+    "total": 987
+   },
+   "conflicting_dob_vs_id": {
+    "dev": 953,
+    "holdout": 243,
+    "total": 1196
+   },
+   "duplicate_name_explicit_id": {
+    "dev": 917,
+    "holdout": 215,
+    "total": 1132
+   },
+   "identifier_not_in_candidates": {
+    "dev": 709,
+    "holdout": 155,
+    "total": 864
+   },
+   "injection_in_chart_text": {
+    "dev": 646,
+    "holdout": 162,
+    "total": 808
+   },
+   "leading_zero_id": {
+    "dev": 768,
+    "holdout": 200,
+    "total": 968
+   },
+   "many_candidates": {
+    "dev": 764,
+    "holdout": 200,
+    "total": 964
+   },
+   "missing_id_ambiguous": {
+    "dev": 808,
+    "holdout": 220,
+    "total": 1028
+   },
+   "missing_id_two_details_unique": {
+    "dev": 1182,
+    "holdout": 300,
+    "total": 1482
+   },
+   "mrn_format_variants": {
+    "dev": 648,
+    "holdout": 153,
+    "total": 801
+   },
+   "multi_field_required": {
+    "dev": 1045,
+    "holdout": 258,
+    "total": 1303
+   },
+   "name_format_variants": {
+    "dev": 642,
+    "holdout": 154,
+    "total": 796
+   },
+   "name_typo_id_dob_match": {
+    "dev": 1197,
+    "holdout": 311,
+    "total": 1508
+   },
+   "near_miss_transposed_dob": {
+    "dev": 723,
+    "holdout": 168,
+    "total": 891
+   },
+   "no_safe_option": {
+    "dev": 400,
+    "holdout": 100,
+    "total": 500
+   },
+   "ordinary_exact_id": {
+    "dev": 841,
+    "holdout": 217,
+    "total": 1058
+   },
+   "swapped_identifier": {
+    "dev": 804,
+    "holdout": 209,
+    "total": 1013
+   },
+   "two_edit_name": {
+    "holdout": 500,
+    "total": 500
+   }
+  },
+  "inbox": {
+   "ambiguous_text": {
+    "dev": 564,
+    "holdout": 149,
+    "total": 713
+   },
+   "authority_conflict": {
+    "dev": 743,
+    "holdout": 200,
+    "total": 943
+   },
+   "compound_traps": {
+    "dev": 777,
+    "holdout": 196,
+    "total": 973
+   },
+   "concise_vs_expanded": {
+    "dev": 560,
+    "holdout": 140,
+    "total": 700
+   },
+   "identity_mismatch": {
+    "dev": 996,
+    "holdout": 254,
+    "total": 1250
+   },
+   "injection_in_message": {
+    "dev": 576,
+    "holdout": 150,
+    "total": 726
+   },
+   "long_thread": {
+    "dev": 765,
+    "holdout": 174,
+    "total": 939
+   },
+   "missing_context": {
+    "dev": 540,
+    "holdout": 154,
+    "total": 694
+   },
+   "multi_intent": {
+    "dev": 658,
+    "holdout": 159,
+    "total": 817
+   },
+   "no_safe_option": {
+    "dev": 400,
+    "holdout": 100,
+    "total": 500
+   },
+   "ordinary_single_intent": {
+    "dev": 1394,
+    "holdout": 361,
+    "total": 1755
+   },
+   "proxy_status_variants": {
+    "dev": 650,
+    "holdout": 155,
+    "total": 805
+   },
+   "roi_recipient_match": {
+    "dev": 631,
+    "holdout": 164,
+    "total": 795
+   },
+   "same_destination_multi_request": {
+    "holdout": 500,
+    "total": 500
+   },
+   "symptom_mention_exception": {
+    "dev": 882,
+    "holdout": 213,
+    "total": 1095
+   },
+   "synonym_destinations": {
+    "dev": 599,
+    "holdout": 170,
+    "total": 769
+   },
+   "unauthorized_proxy": {
+    "dev": 720,
+    "holdout": 183,
+    "total": 903
+   }
+  },
+  "results": {
+   "authority_conflict_source_vs_comment": {
+    "dev": 911,
+    "holdout": 240,
+    "total": 1151
+   },
+   "banner_case_variants": {
+    "dev": 556,
+    "holdout": 139,
+    "total": 695
+   },
+   "compound_traps": {
+    "dev": 808,
+    "holdout": 183,
+    "total": 991
+   },
+   "conflicting_severity": {
+    "dev": 1178,
+    "holdout": 286,
+    "total": 1464
+   },
+   "critical_flagged_complete": {
+    "dev": 726,
+    "holdout": 172,
+    "total": 898
+   },
+   "critical_word_in_comment_only": {
+    "dev": 1009,
+    "holdout": 285,
+    "total": 1294
+   },
+   "decoy_destination_bait": {
+    "dev": 815,
+    "holdout": 186,
+    "total": 1001
+   },
+   "incomplete_identity": {
+    "dev": 1179,
+    "holdout": 306,
+    "total": 1485
+   },
+   "injection_in_result_text": {
+    "dev": 804,
+    "holdout": 196,
+    "total": 1000
+   },
+   "long_prior_results": {
+    "dev": 790,
+    "holdout": 206,
+    "total": 996
+   },
+   "missing_severity": {
+    "dev": 980,
+    "holdout": 268,
+    "total": 1248
+   },
+   "multi_field": {
+    "dev": 1098,
+    "holdout": 256,
+    "total": 1354
+   },
+   "narrative_note": {
+    "dev": 998,
+    "holdout": 260,
+    "total": 1258
+   },
+   "no_safe_option": {
+    "dev": 400,
+    "holdout": 100,
+    "total": 500
+   },
+   "out_of_policy_item_type": {
+    "dev": 898,
+    "holdout": 200,
+    "total": 1098
+   },
+   "routine_discrete_complete": {
+    "dev": 1027,
+    "holdout": 249,
+    "total": 1276
+   },
+   "rule_order_collisions": {
+    "holdout": 500,
+    "total": 500
+   },
+   "specialty_type_routing": {
+    "dev": 1206,
+    "holdout": 299,
+    "total": 1505
+   },
+   "status_routing": {
+    "dev": 1005,
+    "holdout": 255,
+    "total": 1260
+   }
+  }
+ },
+ "chart_n2_share": 0.1042,
+ "counterfactual": {
+  "chart": {
+   "bases": 1964,
+   "label_flips": 1777,
+   "siblings": 3837
+  },
+  "inbox": {
+   "bases": 1800,
+   "label_flips": 1594,
+   "siblings": 2973
+  },
+  "results": {
+   "bases": 2215,
+   "label_flips": 2009,
+   "siblings": 4404
+  }
+ },
+ "dropped_duplicates": 0,
+ "hr_share": {
+  "chart": 0.4579,
+  "inbox": 0.391,
+  "results": 0.4384
+ },
+ "hr_share_per_stratum": {
+  "chart|authority_conflict_comment_vs_registration": [
+   0.514,
+   963
+  ],
+  "chart|compound_traps": [
+   0.5299,
+   987
+  ],
+  "chart|conflicting_dob_vs_id": [
+   0.694,
+   1196
+  ],
+  "chart|duplicate_name_explicit_id": [
+   0.1661,
+   1132
+  ],
+  "chart|identifier_not_in_candidates": [
+   0.7199,
+   864
+  ],
+  "chart|injection_in_chart_text": [
+   0.5087,
+   808
+  ],
+  "chart|leading_zero_id": [
+   0.4804,
+   968
+  ],
+  "chart|many_candidates": [
+   0.473,
+   964
+  ],
+  "chart|missing_id_ambiguous": [
+   0.5914,
+   1028
+  ],
+  "chart|missing_id_two_details_unique": [
+   0.17,
+   1482
+  ],
+  "chart|mrn_format_variants": [
+   0.5918,
+   801
+  ],
+  "chart|multi_field_required": [
+   0.3323,
+   1303
+  ],
+  "chart|name_format_variants": [
+   0.4799,
+   796
+  ],
+  "chart|name_typo_id_dob_match": [
+   0.4403,
+   1508
+  ],
+  "chart|near_miss_transposed_dob": [
+   0.4815,
+   891
+  ],
+  "chart|ordinary_exact_id": [
+   0.1645,
+   1058
+  ],
+  "chart|swapped_identifier": [
+   0.6979,
+   1013
+  ],
+  "chart|two_edit_name": [
+   0.5,
+   500
+  ],
+  "inbox|ambiguous_text": [
+   0.7013,
+   713
+  ],
+  "inbox|authority_conflict": [
+   0.2481,
+   943
+  ],
+  "inbox|compound_traps": [
+   0.3001,
+   973
+  ],
+  "inbox|concise_vs_expanded": [
+   0.5486,
+   700
+  ],
+  "inbox|identity_mismatch": [
+   0.6512,
+   1250
+  ],
+  "inbox|injection_in_message": [
+   0.4215,
+   726
+  ],
+  "inbox|long_thread": [
+   0.2492,
+   939
+  ],
+  "inbox|missing_context": [
+   0.6326,
+   694
+  ],
+  "inbox|multi_intent": [
+   0.437,
+   817
+  ],
+  "inbox|ordinary_single_intent": [
+   0.0513,
+   1755
+  ],
+  "inbox|proxy_status_variants": [
+   0.5839,
+   805
+  ],
+  "inbox|roi_recipient_match": [
+   0.5006,
+   795
+  ],
+  "inbox|same_destination_multi_request": [
+   0.5,
+   500
+  ],
+  "inbox|symptom_mention_exception": [
+   0.0365,
+   1095
+  ],
+  "inbox|synonym_destinations": [
+   0.3628,
+   769
+  ],
+  "inbox|unauthorized_proxy": [
+   0.5925,
+   903
+  ],
+  "results|authority_conflict_source_vs_comment": [
+   0.3884,
+   1151
+  ],
+  "results|banner_case_variants": [
+   0.5237,
+   695
+  ],
+  "results|compound_traps": [
+   0.4359,
+   991
+  ],
+  "results|conflicting_severity": [
+   0.834,
+   1464
+  ],
+  "results|critical_flagged_complete": [
+   0.0713,
+   898
+  ],
+  "results|critical_word_in_comment_only": [
+   0.3385,
+   1294
+  ],
+  "results|decoy_destination_bait": [
+   0.1588,
+   1001
+  ],
+  "results|incomplete_identity": [
+   0.8579,
+   1485
+  ],
+  "results|injection_in_result_text": [
+   0.508,
+   1000
+  ],
+  "results|long_prior_results": [
+   0.4307,
+   996
+  ],
+  "results|missing_severity": [
+   0.8542,
+   1248
+  ],
+  "results|multi_field": [
+   0.2843,
+   1354
+  ],
+  "results|narrative_note": [
+   0.1622,
+   1258
+  ],
+  "results|out_of_policy_item_type": [
+   0.8579,
+   1098
+  ],
+  "results|routine_discrete_complete": [
+   0.1567,
+   1276
+  ],
+  "results|rule_order_collisions": [
+   0.374,
+   500
+  ],
+  "results|specialty_type_routing": [
+   0.1435,
+   1505
+  ],
+  "results|status_routing": [
+   0.3484,
+   1260
+  ]
+ },
+ "label_basis": {
+  "chart": {
+   "chart_rule_1_mrn_match": 6654,
+   "chart_rule_1a_mrn_not_found": 2109,
+   "chart_rule_1b_mrn_dob_conflict": 2634,
+   "chart_rule_1c_mrn_name_conflict": 1336,
+   "chart_rule_2_not_unique": 2784,
+   "chart_rule_2_unique_details": 3245
+  },
+  "inbox": {
+   "inbox_rule_1_symptom": 2054,
+   "inbox_rule_2_identity": 906,
+   "inbox_rule_3_proxy": 1768,
+   "inbox_rule_4_no_request": 602,
+   "inbox_rule_5_multi_intent": 1547,
+   "inbox_rule_6_incomplete": 1299,
+   "inbox_rule_7_destination": 6701
+  },
+  "results": {
+   "results_rule_1_item_type": 980,
+   "results_rule_2_identity": 2677,
+   "results_rule_3a_missing_flag": 2741,
+   "results_rule_3b_flag_conflict": 2002,
+   "results_rule_4_critical": 2855,
+   "results_rule_5a_missing_status": 1075,
+   "results_rule_5b_cosign": 971,
+   "results_rule_5c_corrected": 298,
+   "results_rule_5d_preliminary": 920,
+   "results_rule_6_outside": 509,
+   "results_rule_7_type": 5946
+  }
+ },
+ "label_confidence": {
+  "chart": {
+   "gold": 18762
+  },
+  "inbox": {
+   "gold": 14877
+  },
+  "results": {
+   "gold": 20974
+  }
+ },
+ "label_distribution": {
+  "chart": {
+   "<candidate chart>": 9899,
+   "needs_human_review": 8863
+  },
+  "inbox": {
+   "billing": 492,
+   "care_coordination": 348,
+   "critical_results": 300,
+   "forms_letters": 489,
+   "interpreter_services": 335,
+   "medical_records_roi": 896,
+   "needs_human_review": 6122,
+   "nurse_triage": 2054,
+   "outside_records": 177,
+   "patient_calls": 417,
+   "patient_relations": 335,
+   "portal_support": 350,
+   "prior_auth": 373,
+   "referrals": 422,
+   "result_notes": 249,
+   "results": 235,
+   "rx_requests": 595,
+   "scheduling": 502,
+   "staff_messages": 186
+  },
+  "results": {
+   "cardiology_results": 769,
+   "corrected_results": 298,
+   "cosign_pending": 971,
+   "critical_results": 2855,
+   "imaging_results": 801,
+   "microbiology_review": 746,
+   "needs_human_review": 9475,
+   "outside_results": 509,
+   "pathology_review": 742,
+   "preliminary_results": 920,
+   "result_notes": 1428,
+   "results": 1460
+  }
+ },
+ "nonabstain_share": {
+  "chart": {
+   "all_generated": 0.5276,
+   "excluding_ambiguity_set": 0.5421
+  },
+  "inbox": {
+   "all_generated": 0.5885,
+   "excluding_ambiguity_set": 0.609
+  },
+  "results": {
+   "all_generated": 0.5483,
+   "excluding_ambiguity_set": 0.5616
+  }
+ },
+ "perturbations": {
+  "chart": {
+   "abstain_available": {
+    "False": 3062,
+    "True": 15700
+   },
+   "authority_conflict": {
+    "False": 13053,
+    "True": 5709
+   },
+   "decision_shape": {
+    "multi_field": 1348,
+    "single_step": 17414
+   },
+   "distractors": {
+    "False": 8752,
+    "True": 10010
+   },
+   "evidence_style": {
+    "concise": 6103,
+    "expanded": 6087,
+    "noisy": 6572
+   },
+   "field_condition": {
+    "conflicting": 5294,
+    "missing": 5807,
+    "near_miss": 4324,
+    "ordinary": 3337
+   },
+   "injection": {
+    "False": 12490,
+    "True": 6272
+   },
+   "n_options": {
+    "16": 5453,
+    "2": 1955,
+    "4": 6942,
+    "8": 4412
+   },
+   "option_order": {
+    "canonical": 9323,
+    "shuffled": 9439
+   },
+   "synonyms": {
+    "False": 9355,
+    "True": 9407
+   }
+  },
+  "inbox": {
+   "abstain_available": {
+    "False": 3465,
+    "True": 11412
+   },
+   "authority_conflict": {
+    "False": 10135,
+    "True": 4742
+   },
+   "decision_shape": {
+    "multi_field": 1597,
+    "single_step": 13280
+   },
+   "distractors": {
+    "False": 6715,
+    "True": 8162
+   },
+   "evidence_style": {
+    "concise": 4847,
+    "expanded": 4953,
+    "noisy": 5077
+   },
+   "field_condition": {
+    "conflicting": 3426,
+    "missing": 1450,
+    "near_miss": 1853,
+    "ordinary": 8148
+   },
+   "injection": {
+    "False": 9742,
+    "True": 5135
+   },
+   "n_options": {
+    "16": 3771,
+    "2": 3223,
+    "4": 4252,
+    "8": 3631
+   },
+   "option_order": {
+    "canonical": 7523,
+    "shuffled": 7354
+   },
+   "synonyms": {
+    "False": 6871,
+    "True": 8006
+   }
+  },
+  "results": {
+   "abstain_available": {
+    "False": 4593,
+    "True": 16381
+   },
+   "authority_conflict": {
+    "False": 14481,
+    "True": 6493
+   },
+   "decision_shape": {
+    "multi_field": 1441,
+    "single_step": 19533
+   },
+   "distractors": {
+    "False": 10288,
+    "True": 10686
+   },
+   "evidence_style": {
+    "concise": 6828,
+    "expanded": 6805,
+    "noisy": 7341
+   },
+   "field_condition": {
+    "conflicting": 2927,
+    "missing": 5494,
+    "near_miss": 1946,
+    "ordinary": 10607
+   },
+   "injection": {
+    "False": 13954,
+    "True": 7020
+   },
+   "n_options": {
+    "16": 5232,
+    "2": 4591,
+    "4": 5842,
+    "8": 5309
+   },
+   "option_order": {
+    "canonical": 10496,
+    "shuffled": 10478
+   },
+   "synonyms": {
+    "False": 10464,
+    "True": 10510
+   }
+  }
+ },
+ "repeat_panel": {
+  "chart": {
+   "nonabstain": 20,
+   "total": 40
+  },
+  "inbox": {
+   "nonabstain": 20,
+   "total": 40
+  },
+  "results": {
+   "nonabstain": 20,
+   "total": 40
+  }
+ },
+ "scale": 1.0,
+ "seed": 20260924,
+ "total_cases": 54613
+}

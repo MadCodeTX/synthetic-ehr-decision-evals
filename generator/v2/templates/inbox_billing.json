@@ -1,0 +1,414 @@
+[
+ {
+  "id": "bill_000",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "Hi, I got a statement for ${amount} from my {pdate} visit and I do not understand the charge. Can someone please look at it with me?",
+  "register": "casual",
+  "notes": "one request, statement question",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_001",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "I am writing regarding a charge on my account of ${amount} from {pdate}. I believe my plan processed it incorrectly and ask that it be reviewed.",
+  "register": "formal",
+  "notes": "formal dispute",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_002",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "Billed ${amount} for the {pdate} visit. Please explain or correct.",
+  "register": "terse",
+  "notes": "terse dispute",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_003",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "Hello, I hope you can help me, I received a statement for ${amount} about my visit on {pdate} and when I called my insurance they told me something different, so now I do not know who is right, and I would appreciate it if your office could check on this for me.",
+  "register": "rambling",
+  "notes": "rambling insurance mismatch",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_004",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "Hello, my bill for ${amount} from the visit on {pdate} I do not understand. I think insurance pay this. Please check for me. Thank you.",
+  "register": "esl",
+  "notes": "esl statement question",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_005",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "hi im asking about my bill the statement for ${amount} came for {pdate} but i already paid part of it i think can you check my account please",
+  "register": "voice_to_text",
+  "notes": "transcribed partial payment",
+  "pool": "heldout"
+ },
+ {
+  "id": "bill_006",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "Once again there is a ${amount} charge on my account from {pdate} even though I was told it was covered. Please fix this.",
+  "register": "frustrated",
+  "notes": "frustrated coverage dispute",
+  "pool": "heldout"
+ },
+ {
+  "id": "bill_007",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "Dear Billing Office, Would you kindly explain my balance of ${amount} for the appointment of {pdate}? I do not recall agreeing to this amount. Thank you kindly.",
+  "register": "elderly_formal",
+  "notes": "elderly formal explanation",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_008",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "Can I set up a payment plan for my ${amount} balance? I can do small monthly payments.",
+  "register": "casual",
+  "notes": "payment plan",
+  "pool": "heldout"
+ },
+ {
+  "id": "bill_009",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [],
+  "text": "I would like to arrange a payment plan for the outstanding balance on my account. Please advise on available options.",
+  "register": "formal",
+  "notes": "formal payment schedule",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_010",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "Payment plan needed. Balance ${amount}. Monthly if possible.",
+  "register": "terse",
+  "notes": "terse payment plan",
+  "pool": "heldout"
+ },
+ {
+  "id": "bill_011",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "Money is very tight right now with everything going on, and I saw my balance of ${amount} from the {pdate} appointment, so I was wondering if maybe I could pay a little bit each month instead of all at once, that would really help me out a lot.",
+  "register": "rambling",
+  "notes": "rambling installment request",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_012",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "My balance is ${amount} from my visit on {pdate}. I cannot pay all today. Can I pay small every month? Please tell me how.",
+  "register": "esl",
+  "notes": "esl installment request",
+  "pool": "heldout"
+ },
+ {
+  "id": "bill_013",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "hey so about my balance of ${amount} from {pdate} is there any way to do payments instead of one big amount thanks",
+  "register": "voice_to_text",
+  "notes": "transcribed installment request",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_014",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "I have asked twice already about a payment plan for this ${amount} and nobody gets back to me. I need an answer this week.",
+  "register": "frustrated",
+  "notes": "frustrated follow up",
+  "pool": "heldout"
+ },
+ {
+  "id": "bill_015",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "Dear Sir or Madam, I am unable to pay my balance of ${amount} at this time, and I would be grateful for the opportunity to remit payment in smaller monthly portions. Respectfully yours.",
+  "register": "elderly_formal",
+  "notes": "elderly formal installments",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_016",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "My insurance paid their part but I was still billed ${amount} for the {pdate} appointment. Did something go through wrong?",
+  "register": "casual",
+  "notes": "casual claim question",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_017",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Please verify whether a duplicate claim was submitted for my {pdate} visit, as I was billed twice on my most recent statement.",
+  "register": "formal",
+  "notes": "formal duplicate claim",
+  "pool": "heldout"
+ },
+ {
+  "id": "bill_018",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "Billed twice, ${amount}, for {pdate}. Duplicate? Please check.",
+  "register": "terse",
+  "notes": "terse duplicate",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_019",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "I was going through my mail from the clinic and the hospital and whatnot, and I noticed the ${amount} from my {pdate} visit shows up on two different statements, which seems odd to me, so could somebody double check whether it was billed two times by mistake.",
+  "register": "rambling",
+  "notes": "rambling duplicate",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_020",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "My bill shows the ${amount} from {pdate} two times. I think it is a mistake. Please fix.",
+  "register": "esl",
+  "notes": "esl duplicate",
+  "pool": "heldout"
+ },
+ {
+  "id": "bill_021",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "so my bill shows the same ${amount} two times for my {pdate} visit one of them has to be wrong right can you look into it",
+  "register": "voice_to_text",
+  "notes": "transcribed duplicate",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_022",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "You billed me ${amount} twice for the same {pdate} appointment. This keeps happening and I am done paying for paperwork errors.",
+  "register": "frustrated",
+  "notes": "frustrated duplicate",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_023",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "Dear Billing Department, I was billed the sum of ${amount} for my visit of {pdate} on more than one statement. Might someone kindly look into whether it was charged twice? With thanks.",
+  "register": "elderly_formal",
+  "notes": "elderly formal duplicate",
+  "pool": "heldout"
+ },
+ {
+  "id": "bill_024",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "Is there financial assistance for my balance of ${amount} from {pdate}? Money is really tight since I lost hours at work.",
+  "register": "casual",
+  "notes": "financial assistance",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_025",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "I am writing to inquire whether a financial assistance or charity care application is available for my balance of ${amount} from the {pdate} encounter.",
+  "register": "formal",
+  "notes": "formal assistance inquiry",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_026",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "Payment plan or help for my balance of ${amount} from {pdate}? Please send application.",
+  "register": "terse",
+  "notes": "terse assistance",
+  "pool": "heldout"
+ },
+ {
+  "id": "bill_027",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "My daughter mentioned that hospitals sometimes have programs that help with the bills, and since I am still carrying my balance of ${amount} from the {pdate} visit and things are tight, I thought I would ask if there is any kind of assistance or discount program I could apply for.",
+  "register": "rambling",
+  "notes": "rambling assistance",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_028",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "My balance is ${amount} from {pdate}. Please send form for help. Thank you.",
+  "register": "esl",
+  "notes": "esl assistance",
+  "pool": "shared"
+ },
+ {
+  "id": "bill_029",
+  "kind": "inbox_request",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "hi yes i heard there might be a program to help with my balance of ${amount} from {pdate} if so could you send me the paperwork please",
+  "register": "voice_to_text",
+  "notes": "transcribed assistance",
+  "pool": "shared"
+ }
+]

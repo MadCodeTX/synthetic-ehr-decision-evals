@@ -1,0 +1,675 @@
+[
+ {
+  "id": "thr_000",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "(older message) Could you renew my {med} {dose}? I was down to my last week.",
+  "register": "casual",
+  "notes": "old refill request",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_001",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "(older message) Please move my appointment on {fdate}; mornings do not work for me.",
+  "register": "formal",
+  "notes": "old reschedule",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_002",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) Thanks for sorting the payment plan out so quickly.",
+  "register": "casual",
+  "notes": "old thanks",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_003",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "weekday"
+  ],
+  "text": "(older message) I was dizzy last {weekday} but it passed after a nap, just wanted to note it.",
+  "register": "rambling",
+  "notes": "old resolved symptom mention",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_004",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "(older message) Refill {med} {dose} to the usual pharmacy please.",
+  "register": "terse",
+  "notes": "old terse refill",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_005",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) got my records fine now thank you",
+  "register": "esl",
+  "notes": "old records thanks",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_006",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "(older message) could someone call me about my {pdate} visit i missed the call",
+  "register": "voice_to_text",
+  "notes": "old callback ask",
+  "pool": "heldout"
+ },
+ {
+  "id": "thr_007",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) The portal was down all weekend for me, it seems fine now.",
+  "register": "casual",
+  "notes": "old portal complaint",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_008",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "(older message) I am still waiting to hear about the {specialty} referral from last month.",
+  "register": "formal",
+  "notes": "old referral wait",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_009",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "(older message) The ${amount} charge got fixed after your office called me. Thank you.",
+  "register": "elderly_formal",
+  "notes": "old billing thanks",
+  "pool": "heldout"
+ },
+ {
+  "id": "thr_010",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "(older message) My {med} {dose} renewal went through, pharmacy has it. All set.",
+  "register": "casual",
+  "notes": "old resolved refill",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_011",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "(older message) Change my {fdate} visit to the afternoon when you get a chance.",
+  "register": "terse",
+  "notes": "old scheduling ask",
+  "pool": "heldout"
+ },
+ {
+  "id": "thr_012",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) My cough kept me up that whole week, it is much quieter now.",
+  "register": "rambling",
+  "notes": "old cough mention",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_013",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "language"
+  ],
+  "text": "(older message) Interpreter in {language} worked out well at the last visit.",
+  "register": "casual",
+  "notes": "old interpreter feedback",
+  "pool": "heldout"
+ },
+ {
+  "id": "thr_014",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) Following up on the thing from my last note.",
+  "register": "terse",
+  "notes": "old vague follow up",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_015",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "(older message) Please renew {med} {dose}; I am traveling at the end of the month and want extra on hand.",
+  "register": "formal",
+  "notes": "old travel refill",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_016",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) The rash cleared up on its own, no follow-up needed.",
+  "register": "casual",
+  "notes": "old rash mention",
+  "pool": "heldout"
+ },
+ {
+  "id": "thr_017",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "(older message) Can you send my chart printout from {pdate}? My new doctor asked for it.",
+  "register": "esl",
+  "notes": "old records ask",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_018",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) fever came and went that week, all back to normal now",
+  "register": "voice_to_text",
+  "notes": "old fever mention",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_019",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) I appreciate the callback about my labwork last week.",
+  "register": "elderly_formal",
+  "notes": "old callback thanks",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_020",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "(older message) Third ask on the {med} {dose} renewal that month. It eventually came through.",
+  "register": "frustrated",
+  "notes": "old frustrated refill",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_021",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "(older message) Kindly note my appointment on {fdate} was moved per the front desk.",
+  "register": "formal",
+  "notes": "old confirmed move",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_022",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) The portal kicked me out again yesterday but I got in eventually.",
+  "register": "casual",
+  "notes": "old portal flake",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_023",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "weekday"
+  ],
+  "text": "(older message) Since {weekday} last month my knees have been noisy, went away on its own.",
+  "register": "rambling",
+  "notes": "old resolved knees",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_024",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "(older message) Refill request: {med} {dose}, the standing one.",
+  "register": "terse",
+  "notes": "old standing refill",
+  "pool": "heldout"
+ },
+ {
+  "id": "thr_025",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) Thank you for the work note, my employer accepted it.",
+  "register": "casual",
+  "notes": "old note thanks",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_026",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "test"
+  ],
+  "text": "(older message) Any news on the {test} report from earlier in the month?",
+  "register": "formal",
+  "notes": "old test ask",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_027",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) twisted my ankle that week, it was fine after rest",
+  "register": "voice_to_text",
+  "notes": "old ankle mention",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_028",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) I was not feeling well during that stretch of visits.",
+  "register": "rambling",
+  "notes": "old unwell mention",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_029",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "dose",
+   "med",
+   "pharmacy"
+  ],
+  "text": "(older message) Renewal for {med} {dose} please, {pharmacy} as always.",
+  "register": "casual",
+  "notes": "old refill with pharmacy",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_030",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) No issues this week. Everything is fine.",
+  "register": "terse",
+  "notes": "old all fine",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_031",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "(older message) Please explain the ${amount} on my account when someone has time.",
+  "register": "formal",
+  "notes": "old billing ask",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_032",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) The nurse who called me back was lovely, please tell her supervisor.",
+  "register": "elderly_formal",
+  "notes": "old compliment",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_033",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "(older message) send my {med} {dose} refill over when you can thanks",
+  "register": "voice_to_text",
+  "notes": "old refill transcribed",
+  "pool": "heldout"
+ },
+ {
+  "id": "thr_034",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) I asked for a ride to my visit and the service came through. Very grateful.",
+  "register": "esl",
+  "notes": "old ride thanks",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_035",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) Any update on my records going to the specialist?",
+  "register": "terse",
+  "notes": "old records update ask",
+  "pool": "heldout"
+ },
+ {
+  "id": "thr_036",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "(older message) Please cancel my {fdate} appointment; I was sick that week.",
+  "register": "casual",
+  "notes": "old cancel with illness",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_037",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "(older message) Grateful for the swift processing of my {specialty} referral. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "old referral thanks",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_038",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) The swelling in my hands settled down after the dose change.",
+  "register": "rambling",
+  "notes": "old swelling mention",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_039",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "(older message) {med} {dose} refill, same pharmacy, same quantity.",
+  "register": "terse",
+  "notes": "old refill same qty",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_040",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) I need my FMLA paperwork finished; my employer keeps asking.",
+  "register": "frustrated",
+  "notes": "old FMLA push",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_041",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "(older message) My daughter says thank you for the records from {pdate}.",
+  "register": "esl",
+  "notes": "old records thanks",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_042",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) My headache is gone now, but it was bad for a few days there.",
+  "register": "casual",
+  "notes": "old headache mention",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_043",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "(older message) Could my {fdate} visit be moved to a morning slot?",
+  "register": "formal",
+  "notes": "old morning ask",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_044",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) The interpreter never came to that visit and it was very hard.",
+  "register": "frustrated",
+  "notes": "old interpreter complaint",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_045",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "(older message) Renew my {med} {dose} before my trip, please and thank you.",
+  "register": "casual",
+  "notes": "old trip refill",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_046",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) thanks for unlocking my portal account last week",
+  "register": "voice_to_text",
+  "notes": "old unlock thanks",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_047",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) The front office resolved the duplicate charge. Thank you kindly.",
+  "register": "elderly_formal",
+  "notes": "old duplicate resolved",
+  "pool": "heldout"
+ },
+ {
+  "id": "thr_048",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "(older message) Renewal needed for {med} {dose}; I had about a week left when I wrote this.",
+  "register": "formal",
+  "notes": "old timed refill",
+  "pool": "heldout"
+ },
+ {
+  "id": "thr_049",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) I fell getting out of the van that one day, all checked out fine at the visit.",
+  "register": "rambling",
+  "notes": "old fall mention resolved",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_050",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) Refill the usual, thanks.",
+  "register": "terse",
+  "notes": "old terse usual",
+  "pool": "heldout"
+ },
+ {
+  "id": "thr_051",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) My cough from that month eventually cleared up completely.",
+  "register": "casual",
+  "notes": "old cough resolved",
+  "pool": "heldout"
+ },
+ {
+  "id": "thr_052",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "test"
+  ],
+  "text": "(older message) Please phone me about the {test} report when convenient.",
+  "register": "formal",
+  "notes": "old phone ask",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_053",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) Everything went fine at the specialist, thank you for the referral.",
+  "register": "esl",
+  "notes": "old specialist thanks",
+  "pool": "heldout"
+ },
+ {
+  "id": "thr_054",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) my stomach was off that week but its normal now",
+  "register": "voice_to_text",
+  "notes": "old stomach mention",
+  "pool": "heldout"
+ },
+ {
+  "id": "thr_055",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) The staff were kind to my mother at check-in. Please pass along our thanks.",
+  "register": "elderly_formal",
+  "notes": "old family thanks",
+  "pool": "heldout"
+ },
+ {
+  "id": "thr_056",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "(older message) I asked twice about the {med} {dose} and it finally arrived.",
+  "register": "frustrated",
+  "notes": "old resolved frustration",
+  "pool": "heldout"
+ },
+ {
+  "id": "thr_057",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) Quick thanks for the quick turnaround on my records request.",
+  "register": "casual",
+  "notes": "old quick thanks",
+  "pool": "heldout"
+ },
+ {
+  "id": "thr_058",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "(older message) Please reschedule my {fdate} visit; I had a work conflict.",
+  "register": "formal",
+  "notes": "old work conflict",
+  "pool": "shared"
+ },
+ {
+  "id": "thr_059",
+  "kind": "thread_message",
+  "sender": "patient",
+  "slots": [],
+  "text": "(older message) my ankle was twisted that week its fine now no worries",
+  "register": "voice_to_text",
+  "notes": "old ankle resolved",
+  "pool": "shared"
+ }
+]

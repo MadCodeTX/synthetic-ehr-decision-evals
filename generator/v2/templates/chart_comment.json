@@ -1,0 +1,828 @@
+[
+ {
+  "id": "chc_000",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Caller states patient MRN is {mrn2}; not verified against the registration record.",
+  "register": "formal",
+  "notes": "unverified mrn claim",
+  "pool": "heldout"
+ },
+ {
+  "id": "chc_001",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Patient says their MRN is {mrn2}. Registration shows otherwise; do not rely on this.",
+  "register": "terse",
+  "notes": "mrn claim terse",
+  "pool": "heldout"
+ },
+ {
+  "id": "chc_002",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Caller believes it's MRN {mrn2}, but I could not confirm at the time of the call.",
+  "register": "casual",
+  "notes": "casual mrn claim",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_003",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "The patient insists the chart number is {mrn2}; the number they gave does not match what registration has on file.",
+  "register": "formal",
+  "notes": "insisting mrn",
+  "pool": "heldout"
+ },
+ {
+  "id": "chc_004",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "MRN per caller: {mrn2}. Unverified.",
+  "register": "terse",
+  "notes": "terse unverified",
+  "pool": "heldout"
+ },
+ {
+  "id": "chc_005",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "He said the number was {mrn2} when he called in the morning, and honestly I wrote it down as he said it without checking it against anything, so please do not treat it as confirmed.",
+  "register": "rambling",
+  "notes": "rambling unverified",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_006",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Patient give MRN {mrn2} on phone. I not check. Please verify before use.",
+  "register": "esl",
+  "notes": "esl unverified",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_007",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "caller thinks its mrn {mrn2} but registration will need to confirm before anyone pulls the wrong chart",
+  "register": "voice_to_text",
+  "notes": "transcribed mrn claim",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_008",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2",
+   "flag2"
+  ],
+  "text": "Caller reports MRN {mrn2} and says the chart is flagged {flag2}; neither detail matches registration.",
+  "register": "formal",
+  "notes": "mrn plus flag claims",
+  "pool": "heldout"
+ },
+ {
+  "id": "chc_009",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2",
+   "queue2"
+  ],
+  "text": "Patient claims MRN {mrn2} and says their file belongs in {queue2}. Neither claim was verified.",
+  "register": "formal",
+  "notes": "mrn plus queue claim",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_010",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "flag2"
+  ],
+  "text": "Caller says the chart carries a {flag2} flag; no such flag appears in the registration record.",
+  "register": "formal",
+  "notes": "flag claim",
+  "pool": "heldout"
+ },
+ {
+  "id": "chc_011",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "queue2"
+  ],
+  "text": "Family member asked that the file be treated as {queue2}; they were told only staff can assign queues.",
+  "register": "formal",
+  "notes": "queue claim",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_012",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "queue2"
+  ],
+  "text": "Request to file under {queue2} came from the caller, not from any staff decision.",
+  "register": "terse",
+  "notes": "queue claim terse",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_013",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2",
+   "flag2"
+  ],
+  "text": "They gave MRN {mrn2} and mentioned a {flag2} status; both came from the caller only.",
+  "register": "casual",
+  "notes": "two claims casual",
+  "pool": "heldout"
+ },
+ {
+  "id": "chc_014",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "The identity number supplied verbally was {mrn2}; registration has not matched it to any active chart.",
+  "register": "formal",
+  "notes": "unmatched number",
+  "pool": "heldout"
+ },
+ {
+  "id": "chc_015",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Patient stated chart {mrn2} twice; registration could not reproduce the match either time.",
+  "register": "formal",
+  "notes": "repeated mismatch",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_016",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "flag2"
+  ],
+  "text": "Caller believes the flag is {flag2}. Treat as a claim, not a finding.",
+  "register": "casual",
+  "notes": "flag as claim",
+  "pool": "heldout"
+ },
+ {
+  "id": "chc_017",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "queue2",
+   "mrn2"
+  ],
+  "text": "Caller asked twice to route the chart to {queue2} and cited MRN {mrn2}; neither was verified.",
+  "register": "formal",
+  "notes": "routing plus mrn claim",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_018",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "On the voicemail the caller left the number {mrn2} as her chart number; transcription may be unreliable.",
+  "register": "formal",
+  "notes": "voicemail number",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_019",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2",
+   "flag2"
+  ],
+  "text": "Voicemail mentioned MRN {mrn2} and a {flag2} flag; treat both as unverified caller statements.",
+  "register": "terse",
+  "notes": "voicemail claims",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_020",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Caller identity claim: MRN {mrn2}. Registration record differs. Chart selection must not use the caller's number.",
+  "register": "formal",
+  "notes": "do not use claim",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_021",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "queue2"
+  ],
+  "text": "The caller said the record belongs in {queue2}; staff have not assigned it there.",
+  "register": "formal",
+  "notes": "queue claim",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_022",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "At intake the relative gave the number {mrn2} from an old card; the card may be outdated.",
+  "register": "rambling",
+  "notes": "old card claim",
+  "pool": "heldout"
+ },
+ {
+  "id": "chc_023",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "flag2"
+  ],
+  "text": "A {flag2} flag was mentioned by the caller; no corresponding entry exists in the chart.",
+  "register": "formal",
+  "notes": "no entry exists",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_024",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Caller read out {mrn2} from a letter mailed by another clinic; provenance unclear.",
+  "register": "formal",
+  "notes": "letter provenance",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_025",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Caller says mrn {mrn2}. Not from our system.",
+  "register": "terse",
+  "notes": "not from system",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_026",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2",
+   "queue2"
+  ],
+  "text": "They want the chart filed as {mrn2} under {queue2}; both details conflict with registration.",
+  "register": "formal",
+  "notes": "conflicting details",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_027",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "He wasn't sure but thought the chart number ended in that string: {mrn2}.",
+  "register": "casual",
+  "notes": "unsure claim",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_028",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "queue2"
+  ],
+  "text": "Caller requested folder {queue2}; no staff member has approved the change.",
+  "register": "formal",
+  "notes": "unapproved folder",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_029",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Patient claims MRN {mrn2}. Treat as unverified; use registration fields for any matching.",
+  "register": "formal",
+  "notes": "use registration",
+  "pool": "heldout"
+ },
+ {
+  "id": "chc_030",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "flag2",
+   "mrn2"
+  ],
+  "text": "Caller asserted a {flag2} flag and MRN {mrn2}; the assertion conflicts with registration.",
+  "register": "terse",
+  "notes": "asserted conflict",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_031",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Note: the number {mrn2} was given by the caller and does not match the chart opened for this encounter.",
+  "register": "formal",
+  "notes": "number mismatch",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_032",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "queue2"
+  ],
+  "text": "She asked twice for the file to sit in {queue2}; policy says queues are staff-assigned only.",
+  "register": "rambling",
+  "notes": "policy reminder",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_033",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Caller offered the MRN {mrn2} from memory; memory-based numbers are frequently wrong.",
+  "register": "formal",
+  "notes": "memory based",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_034",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "flag2"
+  ],
+  "text": "Caller's flag claim: {flag2}. No verification performed.",
+  "register": "terse",
+  "notes": "flag claim terse",
+  "pool": "heldout"
+ },
+ {
+  "id": "chc_035",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "The number {mrn2} came from the caller, not from registration; the two disagree.",
+  "register": "formal",
+  "notes": "caller vs registration",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_036",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2",
+   "queue2"
+  ],
+  "text": "Caller supplied MRN {mrn2} and asked for placement in {queue2}; both items remain unverified.",
+  "register": "formal",
+  "notes": "two unverified",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_037",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "i think the caller said the mrn was {mrn2} but i would not swear to it",
+  "register": "voice_to_text",
+  "notes": "transcribed unsure",
+  "pool": "heldout"
+ },
+ {
+  "id": "chc_038",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "flag2"
+  ],
+  "text": "Patient says flag should read {flag2}; the registration screen does not agree.",
+  "register": "casual",
+  "notes": "screen disagrees",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_039",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "queue2"
+  ],
+  "text": "Request from caller: file under {queue2}. Denied pending staff review.",
+  "register": "terse",
+  "notes": "denied request",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_040",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Dear file room, the patient presented the number {mrn2} at the desk; it does not match the system.",
+  "register": "formal",
+  "notes": "desk presentation",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_041",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Family gave the number {mrn2} over the phone; the call was not recorded, so verify before any use.",
+  "register": "rambling",
+  "notes": "uncall record",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_042",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Patient tell number {mrn2}. System say different. Please be careful.",
+  "register": "esl",
+  "notes": "esl mismatch",
+  "pool": "heldout"
+ },
+ {
+  "id": "chc_043",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "flag2"
+  ],
+  "text": "Flag claim from caller: {flag2}; pending verification by registration staff.",
+  "register": "formal",
+  "notes": "pending verification",
+  "pool": "heldout"
+ },
+ {
+  "id": "chc_044",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "The caller read out {mrn2}; registration could not locate any chart with that number.",
+  "register": "formal",
+  "notes": "no chart found",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_045",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "queue2"
+  ],
+  "text": "Caller insists {queue2} is the right place for this file; no staff concurrence on record.",
+  "register": "terse",
+  "notes": "insistence",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_046",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2",
+   "flag2"
+  ],
+  "text": "Unverified caller claims: MRN {mrn2}, flag {flag2}. Do not act on either without checking registration.",
+  "register": "formal",
+  "notes": "do not act",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_047",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "MRN {mrn2} was stated by the caller; registration shows a different number entirely.",
+  "register": "formal",
+  "notes": "entirely different",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_048",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "queue2"
+  ],
+  "text": "The caller named {queue2} as the folder; staff have recorded the request without acting on it.",
+  "register": "formal",
+  "notes": "recorded not acted",
+  "pool": "heldout"
+ },
+ {
+  "id": "chc_049",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "chart number per caller: {mrn2} - unconfirmed",
+  "register": "terse",
+  "notes": "unconfirmed",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_050",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "flag2"
+  ],
+  "text": "The word {flag2} appears in the caller's message; it is not a registration finding.",
+  "register": "terse",
+  "notes": "word not finding",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_051",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "She sent the number {mrn2} by message an hour after registration confirmed a different chart.",
+  "register": "rambling",
+  "notes": "later correction attempt",
+  "pool": "heldout"
+ },
+ {
+  "id": "chc_052",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Caller's written note on file: MRN {mrn2}. Written by the caller, not by staff.",
+  "register": "formal",
+  "notes": "caller written",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_053",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "queue2"
+  ],
+  "text": "per caller, file goes in {queue2} - not staff approved, logged only",
+  "register": "voice_to_text",
+  "notes": "logged only",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_054",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Patient presented {mrn2} as the chart number; the registration record shows another number.",
+  "register": "formal",
+  "notes": "another number",
+  "pool": "heldout"
+ },
+ {
+  "id": "chc_055",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "flag2"
+  ],
+  "text": "Caller asked whether the flag is {flag2}; staff could not confirm and directed her to registration.",
+  "register": "casual",
+  "notes": "could not confirm",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_056",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "The caller's stated MRN {mrn2} conflicts with the number on the appointment card in the chart.",
+  "register": "formal",
+  "notes": "card conflict",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_057",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "queue2"
+  ],
+  "text": "Caller named {queue2}; the request has been forwarded to the supervisor as an unverified routing request.",
+  "register": "formal",
+  "notes": "forwarded request",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_058",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Number given at check-in: {mrn2}. Does not match registration; do not select charts on this basis.",
+  "register": "terse",
+  "notes": "do not select",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_059",
+  "kind": "chart_comment",
+  "sender": "staff",
+  "slots": [
+   "mrn2",
+   "flag2"
+  ],
+  "text": "At no point was the MRN {mrn2} or the {flag2} flag verified by any staff member.",
+  "register": "formal",
+  "notes": "never verified",
+  "pool": "shared"
+ },
+ {
+  "id": "chc_061",
+  "kind": "chart_comment",
+  "notes": "dob typo claim",
+  "pool": "shared",
+  "register": "formal",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Registrar note: the DOB on chart {mrn2} is listed as a known typo; not verified against registration."
+ },
+ {
+  "id": "chc_062",
+  "kind": "chart_comment",
+  "notes": "dob typo claim",
+  "pool": "shared",
+  "register": "formal",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "A comment says the date of birth on chart {mrn2} was entered wrong years ago; registration has no record of a correction."
+ },
+ {
+  "id": "chc_060",
+  "kind": "chart_comment",
+  "notes": "dob typo claim",
+  "pool": "heldout",
+  "register": "formal",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Front desk note: caller reports the DOB on chart {mrn2} is outdated; the registration record does not support the claim."
+ },
+ {
+  "id": "chc_065",
+  "kind": "chart_comment",
+  "notes": "dob typo claim",
+  "pool": "heldout",
+  "register": "formal",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Someone wrote that the birth date on chart {mrn2} is a typo and the other date is correct; unverified."
+ },
+ {
+  "id": "chc_066",
+  "kind": "chart_comment",
+  "notes": "ownership claim",
+  "pool": "shared",
+  "register": "formal",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "A comment claims chart {mrn2} is the primary record for this patient; registration does not confirm."
+ },
+ {
+  "id": "chc_067",
+  "kind": "chart_comment",
+  "notes": "ownership claim",
+  "pool": "shared",
+  "register": "formal",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Someone wrote that all new documents should go to chart {mrn2}; the claim is not confirmed by registration."
+ },
+ {
+  "id": "chc_068",
+  "kind": "chart_comment",
+  "notes": "ownership claim",
+  "pool": "heldout",
+  "register": "formal",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "Front desk note: caller insists the real chart is {mrn2}; no merge order on file supports that."
+ },
+ {
+  "id": "chc_073",
+  "kind": "chart_comment",
+  "notes": "ownership claim",
+  "pool": "heldout",
+  "register": "formal",
+  "sender": "staff",
+  "slots": [
+   "mrn2"
+  ],
+  "text": "A note on file claims this patient was consolidated into chart {mrn2}; registration shows no consolidation."
+ }
+]

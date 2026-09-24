@@ -1,0 +1,460 @@
+#!/usr/bin/env python3
+"""Self-check for bank_v2.jsonl (PLAN-BANK-V2 P5). Pure stdlib, /usr/bin/python3 3.9.
+
+Usage: python3 selfcheck_v2.py [--bank PATH] [--templates DIR] [--validation PATH] [--plan PATH]
+
+Starts from the v1 selfcheck (fixtures/selfcheck.py): schema, perturbation, family,
+leak, balance and independent-evidence checks are kept. v2 differences:
+- ids are <wf>-v2-<nnnnnn> / <wf>-v2f-<nnnnnn>; no seed cases;
+- key order adds bank_version, template_ids, label_confidence;
+- n_options may be 12 in the many_candidates stratum (Appendix A.2);
+- new checks: template_ids exist in the library, holdout cases use only heldout
+  template ids (T7), label_confidence matches out/template_validation.jsonl.
+
+Selfcheck NEVER reads expected/label_basis/generator facts before deriving; it
+re-derives chart and results labels from rendered evidence only (T4) and
+cross-checks inbox structure. Comparison happens only at the end.
+"""
+import argparse
+import collections
+import datetime
+import json
+import os
+import re
+import sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+REPO = os.path.dirname(os.path.dirname(HERE))
+HR = "needs_human_review"
+PERT_ENUM = {
+    "n_options": {2, 4, 8, 12, 16}, "abstain_available": {True, False}, "evidence_style": {"concise", "expanded", "noisy"},
+    "field_condition": {"ordinary", "near_miss", "missing", "conflicting"}, "distractors": {True, False},
+    "option_order": {"canonical", "shuffled"}, "synonyms": {True, False}, "authority_conflict": {True, False},
+    "injection": {True, False}, "decision_shape": {"single_step", "multi_field"}}
+KEYS = ["case_id", "workflow", "bank_version", "split", "stratum", "family_id", "counterfactual_of", "changed_fact",
+        "perturbations", "evidence", "options", "expected", "label_basis", "ambiguity", "repeat_panel",
+        "template_ids", "label_confidence", "injection_target"]
+LEAKS = ["expected", "label_basis", "stratum", "counterfactual", "ground truth", "ground_truth", "correct answer",
+         "near_miss", "near miss", "field_condition", "_rule_", "abstain", "irreducible", "historical_seed",
+         "no_valid_option", "label:", "decision_shape"]
+ID_RE = re.compile(r"^(chart|inbox|results)-v2f?-\d{6}$")
+PHASES = ("pilot", "broad", "counterfactual", "repeat", "load_c1", "load_c2", "load_c4", "load_c8", "holdout")
+MON = {"Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4, "May": 5, "Jun": 6, "Jul": 7, "Aug": 8, "Sep": 9, "Oct": 10,
+       "Nov": 11, "Dec": 12}
+LOAD_REP = {"load_c1": 10, "load_c2": 11, "load_c4": 12, "load_c8": 13}
+
+errors = []
+
+
+def err(msg):
+    errors.append(msg)
+
+
+# ---------------- independent evidence-only verifiers (verbatim from v1) ----------------
+def parse_date(s):
+    s = s.strip()
+    m = re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})", s)
+    if m:
+        return datetime.date(int(m[1]), int(m[2]), int(m[3]))
+    m = re.fullmatch(r"(\d{2})/(\d{2})/(\d{4})", s)
+    if m:
+        return datetime.date(int(m[3]), int(m[1]), int(m[2]))
+    m = re.fullmatch(r"([A-Z][a-z]{2}) (\d{1,2}), (\d{4})", s)
+    if m:
+        return datetime.date(int(m[3]), MON[m[1]], int(m[2]))
+    raise ValueError("bad date %r" % s)
+
+
+def lev(a, b):
+    prev = list(range(len(b) + 1))
+    for i, ca in enumerate(a, 1):
+        cur = [i]
+        for j, cb in enumerate(b, 1):
+            cur.append(min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (ca != cb)))
+        prev = cur
+    return prev[-1]
+
+
+def nm(s):
+    s = s.strip()
+    if "," in s:
+        a, b = s.split(",", 1)
+        s = b.strip() + " " + a.strip()
+    t = [re.sub(r"[^a-z]", "", x.lower()) for x in s.split()]
+    t = [x for x in t if len(x) > 1]
+    return t[0], t[-1]
+
+
+def name_ok(a, b):
+    (fa, la), (fb, lb) = nm(a), nm(b)
+    return lev(fa, fb) + lev(la, lb) <= 1
+
+
+def pick(d, *names):
+    for n in names:
+        if n in d:
+            return d[n]
+    return None
+
+
+def verify_chart(ev):
+    r = ev["request"]
+    req = {"name": pick(r, "patient_name", "name_on_request"), "mrn": pick(r, "mrn", "medical_record_number"),
+           "dob": pick(r, "dob", "date_of_birth"), "phone": pick(r, "phone", "callback_number"),
+           "email": pick(r, "email", "email_address"), "address": pick(r, "address", "home_address")}
+    cands = []
+    for c in ev["candidates"]:
+        cands.append({"id": c["chart_id"], "name": pick(c, "name", "registered_name"), "dob": pick(c, "dob", "date_of_birth"),
+                      "phone": pick(c, "phone", "phone_on_file"), "email": pick(c, "email", "email_on_file"),
+                      "address": pick(c, "address", "address_on_file")})
+
+    def norm(k, v):
+        if v is None:
+            return None
+        if k == "dob":
+            return parse_date(v)
+        if k == "phone":
+            return re.sub(r"\D", "", v)
+        return re.sub(r"[^a-z0-9]", "", v.lower())
+    if req["mrn"] is not None:
+        m = [c for c in cands if c["id"] == req["mrn"].strip()]
+        if not m:
+            return HR
+        c = m[0]
+        if req["dob"] is not None and norm("dob", req["dob"]) != norm("dob", c["dob"]):
+            return HR
+        if not name_ok(req["name"], c["name"]):
+            return HR
+        return c["id"]
+    sup = [k for k in ("dob", "phone", "email", "address") if req[k] is not None]
+    q = [c for c in cands if name_ok(req["name"], c["name"]) and len(sup) >= 2
+         and all(norm(k, req[k]) == norm(k, c[k]) for k in sup)]
+    return q[0]["id"] if len(q) == 1 else HR
+
+
+def res_cat(item_type):
+    t = item_type.lower()
+    if t in ("patient call", "refill request", "appointment request", "staff message", "billing notice",
+             "order requiring signature", "portal message"):
+        return None
+    if "imag" in t or "radiology" in t:
+        return "imaging_results"
+    if "patholog" in t or "cytology" in t:
+        return "pathology_review"
+    if "micro" in t or "culture" in t:
+        return "microbiology_review"
+    if "cardio" in t or "ecg" in t or "echo" in t:
+        return "cardiology_results"
+    if "note" in t or "comment" in t:
+        return "result_notes"
+    if "lab" in t:
+        return "results"
+    raise ValueError("unknown item_type %r" % item_type)
+
+
+def verify_results(ev):
+    n = ev["notification"]
+    cat = res_cat(n["item_type"])
+    if cat is None or n.get("message_class") != "Result":
+        return HR
+    p = n.get("patient", {})
+    if not all(isinstance(p.get(k), str) and p.get(k).strip() for k in ("name", "mrn", "dob")):
+        return HR
+    sf = n.get("source_flag")
+    if sf is None:
+        return HR
+    b = n.get("notification_banner")
+    if b is not None and b.lower() != sf.lower():
+        return HR
+    if sf.lower() == "critical":
+        return "critical_results"
+    st = n.get("result_status")
+    if st is None:
+        return HR
+    if n["requires_cosign"] is True:
+        return "cosign_pending"
+    if st in ("Corrected", "Amended"):
+        return "corrected_results"
+    if st == "Preliminary":
+        return "preliminary_results"
+    if n["performing_org_type"] == "outside":
+        return "outside_results"
+    return cat
+
+
+def inbox_structural(ev, expected, basis):
+    """Cross-check the structured preconditions for rule-based labels."""
+    frm = ev["item"]["from"]
+    if basis == "inbox_rule_3_proxy":
+        if frm["role"] != "family member":
+            return "proxy rule but sender not family member"
+        if any(p["name"] == frm["name"] and p["status"] == "active" for p in ev.get("account_flags", {}).get("proxy_access", [])):
+            return "proxy rule but active entry present"
+    if frm["role"] == "family member" and basis not in ("inbox_rule_1_symptom", "inbox_rule_2_identity", "inbox_rule_3_proxy"):
+        if not any(p["name"] == frm["name"] and p["status"] == "active" for p in ev.get("account_flags", {}).get("proxy_access", [])):
+            return "family sender without active proxy but label not proxy/earlier rule"
+    if basis == "inbox_rule_2_identity":
+        rp, lc = ev["regarding_patient"], ev["linked_chart"]
+        if parse_date(rp["dob"]) == parse_date(lc["dob"]) and name_ok(rp["name"], lc["name"]):
+            return "identity rule but regarding_patient matches"
+    elif "regarding_patient" in ev and basis != "inbox_rule_1_symptom":
+        rp, lc = ev["regarding_patient"], ev["linked_chart"]
+        if not (parse_date(rp["dob"]) == parse_date(lc["dob"]) and name_ok(rp["name"], lc["name"])):
+            return "regarding_patient mismatch but identity rule did not fire"
+    ri = ev.get("result_info")
+    if ri and basis == "inbox_rule_7_destination":
+        want = "critical_results" if ri["source_severity_flag"] == "critical" else ("results" if ri["result_type"] == "discrete" else "result_notes")
+        if want != expected:
+            return "result_info implies %s" % want
+    return None
+
+
+# ---------------- template library / validation (v2 new) ----------------
+def load_library(templates_dir, validation_path):
+    """tid -> (kind, pool); tid -> status. Neutral kinds are not status-bearing."""
+    lib, status = {}, {}
+    if os.path.isdir(templates_dir):
+        for fn in sorted(os.listdir(templates_dir)):
+            if not fn.endswith(".json"):
+                continue
+            with open(os.path.join(templates_dir, fn), encoding="utf-8") as fh:
+                arr = json.load(fh)
+            if not isinstance(arr, list):
+                continue
+            for t in arr:
+                if t.get("id"):
+                    lib[t["id"]] = (t.get("kind"), t.get("pool") or "shared")
+    if os.path.exists(validation_path):
+        with open(validation_path, encoding="utf-8") as fh:
+            for line in fh:
+                try:
+                    rec = json.loads(line)
+                except ValueError:
+                    continue
+                if rec.get("id"):
+                    status[rec["id"]] = rec.get("status")
+    return lib, status
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--bank", default=os.path.join(REPO, "data", "v2", "bank_v2.jsonl"))
+    ap.add_argument("--templates", default=os.path.join(HERE, "templates"))
+    ap.add_argument("--validation", default=os.path.join(HERE, "validation", "template_validation.jsonl"))
+    ap.add_argument("--plan", default=None, help="optional shard plan json to verify")
+    a = ap.parse_args()
+    policy = json.load(open(os.path.join(REPO, "policy", "policy.json")))
+    assert policy["policy_version"] == "v1"
+    for wf in ("chart", "inbox", "results"):
+        w = policy["workflows"][wf]
+        for k in ("policy_text", "destinations", "abstain_key", "rules"):
+            if k not in w:
+                err("policy %s missing %s" % (wf, k))
+        if w["abstain_key"] != HR:
+            err("policy abstain_key")
+        if len(w["policy_text"]) > 1300:
+            err("policy_text too long %s" % wf)
+    if len(policy["workflows"]["inbox"]["destinations"]) - 1 < 16 or len(policy["workflows"]["results"]["destinations"]) - 1 < 16:
+        err("catalog < 16")
+
+    lib, vstatus = load_library(a.templates, a.validation)
+    label_bearing_kinds = set()
+    if os.path.isdir(a.templates):
+        for fn in os.listdir(a.templates):
+            if fn.endswith(".json"):
+                arr = json.load(open(os.path.join(a.templates, fn), encoding="utf-8"))
+                if isinstance(arr, list):
+                    for t in arr:
+                        if t.get("kind") not in ("chart_comment", "results_comment", "thread_message", "injection"):
+                            label_bearing_kinds.add(t.get("kind"))
+
+    cases = [json.loads(l) for l in open(a.bank, encoding="utf-8")]
+    byid = {}
+    for c in cases:
+        if list(c.keys()) != KEYS:
+            err("%s key order/schema %s" % (c.get("case_id"), list(c.keys())))
+            continue
+        if c["case_id"] in byid:
+            err("duplicate id %s" % c["case_id"])
+        byid[c["case_id"]] = c
+    stratum_counts = collections.Counter()
+    ver = collections.Counter()
+    t7_bad = tmpl_bad = conf_bad = 0
+    for c in cases:
+        cid, wf, P = c["case_id"], c["workflow"], c["perturbations"]
+        if wf not in ("chart", "inbox", "results"):
+            err("%s workflow" % cid)
+        if not ID_RE.match(cid) or not cid.startswith(wf + "-"):
+            err("%s id format" % cid)
+        if c["bank_version"] != "v2":
+            err("%s bank_version" % cid)
+        if c["split"] not in ("dev", "holdout"):
+            err("%s split" % cid)
+        for k, allowed in PERT_ENUM.items():
+            if k not in P:
+                err("%s missing pert %s" % (cid, k))
+            elif P[k] not in allowed:
+                err("%s pert %s=%r" % (cid, k, P[k]))
+        if P.get("n_options") == 12 and c["stratum"] != "many_candidates":
+            err("%s n_options 12 outside many_candidates" % cid)
+        if P.get("n_options") != len(c["options"]):
+            err("%s n_options %s != %d" % (cid, P.get("n_options"), len(c["options"])))
+        if P["abstain_available"] != (HR in c["options"]):
+            err("%s abstain_available mismatch" % cid)
+        amb = c["ambiguity"]
+        if amb is not None and amb.get("kind") not in ("irreducible", "no_valid_option", "adjudication_disagreement"):
+            err("%s ambiguity kind" % cid)
+        if amb and amb["kind"] == "no_valid_option":
+            if c["expected"] != HR or HR in c["options"] or P["abstain_available"]:
+                err("%s no_valid_option shape" % cid)
+        else:
+            if c["expected"] not in c["options"]:
+                err("%s expected not in options" % cid)
+            if not P["abstain_available"] and c["expected"] == HR:
+                err("%s abstain label without abstain option" % cid)
+        if not isinstance(c["repeat_panel"], bool):
+            err("%s repeat_panel type" % cid)
+        stratum_counts[(wf, c["stratum"])] += 1
+        if c["counterfactual_of"] is None:
+            if c["changed_fact"] is not None:
+                err("%s base has changed_fact" % cid)
+        else:
+            p = byid.get(c["counterfactual_of"])
+            if p is None:
+                err("%s parent missing" % cid)
+            else:
+                if p["counterfactual_of"] is not None or p["family_id"] != c["family_id"] or p["split"] != c["split"] or p["workflow"] != wf:
+                    err("%s parent relation" % cid)
+                if list(p["options"]) != list(c["options"]):
+                    err("%s sibling options differ from base" % cid)
+            if not (isinstance(c["changed_fact"], str) and c["changed_fact"].strip()) or ";" in c["changed_fact"]:
+                err("%s changed_fact must be exactly one description" % cid)
+        blob = json.dumps(c["evidence"], ensure_ascii=False).lower()
+        for L in LEAKS:
+            if L in blob:
+                err("%s leak %r" % (cid, L))
+        for k in c["options"]:
+            if any(x in c["options"][k].lower() for x in ("correct answer", "correct option", "expected", "(safe)")):
+                err("%s option description leak" % cid)
+        if not P["injection"] and c["injection_target"] is not None:
+            err("%s injection_target without injection perturbation" % cid)
+        # v2 template checks (T7 / template_ids / label_confidence)
+        for tid in c["template_ids"]:
+            if tid not in lib:
+                tmpl_bad += 1
+                err("%s template id %s not in library" % (cid, tid))
+            elif c["split"] == "holdout" and lib[tid][1] != "heldout":
+                t7_bad += 1
+                err("%s holdout uses non-heldout template %s" % (cid, tid))
+        want_conf = "gold"
+        for tid in c["template_ids"]:
+            if lib.get(tid, (None, None))[0] in label_bearing_kinds and vstatus.get(tid) == "silver":
+                want_conf = "silver"
+        if vstatus and c["label_confidence"] != want_conf:
+            conf_bad += 1
+            err("%s label_confidence %s != %s" % (cid, c["label_confidence"], want_conf))
+        # independent verification
+        if amb is None:
+            if wf == "chart":
+                got = verify_chart(c["evidence"])
+                ver[("chart", got == c["expected"])] += 1
+                if got != c["expected"]:
+                    err("%s chart verifier %s != %s" % (cid, got, c["expected"]))
+            elif wf == "results":
+                got = verify_results(c["evidence"])
+                ver[("results", got == c["expected"])] += 1
+                if got != c["expected"]:
+                    err("%s results verifier %s != %s" % (cid, got, c["expected"]))
+            else:
+                e = inbox_structural(c["evidence"], c["expected"], c["label_basis"])
+                ver[("inbox_structural", e is None)] += 1
+                if e:
+                    err("%s inbox structural: %s" % (cid, e))
+    for k, v in sorted(stratum_counts.items()):
+        if v < 500:
+            err("stratum %s has %d < 500" % (k, v))
+    # family / split checks
+    fam_split = {}
+    for c in cases:
+        s = fam_split.setdefault(c["family_id"], set())
+        s.add(c["split"])
+    if any(len(s) > 1 for s in fam_split.values()):
+        err("family split across dev/holdout")
+    per_wf = collections.Counter()
+    for c in cases:
+        per_wf[(c["workflow"], c["split"])] += 1
+    for wf in ("chart", "inbox", "results"):
+        h = per_wf[(wf, "holdout")] / (per_wf[(wf, "holdout")] + per_wf[(wf, "dev")])
+        if not 0.15 <= h <= 0.25:
+            err("holdout share %s %.3f" % (wf, h))
+        bases = set(c["counterfactual_of"] for c in cases if c["workflow"] == wf and c["counterfactual_of"]
+                    and not c["changed_fact"].startswith("presentation only"))
+        if len(bases) < 150:
+            err("%s counterfactual bases %d < 150" % (wf, len(bases)))
+        gen = [c for c in cases if c["workflow"] == wf]
+        irr = sum(1 for c in gen if c["ambiguity"] and c["ambiguity"]["kind"] == "irreducible")
+        if irr > 0.05 * len(gen):
+            err("irreducible > 5%% in %s" % wf)
+        lab = [c for c in gen if c["ambiguity"] is None]
+        na = sum(1 for c in lab if c["expected"] != HR) / len(lab)
+        if not 0.45 <= na <= 0.61:
+            err("%s non-abstain share %.3f outside target" % (wf, na))
+    rp = [c for c in cases if c["repeat_panel"]]
+    if len(rp) != 120 or any(c["split"] != "dev" for c in rp) or collections.Counter(c["workflow"] for c in rp) != {"chart": 40, "inbox": 40, "results": 40}:
+        err("repeat panel shape")
+    # optional plan verification (single shard; cross-shard invariants live in make_plans.py)
+    plan_summary = None
+    if a.plan:
+        plan = json.load(open(a.plan, encoding="utf-8"))
+        tr = plan["trials"]
+        plan_summary = {"plan_version": plan.get("plan_version"), "shard": plan.get("shard"), "trials": len(tr)}
+        if plan.get("plan_version") != "v2":
+            err("plan header version")
+        if len(tr) > 9500:
+            err("too many trials %d" % len(tr))
+        ids = [t["trial_id"] for t in tr]
+        if len(ids) != len(set(ids)):
+            err("dup trial ids")
+        ph = collections.Counter()
+        dev_primary = collections.Counter()
+        for t in tr:
+            c = byid.get(t["case_id"])
+            if c is None:
+                err("trial case missing %s" % t["trial_id"])
+                continue
+            if t["trial_id"] != "%s#%s#r%d" % (t["case_id"], t["phase"], t["rep"]):
+                err("trial id format %s" % t["trial_id"])
+            if t["phase"] not in PHASES:
+                err("trial phase %s" % t["trial_id"])
+            if sorted(t["arm_order"]) not in (["jev", "qwen"], ["jev"], ["qwen"]):
+                err("trial arm %s" % t["trial_id"])
+            ph[t["phase"]] += 1
+            if (t["phase"] == "holdout") != (c["split"] == "holdout"):
+                err("holdout leakage %s" % t["trial_id"])
+            if t["phase"] in ("pilot", "broad", "counterfactual"):
+                dev_primary[t["case_id"]] += 1
+                if t["rep"] != 0:
+                    err("primary rep %s" % t["trial_id"])
+            if t["phase"] == "counterfactual" and c["counterfactual_of"] is None:
+                err("base duplicated in counterfactual phase %s" % t["trial_id"])
+            if t["phase"] == "repeat" and (t["rep"] not in (1, 2, 3) or not c["repeat_panel"]):
+                err("repeat trial %s" % t["trial_id"])
+            if t["phase"].startswith("load_") and t["rep"] != LOAD_REP[t["phase"]]:
+                err("load rep %s" % t["trial_id"])
+        for cid, n in dev_primary.items():
+            if n != 1:
+                err("dev case %s has %d primary trials in shard" % (cid, n))
+        plan_summary["phases"] = dict(ph)
+    print(json.dumps({"cases": len(cases), "template_library": len(lib),
+                      "validation_statuses": len(vstatus),
+                      "independent_verification": {"%s:%s" % k: v for k, v in sorted(ver.items())},
+                      "t7_violations": t7_bad, "unknown_template_ids": tmpl_bad,
+                      "label_confidence_mismatches": conf_bad,
+                      "plan": plan_summary, "errors": len(errors)}, indent=1))
+    for e in errors[:60]:
+        print("ERROR", e)
+    sys.exit(1 if errors else 0)
+
+
+if __name__ == "__main__":
+    main()

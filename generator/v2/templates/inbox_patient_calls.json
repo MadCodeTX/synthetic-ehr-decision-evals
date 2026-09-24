@@ -1,0 +1,424 @@
+[
+ {
+  "id": "call_000",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "test",
+   "pdate"
+  ],
+  "text": "Could someone call me back about the {test} report released on {pdate}? I have a question about the wording.",
+  "register": "casual",
+  "notes": "callback about released report",
+  "pool": "shared"
+ },
+ {
+  "id": "call_001",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Please call me back about my {pdate} visit.",
+  "register": "terse",
+  "notes": "terse callback",
+  "pool": "shared"
+ },
+ {
+  "id": "call_002",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "I would appreciate it if someone could phone me regarding my appointment on {pdate}, at your earliest convenience.",
+  "register": "formal",
+  "notes": "formal callback request",
+  "pool": "shared"
+ },
+ {
+  "id": "call_003",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate",
+   "test"
+  ],
+  "text": "Hello, it is about my visit on {pdate} - they sent me home with a paper and I could not read half of it, and the {test} was mentioned on it somewhere and I have questions, not about the results so much as about what I am supposed to do next, and I never do well with the phone tree, so if a person could just call me back at a good time in the afternoon I would be so grateful.",
+  "register": "rambling",
+  "notes": "rambling callback, one request",
+  "pool": "shared"
+ },
+ {
+  "id": "call_004",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Please can you phone me? I have question about visit on {pdate}. Thank you.",
+  "register": "esl",
+  "notes": "esl callback",
+  "pool": "heldout"
+ },
+ {
+  "id": "call_005",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "hi please call me back about the {pdate} appointment papers",
+  "register": "voice_to_text",
+  "notes": "transcribed callback",
+  "pool": "shared"
+ },
+ {
+  "id": "call_006",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "I left two voicemails about my {pdate} visit and nobody will call me back. Please call me back this week.",
+  "register": "frustrated",
+  "notes": "frustrated callback",
+  "pool": "shared"
+ },
+ {
+  "id": "call_007",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Dear Office, I would be much obliged if a member of staff could phone me concerning my {pdate} appointment. I am at home most days. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "elderly formal callback",
+  "pool": "shared"
+ },
+ {
+  "id": "call_008",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Could someone give me a call about the after-visit summary from {pdate}? Some of it did not make sense to me.",
+  "register": "casual",
+  "notes": "paraphrase callback",
+  "pool": "heldout"
+ },
+ {
+  "id": "call_009",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "test",
+   "pdate"
+  ],
+  "text": "Could someone give me a call to talk through the {test} paperwork from {pdate}? Thanks.",
+  "register": "casual",
+  "notes": "callback to discuss paperwork",
+  "pool": "shared"
+ },
+ {
+  "id": "call_010",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "The instructions sheet from my {pdate} visit has me puzzled - could a nurse give me a call when free?",
+  "register": "casual",
+  "notes": "callback about instructions",
+  "pool": "shared"
+ },
+ {
+  "id": "call_011",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Please phone me to discuss the summary of my {pdate} consultation.",
+  "register": "formal",
+  "notes": "formal callback",
+  "pool": "shared"
+ },
+ {
+  "id": "call_012",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "call me back about my {pdate} visit please",
+  "register": "terse",
+  "notes": "telegraphic callback",
+  "pool": "shared"
+ },
+ {
+  "id": "call_013",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate",
+   "provider"
+  ],
+  "text": "I am writing, as we did not manage to cover everything when {provider} was rushing before the holiday. There were a few items on the printed sheet from {pdate} that I could not make out - my eyes are not what they were - and rather than guess, I would be grateful if the office could phone me at a quiet hour. I thank you warmly for your patience.",
+  "register": "elderly_formal",
+  "notes": "rambling elderly callback",
+  "pool": "shared"
+ },
+ {
+  "id": "call_014",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Hello, sorry my English is slow on writing. Please call me about my visit on {pdate}. I prefer telephone.",
+  "register": "esl",
+  "notes": "esl prefers phone",
+  "pool": "heldout"
+ },
+ {
+  "id": "call_015",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "please phone me about the {pdate} paperwork",
+  "register": "terse",
+  "notes": "terse callback",
+  "pool": "shared"
+ },
+ {
+  "id": "call_016",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Could someone phone me to walk me through the visit notes from {pdate}? Twenty minutes of your time would settle it.",
+  "register": "casual",
+  "notes": "callback to walk through notes",
+  "pool": "shared"
+ },
+ {
+  "id": "call_017",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "I should be grateful if the office could give me a call at your leisure regarding the matters arising from my {pdate} appointment. Yours faithfully.",
+  "register": "elderly_formal",
+  "notes": "elderly formal callback",
+  "pool": "shared"
+ },
+ {
+  "id": "call_018",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "call me back about my {pdate} summary",
+  "register": "terse",
+  "notes": "telegraphic",
+  "pool": "shared"
+ },
+ {
+  "id": "call_019",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "test",
+   "pdate"
+  ],
+  "text": "Hi! Just following up like the receptionist suggested - she said to message if I wanted to chat about the {test} from {pdate}. Please call me back, any weekday morning is great.",
+  "register": "casual",
+  "notes": "callback per receptionist advice",
+  "pool": "heldout"
+ },
+ {
+  "id": "call_020",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Good afternoon. Kindly have the nurse phone me; I wish to go over the paperwork given on {pdate}. Many thanks.",
+  "register": "elderly_formal",
+  "notes": "nurse callback request",
+  "pool": "shared"
+ },
+ {
+  "id": "call_021",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Got home and realized I still do not know what the plan from {pdate} was. Please call me back - email does not do it for me.",
+  "register": "frustrated",
+  "notes": "frustrated callback",
+  "pool": "shared"
+ },
+ {
+  "id": "call_022",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Please arrange for a member of your team to phone me concerning my recent consultation of {pdate}.",
+  "register": "formal",
+  "notes": "formal callback",
+  "pool": "shared"
+ },
+ {
+  "id": "call_023",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "um yes I would like someone to call me back about the visit thing on {pdate} I had a question I forget now what it was but if someone calls I will remember",
+  "register": "voice_to_text",
+  "notes": "transcribed callback",
+  "pool": "shared"
+ },
+ {
+  "id": "call_024",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "This is my third message asking someone to call me about the {pdate} visit. Please, someone, call me back.",
+  "register": "frustrated",
+  "notes": "frustrated third attempt",
+  "pool": "shared"
+ },
+ {
+  "id": "call_025",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Hello, please phone me in the evening if possible, about the doctor paper from {pdate}. In day I am at work and cannot answer. Thank you.",
+  "register": "esl",
+  "notes": "esl evening callback",
+  "pool": "shared"
+ },
+ {
+  "id": "call_026",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Could someone give me a call about the {pdate} follow-up sheet? A quick chat would really help me sort the calendar out.",
+  "register": "casual",
+  "notes": "casual callback paraphrase",
+  "pool": "shared"
+ },
+ {
+  "id": "call_027",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Request that a member of your team call me about my {pdate} visit to clarify the printed summary. Please schedule the return call before the week's end.",
+  "register": "formal",
+  "notes": "bureaucratic callback",
+  "pool": "shared"
+ },
+ {
+  "id": "call_028",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "yes hello please call me about the after visit paper from {pdate} because I left my reading glasses there of all things and cannot read it anyway",
+  "register": "voice_to_text",
+  "notes": "transcribed callback with detail",
+  "pool": "heldout"
+ },
+ {
+  "id": "call_029",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "test",
+   "pdate"
+  ],
+  "text": "I hope this finds the right person. After my {pdate} visit I was handed a summary mentioning the {test}, and my daughter read it to me over the phone, and between the two of us we made only partial sense of it - so what I really need is for someone from the office to phone me at their convenience and read me the important parts, or explain them, whichever is quicker. Thank you so very much for bearing with me.",
+  "register": "rambling",
+  "notes": "long rambling callback, one request",
+  "pool": "heldout"
+ },
+ {
+  "id": "call_030",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "pool": "shared",
+  "register": "casual",
+  "notes": "explicit callback request, easy for blind labeler",
+  "text": "Hello, I would like someone from your office to please call me back about my visit on {pdate}. Thank you for the help."
+ },
+ {
+  "id": "call_031",
+  "kind": "inbox_request",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "pool": "shared",
+  "notes": "heldout explicit callback request",
+  "text": "Could a member of your staff please phone me back before {fdate}? I would appreciate a call about my care.",
+  "register": "casual"
+ }
+]

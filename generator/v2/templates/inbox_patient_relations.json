@@ -1,0 +1,394 @@
+[
+ {
+  "id": "prel_000",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Hi, I want to file a complaint about how I was treated at the front desk on {pdate}. The whole exchange was disrespectful.",
+  "register": "casual",
+  "notes": "front desk complaint",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_001",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "I wish to lodge a formal complaint regarding my treatment at the registration desk on {pdate}. The conduct I experienced was unprofessional.",
+  "register": "formal",
+  "notes": "formal complaint",
+  "pool": "heldout"
+ },
+ {
+  "id": "prel_002",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Complaint: front desk treatment on {pdate}. Someone should review this.",
+  "register": "terse",
+  "notes": "terse complaint",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_003",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "I have been going back and forth on whether to say anything, but the way I was spoken to at check-in on {pdate} was honestly upsetting, and after thinking it over I decided to file a complaint so somebody in charge of patient experience hears about it.",
+  "register": "rambling",
+  "notes": "rambling complaint",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_004",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Hello, I want to make complaint about front desk staff on {pdate}. The talking was not respectful. Please somebody look at this.",
+  "register": "esl",
+  "notes": "esl complaint",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_005",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "so the check in experience on {pdate} was really bad the person at the desk talked down to me the whole time and i want to file a formal complaint about it",
+  "register": "voice_to_text",
+  "notes": "transcribed complaint",
+  "pool": "heldout"
+ },
+ {
+  "id": "prel_006",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Second complaint I am filing about {pdate}. Nobody responded to the first one and the behavior at the desk was unacceptable.",
+  "register": "frustrated",
+  "notes": "frustrated complaint",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_007",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Dear Patient Relations, I respectfully wish to lodge a complaint about the discourteous treatment at the front desk on {pdate}, which I found most upsetting. I would be grateful for your attention to this matter.",
+  "register": "elderly_formal",
+  "notes": "elderly formal complaint",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_008",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "I want to compliment the nurse who helped me on {pdate}. She was patient and explained everything twice without making me feel dumb.",
+  "register": "casual",
+  "notes": "compliment nurse",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_009",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Please convey my compliment to the nursing staff for their kindness and professionalism during my visit of {pdate}.",
+  "register": "formal",
+  "notes": "formal compliment",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_010",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Compliment: the nurse who saw me on {pdate} was excellent. Please pass it along.",
+  "register": "terse",
+  "notes": "terse compliment",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_011",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "I do not usually write these things but the young woman who took care of me on {pdate} went out of her way to make sure I understood everything before I left, and I wanted to send a compliment, because someone should know what a difference that made to my whole day.",
+  "register": "rambling",
+  "notes": "rambling compliment",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_012",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "The nurse on {pdate} was very good to me. She explain everything with patience. Please give her my compliment and tell her boss thank you.",
+  "register": "esl",
+  "notes": "esl compliment",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_013",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "just wanted to say the care team on {pdate} was great everyone was kind and took time to answer my questions please let them know i send a compliment",
+  "register": "voice_to_text",
+  "notes": "transcribed compliment",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_014",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate",
+   "provider"
+  ],
+  "text": "I want to compliment {provider} specifically. On {pdate} they actually sat down and listened to me, which almost never happens anymore.",
+  "register": "frustrated",
+  "notes": "compliment with edge",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_015",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Dear Patient Experience Office, I wish to offer my compliment to the staff, whose care on {pdate} was exemplary and who treated me with great courtesy. Thank you most sincerely.",
+  "register": "elderly_formal",
+  "notes": "elderly formal compliment",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_016",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "I want to file a complaint about the way my family was treated in the waiting room on {pdate}. We waited two hours past the appointment time with no update.",
+  "register": "casual",
+  "notes": "wait time complaint",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_017",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "I wish to lodge a complaint regarding the excessive wait on {pdate}, during which no information was provided for over two hours beyond the scheduled time.",
+  "register": "formal",
+  "notes": "formal wait complaint",
+  "pool": "heldout"
+ },
+ {
+  "id": "prel_018",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Long wait on {pdate}, nobody told us anything. I want to file a complaint.",
+  "register": "terse",
+  "notes": "terse wait complaint",
+  "pool": "heldout"
+ },
+ {
+  "id": "prel_019",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "We brought my father in for his visit on {pdate} and sat in that waiting room for hours past his time with not one person telling us what was going on, and when I finally asked the answer was basically a shrug, so I would like to make a complaint to patient relations about how that was handled.",
+  "register": "rambling",
+  "notes": "rambling wait complaint",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_020",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "On {pdate} we wait very long time and nobody say why. I want to make complaint about this. Please check.",
+  "register": "esl",
+  "notes": "esl wait complaint",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_021",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "waited more than two hours past my {pdate} appointment time without a single update i would like to file a complaint officially about it",
+  "register": "voice_to_text",
+  "notes": "transcribed wait complaint",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_022",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Third time your office has left me waiting hours past my slot, {pdate} being the latest. I am filing another complaint and I want a real response from a manager, not another form letter.",
+  "register": "frustrated",
+  "notes": "frustrated wait complaint",
+  "pool": "heldout"
+ },
+ {
+  "id": "prel_023",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Dear Sir or Madam, I wish to register a complaint that the waiting time at my appointment of {pdate} exceeded two hours with no explanation offered. Might it kindly be looked into by your office? Respectfully.",
+  "register": "elderly_formal",
+  "notes": "elderly formal wait complaint",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_024",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate",
+   "provider"
+  ],
+  "text": "I had a billing and scheduling mix-up on {pdate} and {provider} personally made sure it got sorted. Please accept my compliment and make sure their helpfulness is noted somewhere.",
+  "register": "casual",
+  "notes": "compliment provider",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_025",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Please convey my compliment to the staff member who resolved my records confusion on {pdate} with notable patience and courtesy.",
+  "register": "formal",
+  "notes": "formal recognition",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_026",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Compliment for the good service on {pdate} sorting out my paperwork mess. Please note it.",
+  "register": "terse",
+  "notes": "terse recognition",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_027",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "There was a mix-up with my paperwork that was honestly my own fault, but the person who helped me on {pdate} fixed it without making me feel bad about it, so please take this as the compliment it is - people should hear when things go right and not only when they go wrong.",
+  "register": "rambling",
+  "notes": "rambling recognition",
+  "pool": "shared"
+ },
+ {
+  "id": "prel_028",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Staff person on {pdate} help me fix my paper problem very kind. Please take my compliment and say thank you to them for me.",
+  "register": "esl",
+  "notes": "esl recognition",
+  "pool": "heldout"
+ },
+ {
+  "id": "prel_029",
+  "kind": "inbox_request",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "the person who sorted out my paperwork mix up on {pdate} was wonderful please accept this compliment and make sure somebody there knows i said so",
+  "register": "voice_to_text",
+  "notes": "transcribed recognition",
+  "pool": "shared"
+ }
+]

@@ -1,0 +1,588 @@
+[
+ {
+  "id": "multi_000",
+  "kind": "inbox_multi_intent",
+  "dest": "rx_requests",
+  "dest2": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy",
+   "fdate"
+  ],
+  "text": "Hi, two things: can you renew my {med} {dose} to {pharmacy}? And can we move my appointment on {fdate}?",
+  "register": "casual",
+  "notes": "refill plus reschedule",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_001",
+  "kind": "inbox_multi_intent",
+  "dest": "billing",
+  "dest2": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "I have two matters: the ${amount} charge on my account from {pdate} that I do not understand. And a request for a copy of my records from the same visit.",
+  "register": "formal",
+  "notes": "billing plus records",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_002",
+  "kind": "inbox_multi_intent",
+  "dest": "rx_requests",
+  "dest2": "referrals",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "specialty"
+  ],
+  "text": "Refill {med} {dose} please. Also where is my {specialty} referral?",
+  "register": "terse",
+  "notes": "refill plus referral",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_003",
+  "kind": "inbox_multi_intent",
+  "dest": "scheduling",
+  "dest2": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "fdate",
+   "pdate"
+  ],
+  "text": "I would like to move my appointment on {fdate}. Also, could someone call me back about the report from my {pdate} visit? I keep missing the calls you send to my work number.",
+  "register": "rambling",
+  "notes": "reschedule plus callback",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_004",
+  "kind": "inbox_multi_intent",
+  "dest": "rx_requests",
+  "dest2": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "fdate"
+  ],
+  "text": "Please renew my {med} {dose}. Also, move my appointment on {fdate} to the afternoon.",
+  "register": "esl",
+  "notes": "refill plus reschedule",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_005",
+  "kind": "inbox_multi_intent",
+  "dest": "billing",
+  "dest2": "portal_support",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "hey two things the ${amount} on my last statement makes no sense and also the app keeps kicking me out when i try to see it",
+  "register": "voice_to_text",
+  "notes": "transcribed billing plus portal",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_006",
+  "kind": "inbox_multi_intent",
+  "dest": "rx_requests",
+  "dest2": "forms_letters",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "My {med} {dose} refill has been pending forever. Also, nobody has sent the work note either, please finish it.",
+  "register": "frustrated",
+  "notes": "refill plus work note",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_007",
+  "kind": "inbox_multi_intent",
+  "dest": "referrals",
+  "dest2": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "specialty",
+   "language"
+  ],
+  "text": "Dear Office, I request the status of my {specialty} referral. Also, I wish to arrange a {language} interpreter for my visits. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "referral plus interpreter",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_008",
+  "kind": "inbox_multi_intent",
+  "dest": "medical_records_roi",
+  "dest2": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "Two things today: please send my records to my new doctor. Also, my balance of ${amount} is wrong, please explain the charge on my account.",
+  "register": "casual",
+  "notes": "records plus billing",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_009",
+  "kind": "inbox_multi_intent",
+  "dest": "scheduling",
+  "dest2": "care_coordination",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Kindly reschedule my appointment of {fdate} to a later hour. I also require assistance arranging transportation to the new time.",
+  "register": "formal",
+  "notes": "reschedule plus ride",
+  "pool": "heldout"
+ },
+ {
+  "id": "multi_010",
+  "kind": "inbox_multi_intent",
+  "dest": "referrals",
+  "dest2": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "The {specialty} referral is still pending. Also, the insurance wants prior authorization paperwork - please handle both.",
+  "register": "terse",
+  "notes": "referral plus pa",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_011",
+  "kind": "inbox_multi_intent",
+  "dest": "patient_calls",
+  "dest2": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Nobody has called me back about the {pdate} report like I asked twice already, and now my new doctor wants my records too so please send those over.",
+  "register": "rambling",
+  "notes": "callback plus records",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_012",
+  "kind": "inbox_multi_intent",
+  "dest": "portal_support",
+  "dest2": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "Portal account locked again. Also I do not understand the ${amount} charge. Please help with both.",
+  "register": "esl",
+  "notes": "portal plus billing",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_013",
+  "kind": "inbox_multi_intent",
+  "dest": "scheduling",
+  "dest2": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "fdate",
+   "med",
+   "dose"
+  ],
+  "text": "need to move my appointment on {fdate} to later in the day. also get my {med} {dose} renewed to the same pharmacy as always thanks",
+  "register": "voice_to_text",
+  "notes": "transcribed reschedule plus refill",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_014",
+  "kind": "inbox_multi_intent",
+  "dest": "forms_letters",
+  "dest2": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "The FMLA form is still not finished and my job is asking daily. And I need to move my appointment on {fdate} too.",
+  "register": "frustrated",
+  "notes": "FMLA plus reschedule",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_015",
+  "kind": "inbox_multi_intent",
+  "dest": "care_coordination",
+  "dest2": "referrals",
+  "sender": "patient",
+  "slots": [
+   "equipment",
+   "specialty"
+  ],
+  "text": "Dear Coordinators, Might your office assist with obtaining a {equipment} for my home? Also, might someone advise on the status of my {specialty} referral? Thank you kindly.",
+  "register": "elderly_formal",
+  "notes": "equipment plus referral",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_016",
+  "kind": "inbox_multi_intent",
+  "dest": "rx_requests",
+  "dest2": "billing",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "amount"
+  ],
+  "text": "Two quick ones: renew my {med} {dose}, please. And my balance of ${amount} is wrong - someone should explain the charge on my account, I paid that already.",
+  "register": "casual",
+  "notes": "refill plus billing",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_017",
+  "kind": "inbox_multi_intent",
+  "dest": "medical_records_roi",
+  "dest2": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "I request a copy of my records for a second opinion, please. Separately, the disability form left with your office still needs the provider section completed.",
+  "register": "formal",
+  "notes": "records plus disability form",
+  "pool": "heldout"
+ },
+ {
+  "id": "multi_018",
+  "kind": "inbox_multi_intent",
+  "dest": "patient_calls",
+  "dest2": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "pdate",
+   "fdate"
+  ],
+  "text": "Call me back about my {pdate} visit. Also move my appointment on {fdate}.",
+  "register": "terse",
+  "notes": "callback plus reschedule",
+  "pool": "heldout"
+ },
+ {
+  "id": "multi_019",
+  "kind": "inbox_multi_intent",
+  "dest": "prior_auth",
+  "dest2": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "The prior authorization for my {med} {dose} has been sitting for weeks. Please sort out the paperwork, and renew the prescription while you are at it.",
+  "register": "rambling",
+  "notes": "pa plus renewal confusion",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_020",
+  "kind": "inbox_multi_intent",
+  "dest": "interpreter_services",
+  "dest2": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "I need a {language} interpreter at my visits. Also please move my appointment on {fdate} to later.",
+  "register": "esl",
+  "notes": "interpreter plus reschedule",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_021",
+  "kind": "inbox_multi_intent",
+  "dest": "billing",
+  "dest2": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "the ${amount} charge on my account is wrong and i want that fixed. separately the way the front desk handled it on {pdate} deserves its own complaint",
+  "register": "voice_to_text",
+  "notes": "transcribed billing plus complaint",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_022",
+  "kind": "inbox_multi_intent",
+  "dest": "rx_requests",
+  "dest2": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Still no renewal for my {med} {dose} after two asks. And send my records to the specialist, she has been waiting.",
+  "register": "frustrated",
+  "notes": "refill plus records",
+  "pool": "heldout"
+ },
+ {
+  "id": "multi_023",
+  "kind": "inbox_multi_intent",
+  "dest": "scheduling",
+  "dest2": "forms_letters",
+  "sender": "patient",
+  "slots": [
+   "fdate",
+   "pdate"
+  ],
+  "text": "Dear Office, Might someone move my appointment on {fdate} to the afternoon? Also, might a work note be provided for my absence around {pdate}? Respectfully.",
+  "register": "elderly_formal",
+  "notes": "reschedule plus note",
+  "pool": "heldout"
+ },
+ {
+  "id": "multi_024",
+  "kind": "inbox_multi_intent",
+  "dest": "care_coordination",
+  "dest2": "portal_support",
+  "sender": "patient",
+  "slots": [],
+  "text": "I still need help getting that shower chair ordered. Also the portal keeps kicking me out when I try to sign in to track any of it.",
+  "register": "casual",
+  "notes": "equipment plus portal",
+  "pool": "heldout"
+ },
+ {
+  "id": "multi_025",
+  "kind": "inbox_multi_intent",
+  "dest": "referrals",
+  "dest2": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "specialty",
+   "pdate"
+  ],
+  "text": "Please process the {specialty} referral from my {pdate} visit. Also have someone call me back with the status rather than leaving messages at my old number.",
+  "register": "formal",
+  "notes": "referral plus callback",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_026",
+  "kind": "inbox_multi_intent",
+  "dest": "billing",
+  "dest2": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "fdate"
+  ],
+  "text": "Payment plan for the ${amount} on my account, please. Also cancel my appointment on {fdate} - I cannot afford the visit anyway.",
+  "register": "terse",
+  "notes": "billing plus cancel",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_027",
+  "kind": "inbox_multi_intent",
+  "dest": "patient_calls",
+  "dest2": "care_coordination",
+  "sender": "patient",
+  "slots": [
+   "pdate",
+   "equipment"
+  ],
+  "text": "I have been waiting on someone to call me back about my {pdate} report. Meanwhile the {equipment} that was promised for my home has not shown up either, so please chase both.",
+  "register": "rambling",
+  "notes": "callback plus equipment",
+  "pool": "heldout"
+ },
+ {
+  "id": "multi_028",
+  "kind": "inbox_multi_intent",
+  "dest": "rx_requests",
+  "dest2": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Please renew my {med} {dose}. Also the prior authorization paper for it, please send.",
+  "register": "esl",
+  "notes": "refill plus pa",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_029",
+  "kind": "inbox_multi_intent",
+  "dest": "forms_letters",
+  "dest2": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "hey can someone finish the school note my daughter needs. also look at the ${amount} charge on my account please, the one from my statement",
+  "register": "voice_to_text",
+  "notes": "transcribed note plus billing",
+  "pool": "heldout"
+ },
+ {
+  "id": "multi_030",
+  "kind": "inbox_multi_intent",
+  "dest": "medical_records_roi",
+  "dest2": "prior_auth",
+  "sender": "patient",
+  "slots": [],
+  "text": "Please send my records to my insurer. Also, the prior authorization is blocked behind them, so please submit whatever they need.",
+  "register": "frustrated",
+  "notes": "records plus pa",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_031",
+  "kind": "inbox_multi_intent",
+  "dest": "scheduling",
+  "dest2": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "fdate",
+   "pdate"
+  ],
+  "text": "Dear Office, Kindly move my appointment on {fdate}. Kindly also note that I wish to make a complaint about the wait at my visit on {pdate}. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "reschedule plus complaint",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_032",
+  "kind": "inbox_multi_intent",
+  "dest": "rx_requests",
+  "dest2": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pdate"
+  ],
+  "text": "Can you renew my {med} {dose}? Also have someone call me about the test results from {pdate}? The letter was confusing.",
+  "register": "casual",
+  "notes": "refill plus callback",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_033",
+  "kind": "inbox_multi_intent",
+  "dest": "prior_auth",
+  "dest2": "forms_letters",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "The plan wants the questionnaire completed for my {med} {dose}, and my employer needs the leave form finished too, so both of those are waiting on your office this week.",
+  "register": "formal",
+  "notes": "pa plus FMLA",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_034",
+  "kind": "inbox_multi_intent",
+  "dest": "portal_support",
+  "dest2": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Locked out of the portal again. Also need to move my {fdate} appointment.",
+  "register": "terse",
+  "notes": "portal plus reschedule",
+  "pool": "heldout"
+ },
+ {
+  "id": "multi_035",
+  "kind": "inbox_multi_intent",
+  "dest": "referrals",
+  "dest2": "billing",
+  "sender": "patient",
+  "slots": [
+   "specialty",
+   "amount"
+  ],
+  "text": "Where is the {specialty} referral? And there is a ${amount} charge on my account from that visit that insurance says they never received a claim for, so someone should sort out both ends of this.",
+  "register": "rambling",
+  "notes": "referral plus billing",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_036",
+  "kind": "inbox_multi_intent",
+  "dest": "care_coordination",
+  "dest2": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Please renew my {med} {dose}. Also arrange a ride for my visit, two things.",
+  "register": "esl",
+  "notes": "transport plus refill",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_037",
+  "kind": "inbox_multi_intent",
+  "dest": "medical_records_roi",
+  "dest2": "portal_support",
+  "sender": "patient",
+  "slots": [],
+  "text": "please send my records to the new specialist. also i cant sign in to the portal to download them myself so can you fix my login too",
+  "register": "voice_to_text",
+  "notes": "transcribed records plus portal",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_038",
+  "kind": "inbox_multi_intent",
+  "dest": "billing",
+  "dest2": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "amount",
+   "pdate"
+  ],
+  "text": "The ${amount} on my account is a duplicate and I have said so twice. And I still want my callback about the {pdate} visit.",
+  "register": "frustrated",
+  "notes": "billing plus callback",
+  "pool": "shared"
+ },
+ {
+  "id": "multi_039",
+  "kind": "inbox_multi_intent",
+  "dest": "scheduling",
+  "dest2": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "month"
+  ],
+  "text": "Dear Office, Would you kindly book my appointment in {month}? Also arrange a {language} interpreter for it as before. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "booking plus interpreter",
+  "pool": "shared"
+ }
+]

@@ -1,0 +1,720 @@
+[
+ {
+  "id": "sym_000",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Hi, since I started the new pills I have been dizzy on and off. Can you also renew my {med} {dose} while someone looks at this?",
+  "register": "casual",
+  "notes": "dizziness plus refill",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_001",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "fdate",
+   "weekday"
+  ],
+  "text": "I want to report that I have been dizzy since {weekday} — it comes and goes. Separately, I need to move my appointment on {fdate}.",
+  "register": "formal",
+  "notes": "dizziness plus reschedule",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_002",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "Dizzy for two days. Also need my records copied for work.",
+  "register": "terse",
+  "notes": "dizziness plus records",
+  "pool": "heldout"
+ },
+ {
+  "id": "sym_003",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "I do not know if this matters but ever since the doctor changed my dose I keep getting dizzy when I stand up, it happened again this morning and my son says I should tell somebody, and while I am writing anyway I might as well ask about getting the {med} {dose} renewed.",
+  "register": "rambling",
+  "notes": "lightheadedness plus renewal",
+  "pool": "heldout"
+ },
+ {
+  "id": "sym_004",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "My head feel dizzy two days now. Also please refill {med} {dose}.",
+  "register": "esl",
+  "notes": "dizziness plus refill",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_005",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "hey so i keep getting dizzy spells the last couple days also can someone send my records to my new employer thing",
+  "register": "voice_to_text",
+  "notes": "transcribed dizziness plus records",
+  "pool": "heldout"
+ },
+ {
+  "id": "sym_006",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "Second message about the dizziness and nobody called back. Also my statement question from last week is still open.",
+  "register": "frustrated",
+  "notes": "dizziness plus billing",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_007",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Dear Nurses, I have felt unsteady and dizzy these past days. Might someone also furnish a copy of my records from {pdate}? Respectfully.",
+  "register": "elderly_formal",
+  "notes": "dizziness plus records",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_008",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "A rash showed up on my arms after the new medication. Anyway, can I get my {med} {dose} refilled?",
+  "register": "casual",
+  "notes": "rash plus refill",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_009",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "A rash has appeared on both arms since beginning the new prescription. Separately, I request rescheduling of my appointment on {fdate}.",
+  "register": "formal",
+  "notes": "rash plus reschedule",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_010",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "Rash on arms since new pill. Also need copy of my immunization record.",
+  "register": "terse",
+  "notes": "rash plus records",
+  "pool": "heldout"
+ },
+ {
+  "id": "sym_011",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "I broke out in a rash a couple of days after starting what you all gave me, and it has not gone away, and I would show someone a picture if that helps, and also there is this ${amount} charge I do not understand but that can wait.",
+  "register": "rambling",
+  "notes": "rash plus billing",
+  "pool": "heldout"
+ },
+ {
+  "id": "sym_012",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "I have rash on my arms after new medicine. Please also send my records paper.",
+  "register": "esl",
+  "notes": "rash plus records",
+  "pool": "heldout"
+ },
+ {
+  "id": "sym_013",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "so a rash popped up on my arms after the new med and its not going away also can i get a printout of my chart notes sometime",
+  "register": "voice_to_text",
+  "notes": "transcribed rash plus records",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_014",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "The rash from the new medication is still there and spreading. And I am still waiting on that records copy I asked for.",
+  "register": "frustrated",
+  "notes": "rash plus records",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_015",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "Dear Office, Since beginning the new tablet a rash has developed upon my arms. Might I also request a printout of my chart? Respectfully.",
+  "register": "elderly_formal",
+  "notes": "rash plus records",
+  "pool": "heldout"
+ },
+ {
+  "id": "sym_016",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "weekday"
+  ],
+  "text": "My ankles have been swollen since {weekday}. Can someone also renew my prescription?",
+  "register": "casual",
+  "notes": "swelling plus renewal",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_017",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "Both ankles are swollen, more than usual, for several days now. In addition, I require a copy of my immunization record.",
+  "register": "formal",
+  "notes": "swelling plus records",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_018",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "Ankles swollen. Also refill request, the usual one.",
+  "register": "terse",
+  "notes": "swelling plus refill",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_019",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "I noticed my ankles have been swollen over the past few days, worse by evening, and I am not sure if it matters, but while I am here could someone help me move my appointment on {fdate} because I cannot get there that early.",
+  "register": "rambling",
+  "notes": "swelling plus reschedule",
+  "pool": "heldout"
+ },
+ {
+  "id": "sym_020",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "My ankles are swollen every day now. Please also send my {med} {dose} to my pharmacy.",
+  "register": "esl",
+  "notes": "swelling plus refill",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_021",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "my ankles are all swollen up this week also i need a work note for last week please",
+  "register": "voice_to_text",
+  "notes": "swelling plus work note",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_022",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "The swelling in my ankles is back and worse. I asked about a payment plan before and still heard nothing.",
+  "register": "frustrated",
+  "notes": "swelling plus billing",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_023",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "Dear Nurses, My ankles have become swollen of late, more so in the evening. Would someone kindly also arrange a copy of my records? Thank you kindly.",
+  "register": "elderly_formal",
+  "notes": "swelling plus records",
+  "pool": "heldout"
+ },
+ {
+  "id": "sym_024",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "weekday"
+  ],
+  "text": "I've had a fever since {weekday} and it isn't breaking. Can you also refill my prescription, the usual one?",
+  "register": "casual",
+  "notes": "fever plus refill",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_025",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "I have had a fever for several days. Separately, I ask that my immunization record be copied for my new employer.",
+  "register": "formal",
+  "notes": "fever plus records",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_026",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "Fever since yesterday. Also need my chart printout.",
+  "register": "terse",
+  "notes": "fever plus records",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_027",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "The fever started a few days back and just keeps coming back at night, and I figured somebody here should know, and also while I have you my ride fell through — no wait, I mean I need to change my appointment on {fdate} to later in the day.",
+  "register": "rambling",
+  "notes": "fever plus reschedule",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_028",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "I have fever since three days. Also please refill {med} {dose}. Thank you.",
+  "register": "esl",
+  "notes": "fever plus refill",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_029",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "fever wont break its been days also can somebody help me get a copy of my records for school",
+  "register": "voice_to_text",
+  "notes": "transcribed fever plus records",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_030",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "Third day of fever and your portal keeps logging me out so I cannot even see my results. Someone call me.",
+  "register": "frustrated",
+  "notes": "fever plus portal issue",
+  "pool": "heldout"
+ },
+ {
+  "id": "sym_031",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "Dear Nurses, A fever has persisted these several days. Might someone also provide the note my employer requires? Respectfully.",
+  "register": "elderly_formal",
+  "notes": "fever plus note",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_032",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "My cough is getting worse at night. Can you also send my {med} {dose} to the pharmacy?",
+  "register": "casual",
+  "notes": "cough worse plus refill",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_033",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "My cough is worsening, particularly at night. Additionally, I request a copy of my visit summary.",
+  "register": "formal",
+  "notes": "cough worse plus records",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_034",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "Cough getting worse at night. Also need records copy.",
+  "register": "terse",
+  "notes": "cough worse plus records",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_035",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "That cough of mine just keeps getting worse, especially when I lie down, and I probably should have written sooner, and while I am at it can we move my appointment on {fdate} because mornings are hard for me right now.",
+  "register": "rambling",
+  "notes": "cough worse plus reschedule",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_036",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "My cough become worse in night time. Please also renew {med} {dose}.",
+  "register": "esl",
+  "notes": "cough worse plus renewal",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_037",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "the cough is definitely getting worse at night also can you unlock my portal account i cant see anything",
+  "register": "voice_to_text",
+  "notes": "transcribed cough plus portal",
+  "pool": "heldout"
+ },
+ {
+  "id": "sym_038",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "My cough keeps getting worse and nobody calls me back. And my last statement had a charge I never agreed to.",
+  "register": "frustrated",
+  "notes": "cough plus billing",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_039",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "Dear Nurses, My cough has grown worse in recent nights. Might someone also arrange a copy of my immunization record? Respectfully.",
+  "register": "elderly_formal",
+  "notes": "cough plus records",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_040",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Every dose of the new medicine leaves me nauseous for hours. Can you also refill my old {med} {dose} in the meantime?",
+  "register": "casual",
+  "notes": "nausea plus refill",
+  "pool": "heldout"
+ },
+ {
+  "id": "sym_041",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "I experience nausea following each dose of the new medication. Separately, please provide a work note for my recent absence.",
+  "register": "formal",
+  "notes": "nausea plus note",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_042",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "Nausea after every dose of the new pill. Also need my FMLA part filled in.",
+  "register": "terse",
+  "notes": "nausea plus FMLA",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_043",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "The new pills and my stomach are not getting along at all, I get nauseous within the hour every single time, and I only keep taking them because nobody said to stop, and while I am complaining anyway my appointment on {fdate} should really be in the afternoon.",
+  "register": "rambling",
+  "notes": "nausea plus reschedule",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_044",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "After new medicine I feel nauseous always. Please also renew {med} {dose}.",
+  "register": "esl",
+  "notes": "nausea plus renewal",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_045",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "i get nauseous right after every dose of the new stuff please also send my records to my new doctor",
+  "register": "voice_to_text",
+  "notes": "transcribed nausea plus records",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_046",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "Still nauseous after every dose. This is my third message. Also the interpreter never shows up to my appointments.",
+  "register": "frustrated",
+  "notes": "nausea plus interpreter",
+  "pool": "heldout"
+ },
+ {
+  "id": "sym_047",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "Dear Nurses, Each dose of the new remedy leaves me quite nauseous. Would your office also kindly furnish a letter for my employer? Respectfully.",
+  "register": "elderly_formal",
+  "notes": "nausea plus letter",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_048",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "weekday"
+  ],
+  "text": "I twisted my ankle on {weekday} and it still hurts to walk. Can you also renew my prescription while I am laid up?",
+  "register": "casual",
+  "notes": "ankle injury plus renewal",
+  "pool": "heldout"
+ },
+ {
+  "id": "sym_049",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "I twisted my ankle some days ago; it remains painful when walking. Additionally, I require a copy of my visit summary.",
+  "register": "formal",
+  "notes": "ankle injury plus records",
+  "pool": "heldout"
+ },
+ {
+  "id": "sym_050",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "Twisted ankle days ago, still hurts to walk. Also need records copy.",
+  "register": "terse",
+  "notes": "ankle injury plus records",
+  "pool": "heldout"
+ },
+ {
+  "id": "sym_051",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "I stepped off the curb wrong earlier this week and twisted my ankle, and it has gotten worse instead of better, and normally I would just wait it out but we have a trip coming up, so do move my appointment on {fdate} to later in the day please.",
+  "register": "rambling",
+  "notes": "ankle injury plus reschedule",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_052",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "I twist my ankle in week. It hurts for walk. Please also send my records paper.",
+  "register": "esl",
+  "notes": "ankle injury plus records",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_053",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "twisted my ankle a few days ago and its not getting better also need the fmla paperwork finished on your end",
+  "register": "voice_to_text",
+  "notes": "ankle injury plus FMLA",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_054",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "My twisted ankle still hurts and I was told twice someone would call me. Also my payment plan question was never answered.",
+  "register": "frustrated",
+  "notes": "ankle injury plus billing",
+  "pool": "heldout"
+ },
+ {
+  "id": "sym_055",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "Dear Nurses, Some days past I twisted my ankle, and it is still painful to walk. Might someone also kindly provide a printout of my chart? Respectfully.",
+  "register": "elderly_formal",
+  "notes": "ankle injury plus records",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_056",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "I fell in the bathroom yesterday and my hip hurts today. Please also renew my {med} {dose} so I do not run out.",
+  "register": "casual",
+  "notes": "fall plus renewal",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_057",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "I fell in my home yesterday and my hip remains painful. Additionally, please arrange a copy of my records for my daughter.",
+  "register": "formal",
+  "notes": "fall plus records",
+  "pool": "shared"
+ },
+ {
+  "id": "sym_058",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "Fell yesterday, hip hurts. Also need chart printout.",
+  "register": "terse",
+  "notes": "fall plus records",
+  "pool": "heldout"
+ },
+ {
+  "id": "sym_059",
+  "kind": "inbox_symptom",
+  "dest": "nurse_triage",
+  "sender": "patient",
+  "slots": [],
+  "text": "so i fell in the bathroom yesterday and now my hip really hurts when i stand also my portal is locked again can someone fix that too",
+  "register": "voice_to_text",
+  "notes": "transcribed fall plus portal",
+  "pool": "shared"
+ }
+]

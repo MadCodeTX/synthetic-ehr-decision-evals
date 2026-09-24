@@ -1,0 +1,29 @@
+{
+ "policy_version": "test-v1",
+ "workflows": {
+  "chart": {
+   "policy_text": "Select the chart whose identifiers match the request exactly.",
+   "destinations": {},
+   "abstain_key": "needs_human_review",
+   "rules": [
+    "exact id match"
+   ]
+  },
+  "inbox": {
+   "policy_text": "Route the in-basket item to the correct pool.",
+   "destinations": {},
+   "abstain_key": "needs_human_review",
+   "rules": [
+    "route by topic"
+   ]
+  },
+  "results": {
+   "policy_text": "Choose the result-notification review queue. Never diagnose.\n",
+   "destinations": {},
+   "abstain_key": "needs_human_review",
+   "rules": [
+    "queue by result type"
+   ]
+  }
+ }
+}

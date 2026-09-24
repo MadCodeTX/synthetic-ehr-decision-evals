@@ -1,0 +1,392 @@
+[
+ {
+  "id": "staf_000",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "FYI: the fax line will be out of service for maintenance on {fdate}. Route incoming faxes to the backup line that day.",
+  "register": "formal",
+  "notes": "ops notice, fax line",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_001",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Reminder: the team huddle moves to {fdate} this week. Same time, same room.",
+  "register": "casual",
+  "notes": "huddle reminder",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_002",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Huddle moved to {fdate}. Tell your people.",
+  "register": "terse",
+  "notes": "terse huddle",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_003",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Just a heads up for everyone covering the desk, the morning huddle got pushed to {fdate} because of the training session, so if you usually plan around it you will want to adjust your week accordingly.",
+  "register": "rambling",
+  "notes": "rambling huddle",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_004",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Team meeting change: now on {fdate}. Please tell your team members. Thank you.",
+  "register": "esl",
+  "notes": "esl meeting notice",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_005",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "hey all quick note the huddle is moving to {fdate} this week same time as usual spread the word",
+  "register": "voice_to_text",
+  "notes": "transcribed huddle",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_006",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "The supply order for exam-table paper and gauze is in; delivery due {fdate}. Store it in the back cabinet when it lands.",
+  "register": "formal",
+  "notes": "supply order",
+  "pool": "heldout"
+ },
+ {
+  "id": "staf_007",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Supply delivery lands {fdate}. Someone needs to sign for it.",
+  "register": "terse",
+  "notes": "terse supply",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_008",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "The office manager asked me to pass along that the new shredding vendor starts on {fdate} and the old bins need to be emptied before then.",
+  "register": "rambling",
+  "notes": "rambling vendor notice",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_009",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Please note: the parking garage section near the clinic entrance closes for resurfacing on {fdate}. Park on the upper levels that day.",
+  "register": "formal",
+  "notes": "parking notice",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_010",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Parking by the clinic entrance is closed on {fdate}. Use the top levels.",
+  "register": "terse",
+  "notes": "terse parking",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_011",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "For anyone who drives in, the garage section we all usually use near the entrance will be shut for the resurfacing work starting {fdate}, so plan to park up top or come in early that morning if you want a spot close by.",
+  "register": "rambling",
+  "notes": "rambling parking",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_012",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Front desk coverage for {fdate} still has an opening. Let me know if you can take it.",
+  "register": "casual",
+  "notes": "coverage request",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_013",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "We are short a floater for {fdate}. Please tell scheduling today if you can cover.",
+  "register": "terse",
+  "notes": "terse coverage",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_014",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "The flu vaccine shipment arrives {fdate}. Unbox and refrigerate it the same morning; do not leave it in receiving.",
+  "register": "formal",
+  "notes": "vaccine shipment",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_015",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Vaccine delivery due {fdate}. Refrigerate on arrival, do not leave in receiving. This is critical for the clinic's supply.",
+  "register": "formal",
+  "notes": "vaccine handling",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_016",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "The language-access team asked us to batch our {fdate} requests by the prior afternoon, so please get any bookings in early that week.",
+  "register": "formal",
+  "notes": "interpreter batching",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_017",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Reminder that the conference room is reserved for the payer training on {fdate}. Find another room for any meetings that day.",
+  "register": "formal",
+  "notes": "room reservation",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_018",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Conference room is taken on {fdate} for payer training. Book elsewhere.",
+  "register": "terse",
+  "notes": "terse room",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_019",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Just so nobody double books, the big conference room is spoken for on {fdate} because the payer training is finally happening, so if you had something penciled in there you will want to move it to one of the smaller rooms or another day.",
+  "register": "rambling",
+  "notes": "rambling room",
+  "pool": "heldout"
+ },
+ {
+  "id": "staf_020",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Heads up: the lab courier now comes at midday instead of morning, starting {fdate}. Adjust specimen drop-offs.",
+  "register": "formal",
+  "notes": "courier schedule",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_021",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Lab courier time changes on {fdate} to midday. Plan specimen drops accordingly.",
+  "register": "terse",
+  "notes": "terse courier",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_022",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Does anyone have the programming card for the phone system? The front desk one stopped working on {fdate} and we cannot fix it without the card.",
+  "register": "casual",
+  "notes": "equipment help",
+  "pool": "heldout"
+ },
+ {
+  "id": "staf_023",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "The printer in the back workroom has been offline since {fdate}. IT says they need a ticket from the department lead before they will look at it.",
+  "register": "formal",
+  "notes": "printer issue",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_024",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Printer in back workroom offline since {fdate}. Lead needs to file the IT ticket. Please do it.",
+  "register": "terse",
+  "notes": "terse printer",
+  "pool": "heldout"
+ },
+ {
+  "id": "staf_025",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "The workroom printer went down around {fdate} and IT will not even look at it until the department lead files a proper ticket, so could whoever that is these days please get that submitted before we are all walking charts to the copy room.",
+  "register": "rambling",
+  "notes": "rambling printer",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_026",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Staff photo day is {fdate}. Badges will be redone for everyone; wear your lanyard.",
+  "register": "casual",
+  "notes": "photo day",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_027",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "This is a reminder that the annual compliance training must be finished by {fdate}. The module is in the learning portal.",
+  "register": "formal",
+  "notes": "training deadline",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_028",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Compliance training due by {fdate}. Finish the module in the learning portal.",
+  "register": "terse",
+  "notes": "terse training",
+  "pool": "shared"
+ },
+ {
+  "id": "staf_029",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "if you have not done the yearly compliance thing yet please knock it out before {fdate} because the learning portal report goes to the manager that day",
+  "register": "voice_to_text",
+  "notes": "transcribed training",
+  "pool": "shared"
+ }
+]

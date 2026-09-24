@@ -1,0 +1,522 @@
+[
+ {
+  "id": "neg_000",
+  "kind": "inbox_negated_symptom",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "Hi! No new symptoms since the change, I feel fine. Just need my {med} {dose} renewed at {pharmacy} when convenient.",
+  "register": "casual",
+  "notes": "negation plus refill",
+  "pool": "heldout"
+ },
+ {
+  "id": "neg_001",
+  "kind": "inbox_negated_symptom",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "I am not having any problems health-wise. I do need to move my appointment on {fdate} to the afternoon.",
+  "register": "formal",
+  "notes": "negation plus reschedule",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_002",
+  "kind": "inbox_negated_symptom",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Feeling fine, no side effects. Refill {med} {dose} please.",
+  "register": "terse",
+  "notes": "negation plus refill",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_003",
+  "kind": "inbox_negated_symptom",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "Nothing has changed health-wise since the last visit, thank goodness, but I did want to ask about the ${amount} charge on my account because I do not know what it is for.",
+  "register": "rambling",
+  "notes": "negation plus billing",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_004",
+  "kind": "inbox_negated_symptom",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "No new symptoms, I feel fine. Please renew {med} {dose}.",
+  "register": "esl",
+  "notes": "negation plus refill",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_005",
+  "kind": "inbox_negated_symptom",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "hey everything is fine on my end no new symptoms or anything can we move my appointment on {fdate} to later that day though",
+  "register": "voice_to_text",
+  "notes": "transcribed negation plus reschedule",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_006",
+  "kind": "inbox_negated_symptom",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "No new symptoms to report, I feel fine. Still waiting on that call - please call me back about my visit on {pdate}.",
+  "register": "frustrated",
+  "notes": "negation plus callback",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_007",
+  "kind": "inbox_negated_symptom",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Dear Office, I remain in good health, with no new symptoms of any kind. Might I request a copy of my records from {pdate}? Respectfully.",
+  "register": "elderly_formal",
+  "notes": "negation plus records",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_008",
+  "kind": "inbox_negated_symptom",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Everything is fine, no new symptoms at all. Can you check on the status of my {specialty} referral?",
+  "register": "casual",
+  "notes": "negation plus referral status",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_009",
+  "kind": "inbox_negated_symptom",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "I am not having any problems and nothing has changed. My employer still needs the leave paperwork completed, however.",
+  "register": "formal",
+  "notes": "negation plus FMLA",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_010",
+  "kind": "inbox_negated_symptom",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Fine, no new symptoms. {specialty} referral status?",
+  "register": "terse",
+  "notes": "terse negation plus referral",
+  "pool": "heldout"
+ },
+ {
+  "id": "neg_011",
+  "kind": "inbox_negated_symptom",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "I feel fine and nothing has changed health-wise, but I could still use that ride to my appointment on {fdate} if someone can arrange it.",
+  "register": "rambling",
+  "notes": "negation plus ride",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_012",
+  "kind": "inbox_negated_symptom",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [],
+  "text": "I feel fine, no new symptoms. Please fill my FMLA form part.",
+  "register": "esl",
+  "notes": "esl negation plus FMLA",
+  "pool": "heldout"
+ },
+ {
+  "id": "neg_013",
+  "kind": "inbox_negated_symptom",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "no new symptoms here and i feel fine just need a copy of my records from my {pdate} visit for the insurance paperwork",
+  "register": "voice_to_text",
+  "notes": "transcribed negation plus records",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_014",
+  "kind": "inbox_negated_symptom",
+  "dest": "portal_support",
+  "sender": "patient",
+  "slots": [],
+  "text": "I am fine, no new symptoms. My portal account is locked though and nobody answers the phone.",
+  "register": "frustrated",
+  "notes": "negation plus portal",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_015",
+  "kind": "inbox_negated_symptom",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Dear Office, I am pleased to report no new symptoms, and I feel quite well. Would someone kindly reschedule my appointment of {fdate}? Respectfully.",
+  "register": "elderly_formal",
+  "notes": "negation plus reschedule",
+  "pool": "heldout"
+ },
+ {
+  "id": "neg_016",
+  "kind": "inbox_negated_symptom",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose",
+   "pharmacy"
+  ],
+  "text": "All good here, no side effects and no new symptoms. Time for my {med} {dose} renewal though — same pharmacy, {pharmacy}.",
+  "register": "casual",
+  "notes": "negation plus refill",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_017",
+  "kind": "inbox_negated_symptom",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "I am not having any problems to report. Kindly advise whether my balance of ${amount} reflects the insurance adjustment we discussed.",
+  "register": "formal",
+  "notes": "negation plus billing",
+  "pool": "heldout"
+ },
+ {
+  "id": "neg_018",
+  "kind": "inbox_negated_symptom",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Fine, no new symptoms. Call me about my {pdate} visit.",
+  "register": "terse",
+  "notes": "terse negation plus callback",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_019",
+  "kind": "inbox_negated_symptom",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "Nothing has changed with me health-wise and I have no new symptoms, but I will still need the {language} interpreter at my visit on {fdate}.",
+  "register": "rambling",
+  "notes": "negation plus interpreter",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_020",
+  "kind": "inbox_negated_symptom",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [],
+  "text": "I feel fine, no new symptoms. Please help me order walker for home.",
+  "register": "esl",
+  "notes": "esl negation plus equipment",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_021",
+  "kind": "inbox_negated_symptom",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "everything is fine health wise no new symptoms but the {specialty} referral still hasnt gone through can someone chase it",
+  "register": "voice_to_text",
+  "notes": "transcribed negation plus referral",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_022",
+  "kind": "inbox_negated_symptom",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "No new symptoms, no side effects, nothing. So why is my {med} {dose} refill still sitting there unapproved?",
+  "register": "frustrated",
+  "notes": "negation plus refill",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_023",
+  "kind": "inbox_negated_symptom",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Dear Patient Relations, Health-wise nothing has changed and I have no new symptoms. I do wish to compliment the staff who helped me on {pdate}. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "negation plus compliment",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_024",
+  "kind": "inbox_negated_symptom",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate",
+   "month"
+  ],
+  "text": "No new symptoms to report! Can I book my annual physical in {month} or around {fdate}?",
+  "register": "casual",
+  "notes": "negation plus booking",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_025",
+  "kind": "inbox_negated_symptom",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "I remain well, with no new symptoms since starting the current regimen. Kindly pursue the outstanding prior authorization for {med} {dose}.",
+  "register": "formal",
+  "notes": "negation plus pa",
+  "pool": "heldout"
+ },
+ {
+  "id": "neg_026",
+  "kind": "inbox_negated_symptom",
+  "dest": "scheduling",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Fine, no symptoms. Cancel my appointment on {fdate}.",
+  "register": "terse",
+  "notes": "terse negation plus cancel",
+  "pool": "heldout"
+ },
+ {
+  "id": "neg_027",
+  "kind": "inbox_negated_symptom",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [],
+  "text": "Health is steady, nothing has changed and no new symptoms whatsoever, but my new doctor across town wants my chart, so could someone send me a copy of my records when you get a chance.",
+  "register": "rambling",
+  "notes": "negation plus records transfer",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_028",
+  "kind": "inbox_negated_symptom",
+  "dest": "prior_auth",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "I feel fine, no new symptoms. Please start the prior authorization for {med} {dose}.",
+  "register": "esl",
+  "notes": "esl negation plus pa",
+  "pool": "heldout"
+ },
+ {
+  "id": "neg_029",
+  "kind": "inbox_negated_symptom",
+  "dest": "billing",
+  "sender": "patient",
+  "slots": [
+   "amount"
+  ],
+  "text": "no new symptoms and i feel fine just want to set up the payment plan for the ${amount} i owe when someone has time",
+  "register": "voice_to_text",
+  "notes": "transcribed negation plus billing",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_030",
+  "kind": "inbox_negated_symptom",
+  "dest": "forms_letters",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "No new symptoms, I feel great actually. Need that work note for the days around {pdate} still.",
+  "register": "frustrated",
+  "notes": "negation plus work note",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_031",
+  "kind": "inbox_negated_symptom",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Dear Nurses, I remain well and have no new symptoms to report. Might someone phone me regarding the report released from my visit of {pdate}? Respectfully.",
+  "register": "elderly_formal",
+  "notes": "negation plus callback",
+  "pool": "heldout"
+ },
+ {
+  "id": "neg_032",
+  "kind": "inbox_negated_symptom",
+  "dest": "portal_support",
+  "sender": "patient",
+  "slots": [],
+  "text": "All fine here, no new symptoms at all. The app kicks me out though every single time I log in.",
+  "register": "casual",
+  "notes": "negation plus portal",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_033",
+  "kind": "inbox_negated_symptom",
+  "dest": "care_coordination",
+  "sender": "patient",
+  "slots": [
+   "fdate"
+  ],
+  "text": "I am not having any problems and nothing has changed. Kindly arrange transportation to my appointment on {fdate}, as previously discussed.",
+  "register": "formal",
+  "notes": "negation plus transport",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_034",
+  "kind": "inbox_negated_symptom",
+  "dest": "patient_calls",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Fine, no new symptoms. Call me back about my {pdate} report.",
+  "register": "terse",
+  "notes": "terse negation plus callback",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_035",
+  "kind": "inbox_negated_symptom",
+  "dest": "rx_requests",
+  "sender": "patient",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "I feel fine honestly, no new symptoms and no side effects since the last check-in, though I am down to the last few pills of my {med} {dose} so the renewal would be well timed.",
+  "register": "rambling",
+  "notes": "negation plus refill",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_036",
+  "kind": "inbox_negated_symptom",
+  "dest": "referrals",
+  "sender": "patient",
+  "slots": [
+   "specialty"
+  ],
+  "text": "No new symptoms, I feel fine. Please book {specialty} referral for me.",
+  "register": "esl",
+  "notes": "esl negation plus referral",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_037",
+  "kind": "inbox_negated_symptom",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language"
+  ],
+  "text": "health is fine no new symptoms here but can the {language} interpreter be on my follow up calls too please",
+  "register": "voice_to_text",
+  "notes": "transcribed negation plus interpreter",
+  "pool": "shared"
+ },
+ {
+  "id": "neg_038",
+  "kind": "inbox_negated_symptom",
+  "dest": "patient_relations",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Nothing has changed health-wise, I feel fine. But I want to complain about the front desk again, {pdate} was the last straw and I want to file a complaint.",
+  "register": "frustrated",
+  "notes": "negation plus complaint",
+  "pool": "heldout"
+ },
+ {
+  "id": "neg_039",
+  "kind": "inbox_negated_symptom",
+  "dest": "medical_records_roi",
+  "sender": "patient",
+  "slots": [
+   "pdate"
+  ],
+  "text": "Dear Office, No new symptoms have arisen and I feel quite well. Kindly furnish a copy of my records from the visit of {pdate}. Respectfully.",
+  "register": "elderly_formal",
+  "notes": "negation plus records",
+  "pool": "shared"
+ }
+]

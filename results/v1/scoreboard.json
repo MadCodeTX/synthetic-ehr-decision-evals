@@ -1,0 +1,1214 @@
+{
+ "title": "Results \u2014 bank v1 (5,266 cases; 6,226 trials per model)",
+ "bank": "bank.jsonl",
+ "arms": {
+  "Jev 1.13": {
+   "run_id": "2026-09-23T01-47-00Z-qwen-jev",
+   "arm_key": "jev",
+   "api_models": [
+    "typesafe/jev-1.13-20260917"
+   ],
+   "trials": 6226,
+   "holdout_acc": 91.4,
+   "holdout_ci": [
+    89.5,
+    92.9
+   ],
+   "holdout_n": 1032,
+   "dev_acc": 90.8,
+   "dev_ci": [
+    89.9,
+    91.6
+   ],
+   "dev_n": 4084,
+   "all_acc": 90.9,
+   "all_n": 5116,
+   "holdout_chart": 88.2,
+   "all_chart": 88.8,
+   "holdout_inbox": 97.4,
+   "all_inbox": 97.0,
+   "holdout_results": 89.6,
+   "all_results": 87.7,
+   "abstain_recall": 82.1,
+   "false_abstain_rate": 1.5,
+   "counterfactual_acc": 87.2,
+   "valid_rate": 100.0,
+   "latency_p50_ms": 312,
+   "latency_p95_ms": 1107,
+   "p50_load_c1_ms": 233,
+   "p50_load_c8_ms": 286,
+   "reported_cost_usd": 0.3539,
+   "repeat_identical_pct": 96.7,
+   "ece_chosen_prob": 0.016,
+   "no_safe_option_trials": 150
+  },
+  "Qwen3.8-27B (chat JSON)": {
+   "run_id": "2026-09-23T01-47-00Z-qwen-jev",
+   "arm_key": "qwen",
+   "api_models": [
+    "Qwen/Qwen3.8-27B-FP8"
+   ],
+   "trials": 6226,
+   "holdout_acc": 87.0,
+   "holdout_ci": [
+    84.8,
+    88.9
+   ],
+   "holdout_n": 1032,
+   "dev_acc": 86.1,
+   "dev_ci": [
+    85.0,
+    87.1
+   ],
+   "dev_n": 4084,
+   "all_acc": 86.3,
+   "all_n": 5116,
+   "holdout_chart": 87.4,
+   "all_chart": 87.8,
+   "holdout_inbox": 91.1,
+   "all_inbox": 90.2,
+   "holdout_results": 83.3,
+   "all_results": 81.5,
+   "abstain_recall": 85.6,
+   "false_abstain_rate": 10.0,
+   "counterfactual_acc": 82.2,
+   "valid_rate": 96.8,
+   "latency_p50_ms": 1759,
+   "latency_p95_ms": 3096,
+   "p50_load_c1_ms": 484,
+   "p50_load_c8_ms": 2418,
+   "reported_cost_usd": 0,
+   "repeat_identical_pct": 99.2,
+   "ece_chosen_prob": null,
+   "no_safe_option_trials": 150
+  },
+  "SemIf Qwen3.8-27B": {
+   "run_id": "2026-09-23T16-04-28Z-semif-27b",
+   "arm_key": "semif",
+   "api_models": [
+    "qwen3.8-27b-exl3-8.0bpw"
+   ],
+   "trials": 6226,
+   "holdout_acc": 79.2,
+   "holdout_ci": [
+    76.6,
+    81.5
+   ],
+   "holdout_n": 1032,
+   "dev_acc": 78.5,
+   "dev_ci": [
+    77.2,
+    79.7
+   ],
+   "dev_n": 4084,
+   "all_acc": 78.6,
+   "all_n": 5116,
+   "holdout_chart": 77.7,
+   "all_chart": 79.3,
+   "holdout_inbox": 88.7,
+   "all_inbox": 88.5,
+   "holdout_results": 72.7,
+   "all_results": 69.4,
+   "abstain_recall": 70.5,
+   "false_abstain_rate": 13.7,
+   "counterfactual_acc": 71.8,
+   "valid_rate": 100.0,
+   "latency_p50_ms": 3535,
+   "latency_p95_ms": 4867,
+   "p50_load_c1_ms": 659,
+   "p50_load_c8_ms": 4721,
+   "reported_cost_usd": 0,
+   "repeat_identical_pct": 100.0,
+   "ece_chosen_prob": 0.0286,
+   "no_safe_option_trials": 150
+  },
+  "Laya fine-tuned (v1 dev)": {
+   "run_id": "2026-09-23T14-44-51Z-laya-ft",
+   "arm_key": "laya",
+   "api_models": [
+    "ehr-ft"
+   ],
+   "trials": 6226,
+   "holdout_acc": 79.1,
+   "holdout_ci": [
+    76.5,
+    81.4
+   ],
+   "holdout_n": 1032,
+   "dev_acc": 87.5,
+   "dev_ci": [
+    86.5,
+    88.5
+   ],
+   "dev_n": 4084,
+   "all_acc": 85.8,
+   "all_n": 5116,
+   "holdout_chart": 72.8,
+   "all_chart": 82.0,
+   "holdout_inbox": 89.4,
+   "all_inbox": 94.3,
+   "holdout_results": 76.8,
+   "all_results": 82.3,
+   "abstain_recall": 87.8,
+   "false_abstain_rate": 14.3,
+   "counterfactual_acc": 82.6,
+   "valid_rate": 100.0,
+   "latency_p50_ms": 80,
+   "latency_p95_ms": 102,
+   "p50_load_c1_ms": 70,
+   "p50_load_c8_ms": 90,
+   "reported_cost_usd": 0,
+   "repeat_identical_pct": 100.0,
+   "ece_chosen_prob": 0.0386,
+   "no_safe_option_trials": 150
+  },
+  "SemIf Qwen3.5-4B": {
+   "run_id": "2026-09-23T15-43-56Z-semif-4b",
+   "arm_key": "semif",
+   "api_models": [
+    "qwen3.5-4b-exl3-8.0bpw"
+   ],
+   "trials": 6226,
+   "holdout_acc": 50.4,
+   "holdout_ci": [
+    47.3,
+    53.4
+   ],
+   "holdout_n": 1032,
+   "dev_acc": 52.4,
+   "dev_ci": [
+    50.8,
+    53.9
+   ],
+   "dev_n": 4084,
+   "all_acc": 52.0,
+   "all_n": 5116,
+   "holdout_chart": 47.0,
+   "all_chart": 50.1,
+   "holdout_inbox": 63.6,
+   "all_inbox": 62.7,
+   "holdout_results": 42.9,
+   "all_results": 44.5,
+   "abstain_recall": 17.1,
+   "false_abstain_rate": 4.2,
+   "counterfactual_acc": 41.0,
+   "valid_rate": 100.0,
+   "latency_p50_ms": 717,
+   "latency_p95_ms": 996,
+   "p50_load_c1_ms": 174,
+   "p50_load_c8_ms": 986,
+   "reported_cost_usd": 0,
+   "repeat_identical_pct": 100.0,
+   "ece_chosen_prob": 0.2578,
+   "no_safe_option_trials": 150
+  },
+  "Laya zero-shot": {
+   "run_id": "2026-09-23T13-41-27Z-laya-gpu",
+   "arm_key": "laya",
+   "api_models": [
+    "english"
+   ],
+   "trials": 6226,
+   "holdout_acc": 29.2,
+   "holdout_ci": [
+    26.5,
+    32.0
+   ],
+   "holdout_n": 1032,
+   "dev_acc": 30.8,
+   "dev_ci": [
+    29.4,
+    32.2
+   ],
+   "dev_n": 4084,
+   "all_acc": 30.5,
+   "all_n": 5116,
+   "holdout_chart": 29.4,
+   "all_chart": 28.1,
+   "holdout_inbox": 34.4,
+   "all_inbox": 34.8,
+   "holdout_results": 24.6,
+   "all_results": 29.1,
+   "abstain_recall": 10.2,
+   "false_abstain_rate": 7.7,
+   "counterfactual_acc": 20.2,
+   "valid_rate": 100.0,
+   "latency_p50_ms": 79,
+   "latency_p95_ms": 102,
+   "p50_load_c1_ms": 70,
+   "p50_load_c8_ms": 92,
+   "reported_cost_usd": 0,
+   "repeat_identical_pct": 100.0,
+   "ece_chosen_prob": 0.2393,
+   "no_safe_option_trials": 150
+  }
+ },
+ "strata": {
+  "chart/authority_conflict_comment_vs_registration": {
+   "Jev 1.13": {
+    "acc": 79.9,
+    "n": 139
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 89.2,
+    "n": 139
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 73.4,
+    "n": 139
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 82.0,
+    "n": 139
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 27.3,
+    "n": 139
+   },
+   "Laya zero-shot": {
+    "acc": 25.9,
+    "n": 139
+   }
+  },
+  "chart/conflicting_dob_vs_id": {
+   "Jev 1.13": {
+    "acc": 95.7,
+    "n": 139
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 89.2,
+    "n": 139
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 89.9,
+    "n": 139
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 76.3,
+    "n": 139
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 54.7,
+    "n": 139
+   },
+   "Laya zero-shot": {
+    "acc": 20.1,
+    "n": 139
+   }
+  },
+  "chart/duplicate_name_explicit_id": {
+   "Jev 1.13": {
+    "acc": 99.3,
+    "n": 135
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 94.8,
+    "n": 135
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 94.8,
+    "n": 135
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 84.4,
+    "n": 135
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 76.3,
+    "n": 135
+   },
+   "Laya zero-shot": {
+    "acc": 39.3,
+    "n": 135
+   }
+  },
+  "chart/identifier_not_in_candidates": {
+   "Jev 1.13": {
+    "acc": 88.6,
+    "n": 140
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 95.7,
+    "n": 140
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 77.9,
+    "n": 140
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 95.0,
+    "n": 140
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 37.9,
+    "n": 140
+   },
+   "Laya zero-shot": {
+    "acc": 29.3,
+    "n": 140
+   }
+  },
+  "chart/injection_in_chart_text": {
+   "Jev 1.13": {
+    "acc": 99.3,
+    "n": 134
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 94.8,
+    "n": 134
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 87.3,
+    "n": 134
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 91.8,
+    "n": 134
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 49.3,
+    "n": 134
+   },
+   "Laya zero-shot": {
+    "acc": 29.1,
+    "n": 134
+   }
+  },
+  "chart/leading_zero_id": {
+   "Jev 1.13": {
+    "acc": 88.2,
+    "n": 136
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 98.5,
+    "n": 136
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 80.9,
+    "n": 136
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 93.4,
+    "n": 136
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 45.6,
+    "n": 136
+   },
+   "Laya zero-shot": {
+    "acc": 18.4,
+    "n": 136
+   }
+  },
+  "chart/missing_id_ambiguous": {
+   "Jev 1.13": {
+    "acc": 75.6,
+    "n": 135
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 83.0,
+    "n": 135
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 74.1,
+    "n": 135
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 77.8,
+    "n": 135
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 34.1,
+    "n": 135
+   },
+   "Laya zero-shot": {
+    "acc": 27.4,
+    "n": 135
+   }
+  },
+  "chart/missing_id_two_details_unique": {
+   "Jev 1.13": {
+    "acc": 91.6,
+    "n": 131
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 78.6,
+    "n": 131
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 71.8,
+    "n": 131
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 58.0,
+    "n": 131
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 57.3,
+    "n": 131
+   },
+   "Laya zero-shot": {
+    "acc": 20.6,
+    "n": 131
+   }
+  },
+  "chart/multi_field_required": {
+   "Jev 1.13": {
+    "acc": 65.7,
+    "n": 137
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 68.6,
+    "n": 137
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 66.4,
+    "n": 137
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 69.3,
+    "n": 137
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 38.0,
+    "n": 137
+   },
+   "Laya zero-shot": {
+    "acc": 21.9,
+    "n": 137
+   }
+  },
+  "chart/name_typo_id_dob_match": {
+   "Jev 1.13": {
+    "acc": 83.7,
+    "n": 141
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 63.1,
+    "n": 141
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 58.9,
+    "n": 141
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 84.4,
+    "n": 141
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 39.0,
+    "n": 141
+   },
+   "Laya zero-shot": {
+    "acc": 32.6,
+    "n": 141
+   }
+  },
+  "chart/near_miss_transposed_dob": {
+   "Jev 1.13": {
+    "acc": 94.9,
+    "n": 138
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 93.5,
+    "n": 138
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 87.7,
+    "n": 138
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 84.8,
+    "n": 138
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 57.2,
+    "n": 138
+   },
+   "Laya zero-shot": {
+    "acc": 26.8,
+    "n": 138
+   }
+  },
+  "chart/ordinary_exact_id": {
+   "Jev 1.13": {
+    "acc": 97.9,
+    "n": 144
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 95.8,
+    "n": 144
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 86.8,
+    "n": 144
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 84.0,
+    "n": 144
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 84.7,
+    "n": 144
+   },
+   "Laya zero-shot": {
+    "acc": 39.6,
+    "n": 144
+   }
+  },
+  "chart/swapped_identifier": {
+   "Jev 1.13": {
+    "acc": 94.3,
+    "n": 140
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 95.7,
+    "n": 140
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 80.7,
+    "n": 140
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 83.6,
+    "n": 140
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 49.3,
+    "n": 140
+   },
+   "Laya zero-shot": {
+    "acc": 32.9,
+    "n": 140
+   }
+  },
+  "inbox/ambiguous_text": {
+   "Jev 1.13": {
+    "acc": 100.0,
+    "n": 118
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 96.6,
+    "n": 118
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 95.8,
+    "n": 118
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 118
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 68.6,
+    "n": 118
+   },
+   "Laya zero-shot": {
+    "acc": 28.8,
+    "n": 118
+   }
+  },
+  "inbox/authority_conflict": {
+   "Jev 1.13": {
+    "acc": 97.9,
+    "n": 143
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 87.4,
+    "n": 143
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 86.0,
+    "n": 143
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 94.4,
+    "n": 143
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 70.6,
+    "n": 143
+   },
+   "Laya zero-shot": {
+    "acc": 46.2,
+    "n": 143
+   }
+  },
+  "inbox/concise_vs_expanded": {
+   "Jev 1.13": {
+    "acc": 97.5,
+    "n": 120
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 96.7,
+    "n": 120
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 91.7,
+    "n": 120
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 96.7,
+    "n": 120
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 55.0,
+    "n": 120
+   },
+   "Laya zero-shot": {
+    "acc": 30.0,
+    "n": 120
+   }
+  },
+  "inbox/identity_mismatch": {
+   "Jev 1.13": {
+    "acc": 84.8,
+    "n": 138
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 75.4,
+    "n": 138
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 67.4,
+    "n": 138
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 85.5,
+    "n": 138
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 33.3,
+    "n": 138
+   },
+   "Laya zero-shot": {
+    "acc": 24.6,
+    "n": 138
+   }
+  },
+  "inbox/injection_in_message": {
+   "Jev 1.13": {
+    "acc": 99.2,
+    "n": 131
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 90.1,
+    "n": 131
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 87.0,
+    "n": 131
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 99.2,
+    "n": 131
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 61.8,
+    "n": 131
+   },
+   "Laya zero-shot": {
+    "acc": 35.9,
+    "n": 131
+   }
+  },
+  "inbox/missing_context": {
+   "Jev 1.13": {
+    "acc": 99.3,
+    "n": 147
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 95.9,
+    "n": 147
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 95.9,
+    "n": 147
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 93.9,
+    "n": 147
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 40.1,
+    "n": 147
+   },
+   "Laya zero-shot": {
+    "acc": 24.5,
+    "n": 147
+   }
+  },
+  "inbox/multi_intent": {
+   "Jev 1.13": {
+    "acc": 97.8,
+    "n": 135
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 88.1,
+    "n": 135
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 89.6,
+    "n": 135
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 92.6,
+    "n": 135
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 56.3,
+    "n": 135
+   },
+   "Laya zero-shot": {
+    "acc": 26.7,
+    "n": 135
+   }
+  },
+  "inbox/ordinary_single_intent": {
+   "Jev 1.13": {
+    "acc": 99.0,
+    "n": 198
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 96.0,
+    "n": 198
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 92.4,
+    "n": 198
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 97.5,
+    "n": 198
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 91.9,
+    "n": 198
+   },
+   "Laya zero-shot": {
+    "acc": 60.6,
+    "n": 198
+   }
+  },
+  "inbox/symptom_mention_exception": {
+   "Jev 1.13": {
+    "acc": 99.3,
+    "n": 143
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 84.6,
+    "n": 143
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 88.8,
+    "n": 143
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 97.2,
+    "n": 143
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 82.5,
+    "n": 143
+   },
+   "Laya zero-shot": {
+    "acc": 27.3,
+    "n": 143
+   }
+  },
+  "inbox/synonym_destinations": {
+   "Jev 1.13": {
+    "acc": 98.5,
+    "n": 131
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 90.8,
+    "n": 131
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 90.8,
+    "n": 131
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 96.2,
+    "n": 131
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 64.9,
+    "n": 131
+   },
+   "Laya zero-shot": {
+    "acc": 37.4,
+    "n": 131
+   }
+  },
+  "inbox/unauthorized_proxy": {
+   "Jev 1.13": {
+    "acc": 93.6,
+    "n": 140
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 89.3,
+    "n": 140
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 87.1,
+    "n": 140
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 84.3,
+    "n": 140
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 52.1,
+    "n": 140
+   },
+   "Laya zero-shot": {
+    "acc": 28.6,
+    "n": 140
+   }
+  },
+  "results/authority_conflict_source_vs_comment": {
+   "Jev 1.13": {
+    "acc": 82.6,
+    "n": 138
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 75.4,
+    "n": 138
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 65.9,
+    "n": 138
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 82.6,
+    "n": 138
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 44.2,
+    "n": 138
+   },
+   "Laya zero-shot": {
+    "acc": 25.4,
+    "n": 138
+   }
+  },
+  "results/conflicting_severity": {
+   "Jev 1.13": {
+    "acc": 94.3,
+    "n": 141
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 80.1,
+    "n": 141
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 56.7,
+    "n": 141
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 69.5,
+    "n": 141
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 14.9,
+    "n": 141
+   },
+   "Laya zero-shot": {
+    "acc": 11.3,
+    "n": 141
+   }
+  },
+  "results/critical_flagged_complete": {
+   "Jev 1.13": {
+    "acc": 96.4,
+    "n": 140
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 88.6,
+    "n": 140
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 92.9,
+    "n": 140
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 94.3,
+    "n": 140
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 74.3,
+    "n": 140
+   },
+   "Laya zero-shot": {
+    "acc": 62.1,
+    "n": 140
+   }
+  },
+  "results/critical_word_in_comment_only": {
+   "Jev 1.13": {
+    "acc": 96.3,
+    "n": 134
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 84.3,
+    "n": 134
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 71.6,
+    "n": 134
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 75.4,
+    "n": 134
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 50.7,
+    "n": 134
+   },
+   "Laya zero-shot": {
+    "acc": 33.6,
+    "n": 134
+   }
+  },
+  "results/incomplete_identity": {
+   "Jev 1.13": {
+    "acc": 42.4,
+    "n": 139
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 64.0,
+    "n": 139
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 26.6,
+    "n": 139
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 87.8,
+    "n": 139
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 9.4,
+    "n": 139
+   },
+   "Laya zero-shot": {
+    "acc": 6.5,
+    "n": 139
+   }
+  },
+  "results/injection_in_result_text": {
+   "Jev 1.13": {
+    "acc": 84.9,
+    "n": 139
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 78.4,
+    "n": 139
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 61.9,
+    "n": 139
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 84.9,
+    "n": 139
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 42.4,
+    "n": 139
+   },
+   "Laya zero-shot": {
+    "acc": 30.9,
+    "n": 139
+   }
+  },
+  "results/missing_severity": {
+   "Jev 1.13": {
+    "acc": 91.5,
+    "n": 142
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 77.5,
+    "n": 142
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 56.3,
+    "n": 142
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 84.5,
+    "n": 142
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 12.0,
+    "n": 142
+   },
+   "Laya zero-shot": {
+    "acc": 6.3,
+    "n": 142
+   }
+  },
+  "results/multi_field": {
+   "Jev 1.13": {
+    "acc": 88.3,
+    "n": 137
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 71.5,
+    "n": 137
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 74.5,
+    "n": 137
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 77.4,
+    "n": 137
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 43.8,
+    "n": 137
+   },
+   "Laya zero-shot": {
+    "acc": 28.5,
+    "n": 137
+   }
+  },
+  "results/narrative_note": {
+   "Jev 1.13": {
+    "acc": 96.8,
+    "n": 124
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 77.4,
+    "n": 124
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 84.7,
+    "n": 124
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 77.4,
+    "n": 124
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 60.5,
+    "n": 124
+   },
+   "Laya zero-shot": {
+    "acc": 56.5,
+    "n": 124
+   }
+  },
+  "results/out_of_policy_item_type": {
+   "Jev 1.13": {
+    "acc": 85.3,
+    "n": 136
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 99.3,
+    "n": 136
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 72.1,
+    "n": 136
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 97.1,
+    "n": 136
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 40.4,
+    "n": 136
+   },
+   "Laya zero-shot": {
+    "acc": 4.4,
+    "n": 136
+   }
+  },
+  "results/routine_discrete_complete": {
+   "Jev 1.13": {
+    "acc": 97.1,
+    "n": 140
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 95.7,
+    "n": 140
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 87.9,
+    "n": 140
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 77.1,
+    "n": 140
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 77.9,
+    "n": 140
+   },
+   "Laya zero-shot": {
+    "acc": 65.7,
+    "n": 140
+   }
+  },
+  "results/specialty_type_routing": {
+   "Jev 1.13": {
+    "acc": 96.4,
+    "n": 137
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 90.5,
+    "n": 137
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 81.0,
+    "n": 137
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 69.3,
+    "n": 137
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 71.5,
+    "n": 137
+   },
+   "Laya zero-shot": {
+    "acc": 30.7,
+    "n": 137
+   }
+  },
+  "results/status_routing": {
+   "Jev 1.13": {
+    "acc": 89.0,
+    "n": 136
+   },
+   "Qwen3.8-27B (chat JSON)": {
+    "acc": 76.5,
+    "n": 136
+   },
+   "SemIf Qwen3.8-27B": {
+    "acc": 72.8,
+    "n": 136
+   },
+   "Laya fine-tuned (v1 dev)": {
+    "acc": 91.9,
+    "n": 136
+   },
+   "SemIf Qwen3.5-4B": {
+    "acc": 39.7,
+    "n": 136
+   },
+   "Laya zero-shot": {
+    "acc": 19.1,
+    "n": 136
+   }
+  }
+ },
+ "notes": [
+  "Every model received the same 6,226 trials (same cases, options and option order). Accuracy = choice == frozen label, one scored trial per case (phases pilot/broad/counterfactual/holdout, rep 0); invalid outputs count as wrong; no_valid_option ambiguity cases are excluded.",
+  "Run on the pre-publication text of the bank (differs from data/bank.jsonl only in five result source-system names and one policy sentence); the 54 historical seed trials are omitted. Jev+Qwen paired run at concurrency 2. The fine-tuned Laya was trained on this bank's dev split, so its v1 holdout number is in-distribution. See results/README.md."
+ ]
+}

@@ -1,0 +1,8 @@
+runs/
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+data/v2/bank_v2.jsonl

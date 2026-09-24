@@ -1,0 +1,17 @@
+{
+  "name": "synthetic-ehr-decision-evals",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Synthetic EHR administrative-routing decision benchmark (chart / inbox / results), with a Jev Decisions-API arm, an OpenAI-compatible Qwen arm, and a generic self-hosted decisions arm.",
+  "scripts": {
+    "test": "node --experimental-strip-types --test \"evals/test/*.test.ts\"",
+    "doctor": "node --experimental-strip-types evals/doctor.ts",
+    "dry-run": "node --experimental-strip-types evals/runner.ts --dry-run",
+    "checksums": "node --experimental-strip-types evals/checksums.ts"
+  },
+  "engines": {
+    "node": ">=22.6"
+  },
+  "license": "MIT"
+}

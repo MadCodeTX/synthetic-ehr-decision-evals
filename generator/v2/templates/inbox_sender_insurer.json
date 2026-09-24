@@ -1,0 +1,415 @@
+[
+ {
+  "id": "sndins_000",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "We have received a request for coverage of {med} {dose} for the above member. Please submit the completed prior authorization questionnaire to our office.",
+  "register": "formal",
+  "notes": "standard pa request",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndins_001",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Prior authorization request for {med} {dose}. Questionnaire attached. Please complete and return.",
+  "register": "terse",
+  "notes": "terse pa",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndins_002",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Hi there, our plan needs the prior authorization form filled out for your patient's {med} {dose} before we can cover it. The form is attached.",
+  "register": "casual",
+  "notes": "casual pa",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_003",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Before this plan will even look at covering the {med} {dose} your office prescribed, we need their prior authorization questionnaire back filled out completely, and incomplete forms have a way of sitting in a drawer for weeks, so please make sure every section is finished.",
+  "register": "rambling",
+  "notes": "rambling pa",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_004",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Plan need prior authorization form for {med} {dose}. Form attached. Please finish every part and send back.",
+  "register": "esl",
+  "notes": "esl pa",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_005",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "hey so the plan wont cover the {med} {dose} until someone at the office does their prior authorization form its attached please get it back to us",
+  "register": "voice_to_text",
+  "notes": "insurer pa message",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_006",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "specialty"
+  ],
+  "text": "A prior authorization determination for {specialty} services requires the enclosed clinical documentation from the referring provider. Please submit within the standard window.",
+  "register": "formal",
+  "notes": "specialty documentation",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndins_007",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Need clinical documentation for the {specialty} prior authorization. Attached checklist. Please return within the standard window.",
+  "register": "terse",
+  "notes": "terse specialty",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_008",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "specialty"
+  ],
+  "text": "We received the prior authorization request for {specialty} services but cannot process coverage until the clinical documentation checklist comes back from your office.",
+  "register": "casual",
+  "notes": "casual referral hold",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndins_009",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "specialty"
+  ],
+  "text": "There was a prior authorization request for {specialty} services sent over a while ago, and as far as our system is concerned it is just sitting there without the clinical documentation checklist, which unfortunately means nothing can move on coverage until your office sends that part back.",
+  "register": "rambling",
+  "notes": "insurer pa message",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_010",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "This is a follow-up on the outstanding prior authorization for {med} {dose}; our file shows the questionnaire has not been returned. Please expedite.",
+  "register": "formal",
+  "notes": "follow up pa",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_011",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Follow-up: the {med} {dose} prior authorization questionnaire is still outstanding. Please expedite.",
+  "register": "terse",
+  "notes": "terse follow up",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_012",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Still waiting on the prior authorization paperwork for the {med} {dose} from last month. Please get it back to us so the member is not stuck.",
+  "register": "casual",
+  "notes": "casual follow up",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndins_013",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "We ask many times about the prior authorization paper for {med} {dose}. Still nothing come. Please send it fast so member get medicine.",
+  "register": "esl",
+  "notes": "insurer pa message",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndins_014",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Honestly this file has been open longer than it should be, the prior authorization questionnaire for the {med} {dose} went out weeks ago and nothing has come back to us, and every week the member calls asking why their medicine is still not covered, so please treat this as the urgent nudge it is.",
+  "register": "rambling",
+  "notes": "insurer pa message",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_015",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose",
+   "pdate"
+  ],
+  "text": "Our review of the {med} {dose} prior authorization is on hold pending the updated trial documentation dated on or after {pdate}. Please provide.",
+  "register": "formal",
+  "notes": "documentation hold",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_016",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose",
+   "pdate"
+  ],
+  "text": "Prior authorization for {med} {dose} on hold. Need trial documentation dated on or after {pdate}.",
+  "register": "terse",
+  "notes": "terse hold",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_017",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose",
+   "pdate"
+  ],
+  "text": "The {med} {dose} prior authorization is stuck because we need the trial paperwork from on or after {pdate}. Can your office send the updated version?",
+  "register": "casual",
+  "notes": "casual updated paperwork",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndins_018",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "specialty"
+  ],
+  "text": "The peer-to-peer review option for the {specialty} prior authorization remains available; please have the prescribing provider schedule a review if the denial is contested.",
+  "register": "formal",
+  "notes": "peer to peer option",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_019",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Peer-to-peer review still open for the {specialty} prior authorization. Prescriber may schedule if contesting the denial.",
+  "register": "terse",
+  "notes": "terse peer to peer",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_020",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "specialty"
+  ],
+  "text": "if your prescriber wants to contest the denial on the {specialty} prior authorization the peer to peer review slot is still open just have them set it up with our review team",
+  "register": "casual",
+  "notes": "insurer pa message",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_021",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "specialty"
+  ],
+  "text": "Please note that our plan requires the initial evaluation note for the {specialty} prior authorization, not merely the request form itself.",
+  "register": "formal",
+  "notes": "initial note required",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndins_022",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "specialty"
+  ],
+  "text": "{specialty} prior authorization incomplete: request form received, initial evaluation note missing. Please submit.",
+  "register": "terse",
+  "notes": "terse missing note",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_023",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "specialty"
+  ],
+  "text": "The request form for the {specialty} prior authorization came through but the initial evaluation note did not, and we cannot approve without it, so please have someone send that over.",
+  "register": "rambling",
+  "notes": "rambling missing note",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_024",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "Plan need full prior authorization form for {med} {dose} before pay. Please send every part back to us. Thank you.",
+  "register": "esl",
+  "notes": "insurer pa message",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_025",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "We are updating our preferred agent list for {med} {dose} in this therapeutic class; the enclosed notice describes the new requirements before prior authorization is granted.",
+  "register": "formal",
+  "notes": "agent list update",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_026",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "New agent requirements for {med} {dose} attached. Review before submitting the prior authorization.",
+  "register": "terse",
+  "notes": "insurer pa message",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_027",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "heads up our formulary changed some rules around the {med} {dose} class the new requirements are in the attached notice before you send the next prior authorization",
+  "register": "casual",
+  "notes": "insurer pa message",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_028",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "We change rule for {med} {dose} prior authorization. Attached paper say what is new. Please read before send form.",
+  "register": "esl",
+  "notes": "insurer pa message",
+  "pool": "shared"
+ },
+ {
+  "id": "sndins_029",
+  "kind": "inbox_request",
+  "dest": "prior_auth",
+  "sender": "insurer",
+  "slots": [
+   "med",
+   "dose"
+  ],
+  "text": "quick note that the rules for the {med} {dose} class changed a bit the attached notice has the new requirements before the next prior authorization goes through",
+  "register": "voice_to_text",
+  "notes": "insurer pa message",
+  "pool": "heldout"
+ }
+]

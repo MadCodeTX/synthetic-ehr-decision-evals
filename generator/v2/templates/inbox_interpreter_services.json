@@ -1,0 +1,410 @@
+[
+ {
+  "id": "intp_000",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "I will need a {language} interpreter at my appointment on {fdate}. Please arrange one.",
+  "register": "casual",
+  "notes": "standard interpreter request",
+  "pool": "heldout"
+ },
+ {
+  "id": "intp_001",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "I respectfully request that a {language} interpreter be provided for my appointment scheduled on {fdate}.",
+  "register": "formal",
+  "notes": "formal interpreter",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_002",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "{language} interpreter needed for {fdate} visit. Please book.",
+  "register": "terse",
+  "notes": "terse interpreter",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_003",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "My English is not so good on the phone and last time I misunderstood what the nurse told me, so for my appointment on {fdate} I would really like to have a {language} interpreter there if that can be arranged.",
+  "register": "rambling",
+  "notes": "rambling interpreter",
+  "pool": "heldout"
+ },
+ {
+  "id": "intp_004",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "Hello, please put {language} interpreter for my visit on {fdate}. My English not enough for doctor talk.",
+  "register": "esl",
+  "notes": "esl interpreter",
+  "pool": "heldout"
+ },
+ {
+  "id": "intp_005",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "hi can you get a {language} interpreter for my {fdate} appointment i want to make sure i understand everything right",
+  "register": "voice_to_text",
+  "notes": "transcribed interpreter",
+  "pool": "heldout"
+ },
+ {
+  "id": "intp_006",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "Nobody booked the {language} interpreter I asked for last time and my {fdate} visit did not go well. Please do it right this time.",
+  "register": "frustrated",
+  "notes": "frustrated interpreter",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_007",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "Dear Office, I would be most grateful if an interpreter in {language} could attend my appointment on {fdate}. Thank you kindly.",
+  "register": "elderly_formal",
+  "notes": "elderly formal interpreter",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_008",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language"
+  ],
+  "text": "Can you book a {language} interpreter for phone calls too, not just visits? Phone conversations are hard for me.",
+  "register": "casual",
+  "notes": "phone interpreter",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_009",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language"
+  ],
+  "text": "In addition to my visits, I request interpreter support in {language} for telephone communications regarding my care.",
+  "register": "formal",
+  "notes": "formal phone interpreter",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_010",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language"
+  ],
+  "text": "{language} interpreter for phone calls as well as visits, please.",
+  "register": "terse",
+  "notes": "terse phone interpreter",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_011",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language"
+  ],
+  "text": "It is mostly the phone calls that trip me up, honestly, because people talk fast and then hang up, so if a {language} interpreter could be on the line for calls about my care and not just in the room, that would help me a great deal.",
+  "register": "rambling",
+  "notes": "rambling phone interpreter",
+  "pool": "heldout"
+ },
+ {
+  "id": "intp_012",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language"
+  ],
+  "text": "For phone calls from the clinic I need {language} interpreter also. Please put this in my file.",
+  "register": "esl",
+  "notes": "esl phone interpreter",
+  "pool": "heldout"
+ },
+ {
+  "id": "intp_013",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language"
+  ],
+  "text": "so the {language} interpreter was great in the room but the follow up phone calls i couldnt follow can you add interpreter for the calls too",
+  "register": "voice_to_text",
+  "notes": "transcribed phone interpreter",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_014",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "The {language} interpreter did not show up again for my {fdate} appointment. Somebody please confirm the booking before I come all that way.",
+  "register": "frustrated",
+  "notes": "frustrated confirmation",
+  "pool": "heldout"
+ },
+ {
+  "id": "intp_015",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "Dear Sir or Madam, Might a {language} interpreter kindly be arranged for my visit of {fdate}, as on past occasions none was present? Respectfully.",
+  "register": "elderly_formal",
+  "notes": "elderly formal confirmation",
+  "pool": "heldout"
+ },
+ {
+  "id": "intp_016",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "My parent is the patient and they need a {language} interpreter at the {fdate} visit. Please note it in the chart.",
+  "register": "casual",
+  "notes": "proxy for parent",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_017",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "My mother, the patient, requires a {language} interpreter for her appointment on {fdate}. Kindly arrange this in advance.",
+  "register": "formal",
+  "notes": "formal proxy",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_018",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "Parent's {fdate} visit needs a {language} interpreter. Please arrange.",
+  "register": "terse",
+  "notes": "terse proxy",
+  "pool": "heldout"
+ },
+ {
+  "id": "intp_019",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "I bring my mother to her appointments and she understands very little of what is said, so for the visit on {fdate} we would both appreciate it if a {language} interpreter could be there with us.",
+  "register": "rambling",
+  "notes": "rambling proxy",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_020",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "My mother patient here she need {language} interpreter at {fdate} appointment please arrange this.",
+  "register": "esl",
+  "notes": "esl proxy",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_021",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "im scheduling for my mom her visit is on {fdate} and she will need a {language} interpreter there with us please",
+  "register": "voice_to_text",
+  "notes": "transcribed proxy",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_022",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "For the third time: my father needs a {language} interpreter at his {fdate} appointment. Please actually schedule one.",
+  "register": "frustrated",
+  "notes": "frustrated proxy",
+  "pool": "heldout"
+ },
+ {
+  "id": "intp_023",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language",
+   "fdate"
+  ],
+  "text": "Dear Staff, My husband shall attend the clinic on {fdate} and will require the assistance of a {language} interpreter. May this be arranged in advance? With thanks.",
+  "register": "elderly_formal",
+  "notes": "elderly formal proxy",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_024",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language"
+  ],
+  "text": "Do you have {language} interpreter services for video visits, or only in person?",
+  "register": "casual",
+  "notes": "video visit question",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_025",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language"
+  ],
+  "text": "Kindly confirm whether {language} interpreter support is available for virtual appointments as well as in-person visits.",
+  "register": "formal",
+  "notes": "formal video question",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_026",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language"
+  ],
+  "text": "{language} interpreter available for video visits? Please advise.",
+  "register": "terse",
+  "notes": "terse video question",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_027",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language"
+  ],
+  "text": "Some of my appointments are by video now and I am not sure how the interpreter part works with those, so before my next one I wanted to ask whether {language} interpretation can be done over video or only when I come in.",
+  "register": "rambling",
+  "notes": "rambling video question",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_028",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language"
+  ],
+  "text": "For video visit, is {language} interpreter possible? Please tell me before my next appointment.",
+  "register": "esl",
+  "notes": "esl video question",
+  "pool": "shared"
+ },
+ {
+  "id": "intp_029",
+  "kind": "inbox_request",
+  "dest": "interpreter_services",
+  "sender": "patient",
+  "slots": [
+   "language"
+  ],
+  "text": "quick question can the {language} interpreter join my video visits too or is that only for in person ones thanks",
+  "register": "voice_to_text",
+  "notes": "transcribed video question",
+  "pool": "shared"
+ }
+]

@@ -1,0 +1,344 @@
+[
+ {
+  "id": "sndstaff_000",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Can someone cover my front desk block on {fdate}? I have a family obligation that morning.",
+  "register": "casual",
+  "notes": "coverage request",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_001",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Requesting coverage for my desk shift on {fdate}. Please reply with who can take it.",
+  "register": "formal",
+  "notes": "formal coverage",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndstaff_002",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Need my {fdate} desk block covered. Who is free?",
+  "register": "terse",
+  "notes": "terse coverage",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_003",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "Something has come up at home and I will not be able to sit at the front desk on {fdate} like we planned, so if anyone has room in their day to pick up that block I would owe you one, just let me know.",
+  "register": "rambling",
+  "notes": "rambling coverage",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_004",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "I cannot work my desk time on {fdate}. Family thing. Please who can take this for me.",
+  "register": "esl",
+  "notes": "esl coverage",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_005",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [
+   "fdate"
+  ],
+  "text": "my {fdate} front desk block needs covering family stuff came up shout if you can take it",
+  "register": "voice_to_text",
+  "notes": "transcribed coverage",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndstaff_006",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "The badge printer at the annex is jamming on every third card. Facilities says it needs a ticket from this department before they will touch it.",
+  "register": "formal",
+  "notes": "badge printer issue",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndstaff_007",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "Badge printer at the annex jams constantly. Someone file the facilities ticket please.",
+  "register": "terse",
+  "notes": "terse printer",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_008",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "Heads up before the survey window closes, the patient experience scores from last quarter are posted in the shared drive if anyone wants to read them before the meeting.",
+  "register": "casual",
+  "notes": "survey scores notice",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_009",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "Last quarter's patient experience results are now posted in the shared drive. Please review them before Thursday's operations meeting.",
+  "register": "formal",
+  "notes": "formal survey notice",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_010",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "Survey scores are in the shared drive. Read them before the ops meeting.",
+  "register": "terse",
+  "notes": "terse survey",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_011",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "I noticed the quarterly experience scores finally went up in the shared drive this afternoon, and since the operations meeting is coming up I figured I would give everyone a nudge to look them over beforehand so we are not all seeing them for the first time in the room.",
+  "register": "rambling",
+  "notes": "rambling survey",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_012",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "Does anyone know where the spare toner went? The workroom copier has been showing low toner since Monday and I cannot find a fresh one anywhere.",
+  "register": "casual",
+  "notes": "supplies question",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_013",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "Workroom copier reports low toner. Please reorder rather than waiting for it to fail mid-clinic.",
+  "register": "formal",
+  "notes": "toner reorder",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_014",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "Copier toner is low. Reorder it today please.",
+  "register": "terse",
+  "notes": "terse toner",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndstaff_015",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "We are down to what looks like the last bit of toner in the workroom copier, and the last time this happened we had to run everything through the annex machine for a week, so it would be great if someone could get the reorder placed before it dies completely.",
+  "register": "rambling",
+  "notes": "rambling toner",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_016",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "Inventory of the exam rooms is done. Rooms four and six are missing blood pressure cuffs; the replacements were never ordered.",
+  "register": "formal",
+  "notes": "inventory finding",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndstaff_017",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "Rooms four and six have no blood pressure cuffs. Replacements never ordered. Please fix.",
+  "register": "terse",
+  "notes": "terse inventory",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_018",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "quick psa the waiting room fish got a bigger tank over the weekend same fish bigger home try not to tap the glass",
+  "register": "voice_to_text",
+  "notes": "light ops note",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_019",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "Please remind your teams that the service elevator is the only one approved for transporting supplies between floors.",
+  "register": "formal",
+  "notes": "elevator policy",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_020",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "Supplies go up and down only on the service elevator. Please remind your teams.",
+  "register": "terse",
+  "notes": "terse elevator",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_021",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "There is a lost jacket in the staff lounge from the holiday party, it is navy and has a name pin on the collar, and it has been sitting on the coat rack for weeks, so claim it or it goes to the donation bin at the end of the month.",
+  "register": "rambling",
+  "notes": "lost and found",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_022",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "The afternoon shuttle schedule changed for next month. New times are posted by the break room door.",
+  "register": "casual",
+  "notes": "shuttle schedule",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_023",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "Revised shuttle times for next month are posted by the break room door. Please make note of them.",
+  "register": "formal",
+  "notes": "formal shuttle",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_024",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "Shuttle times change next month. New schedule is on the break room door.",
+  "register": "terse",
+  "notes": "terse shuttle",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_025",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "For everyone who takes the shuttle, the times are changing next month and the new schedule got taped up by the break room door, so check it before you assume your usual run still exists.",
+  "register": "rambling",
+  "notes": "rambling shuttle",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_026",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "Phlebotomy asked that we stop sending walk-in specimen drop-offs after four; the cooler pickup is the last run of the day.",
+  "register": "formal",
+  "notes": "specimen cutoff",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndstaff_027",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "No walk-in specimen drop-offs after four from now on. Last cooler run is the final pickup.",
+  "register": "terse",
+  "notes": "terse specimen",
+  "pool": "shared"
+ },
+ {
+  "id": "sndstaff_028",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "Reminder that fluoride varnish stock is counted monthly now; report your room's count to the charge desk by the end of the week.",
+  "register": "formal",
+  "notes": "stock counting",
+  "pool": "heldout"
+ },
+ {
+  "id": "sndstaff_029",
+  "kind": "inbox_request",
+  "dest": "staff_messages",
+  "sender": "staff",
+  "slots": [],
+  "text": "the big shredding bin by the copier room is almost full please break down boxes before you put them in or it jams the whole thing again",
+  "register": "voice_to_text",
+  "notes": "transcribed ops note",
+  "pool": "shared"
+ }
+]

@@ -1,0 +1,400 @@
+[
+ {
+  "id": "outrec_000",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Enclosed are visit records from {facility} for the patient named above, transmitted for your files.",
+  "register": "formal",
+  "notes": "records enclosure",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_001",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Records from {facility} attached. Please file to the patient's chart.",
+  "register": "terse",
+  "notes": "terse records",
+  "pool": "heldout"
+ },
+ {
+  "id": "outrec_002",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Hello, we are sending over the discharge paperwork from {facility} for your patient. Please add it to their record.",
+  "register": "casual",
+  "notes": "casual records",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_003",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Attached please find the consult summary from {facility} regarding the above-referenced patient, forwarded for inclusion in your records.",
+  "register": "formal",
+  "notes": "formal consult",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_004",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Sending the {facility} paperwork for this patient today. Please file it where it belongs.",
+  "register": "casual",
+  "notes": "casual paperwork",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_005",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "hello we are faxing over the packet from {facility} for your mutual patient please make sure it gets into the right chart thanks",
+  "register": "voice_to_text",
+  "notes": "transmitted fax cover",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_006",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility",
+   "pdate"
+  ],
+  "text": "Attached: consult note from {facility} for your mutual patient, seen on {pdate}.",
+  "register": "terse",
+  "notes": "consult note",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_007",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility",
+   "pdate"
+  ],
+  "text": "Please find attached the visit summary from {facility} dated {pdate}, forwarded to complete your records for this patient.",
+  "register": "formal",
+  "notes": "formal visit summary",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_008",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility",
+   "pdate"
+  ],
+  "text": "Enclosed is the therapy evaluation from {facility}, carried out on {pdate}, for filing in the patient's chart.",
+  "register": "formal",
+  "notes": "therapy evaluation",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_009",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility",
+   "pdate"
+  ],
+  "text": "Hi there, attached is the paperwork from the visit your patient had with us at {facility} on {pdate}. Give us a call if anything is missing.",
+  "register": "casual",
+  "notes": "casual visit paperwork",
+  "pool": "heldout"
+ },
+ {
+  "id": "outrec_010",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility",
+   "pdate"
+  ],
+  "text": "Visit paperwork from {facility} for {pdate} enclosed. File to chart.",
+  "register": "terse",
+  "notes": "terse visit paperwork",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_011",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility",
+   "pdate"
+  ],
+  "text": "We saw your patient at {facility} on {pdate} and are sending along everything from that encounter, including the worksheets from the assessment, so that your chart has the complete set.",
+  "register": "rambling",
+  "notes": "rambling encounter set",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_012",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility",
+   "pdate"
+  ],
+  "text": "Attached is report from {facility} for visit on {pdate}. Please put in patient file. Thank you.",
+  "register": "esl",
+  "notes": "esl report",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_013",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility",
+   "pdate"
+  ],
+  "text": "hey we treated your patient at {facility} on {pdate} and im sending the visit papers over now let me know if the scan came through blurry",
+  "register": "voice_to_text",
+  "notes": "transmitted scan note",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_014",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Faxed discharge summary from {facility} for your records. The stay ended recently; full set to follow.",
+  "register": "terse",
+  "notes": "discharge summary",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_015",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Please find enclosed the discharge summary issued by {facility}, forwarded for inclusion in the patient's medical record.",
+  "register": "formal",
+  "notes": "formal discharge",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_016",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Discharge summary from {facility} attached. Please scan it into the chart.",
+  "register": "casual",
+  "notes": "scan request",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_017",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Imaging films from {facility} are being mailed in two packets; the written reports follow electronically today.",
+  "register": "formal",
+  "notes": "imaging films",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_018",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Imaging from {facility} coming by mail in two packets. Reports follow by electronic delivery today.",
+  "register": "terse",
+  "notes": "terse imaging",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_019",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Just letting you know the imaging films from {facility} are on their way in a couple of mail packets, and the written reports should hit your electronic inbox the same day, so hopefully the two arrive close together for your filing folks.",
+  "register": "rambling",
+  "notes": "rambling imaging",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_020",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Films from {facility} come by mail, two packets. Reports come electronically today. Please match them when filing.",
+  "register": "esl",
+  "notes": "esl imaging",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_021",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "the imaging films from {facility} are in the mail in two packets and the reports will hit your inbox today please match them up when they come in",
+  "register": "voice_to_text",
+  "notes": "transcribed imaging",
+  "pool": "heldout"
+ },
+ {
+  "id": "outrec_022",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Transmitting the operative report from {facility} as required by the transfer agreement between our organizations.",
+  "register": "formal",
+  "notes": "operative report",
+  "pool": "heldout"
+ },
+ {
+  "id": "outrec_023",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Operative report from {facility} attached. Filing it on your end completes the transfer paperwork.",
+  "register": "terse",
+  "notes": "terse operative report",
+  "pool": "heldout"
+ },
+ {
+  "id": "outrec_024",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Your patient was seen at {facility} and here is the operative report from that stay. Please acknowledge receipt when you file it.",
+  "register": "casual",
+  "notes": "acknowledgment request",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_025",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "The patient was seen at {facility}; enclosed are the operative report and the anesthesia record for your chart.",
+  "register": "formal",
+  "notes": "operative plus anesthesia",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_026",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "Operative report and anesthesia record from {facility} enclosed. File to chart.",
+  "register": "terse",
+  "notes": "terse two documents",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_027",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "We are sending the operative report and the anesthesia record from the stay at {facility} in one packet this time, after the last one went out in separate pieces and caused some confusion on your end.",
+  "register": "rambling",
+  "notes": "rambling combined packet",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_028",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "From {facility} we send operative report and anesthesia paper together this time. Please file both for the patient.",
+  "register": "esl",
+  "notes": "esl combined packet",
+  "pool": "shared"
+ },
+ {
+  "id": "outrec_029",
+  "kind": "inbox_request",
+  "dest": "outside_records",
+  "sender": "outside",
+  "slots": [
+   "facility"
+  ],
+  "text": "sending the operative report and anesthesia record from {facility} in one packet this time so nothing gets separated on your end again",
+  "register": "voice_to_text",
+  "notes": "transcribed combined packet",
+  "pool": "heldout"
+ }
+]
