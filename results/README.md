@@ -9,8 +9,8 @@ Scores from the runs we did, on the banks in `data/`. Each folder has:
 
 | folder | bank | trials per arm | arms |
 |---|---|---|---|
-| [`v2/`](v2/SCOREBOARD.md) | v2 core shard `s00` (9,350 trials: 3,000-case stratified holdout with unseen wording + 3 unseen case types, dev sample, counterfactual families, repeat panel, load sweep) | 9,350 | Jev 1.13, Qwen3.8-27B, SemIf (Qwen3.8-27B, Qwen3.5-4B), Laya, CLM-8B, Clef-flash and Clef 27B (each zero-shot and fine-tuned on v1 dev; Clef-flash also LoRA) |
-| [`v1/`](v1/SCOREBOARD.md) | v1 (5,266 cases) | 6,226 | same thirteen arms |
+| [`v2/`](v2/SCOREBOARD.md) | v2 core shard `s00` (9,350 trials: 3,000-case stratified holdout with unseen wording + 3 unseen case types, dev sample, counterfactual families, repeat panel, load sweep) | 9,350 | Jev 1.13, Qwen3.8-27B, SemIf (Qwen3.8-27B, Qwen3.5-4B), Laya, CLM-8B, Clef-flash, Clef 27B and Julia-1 (each zero-shot and fine-tuned on v1 dev; Clef-flash also LoRA; Julia-1 full and head-only) |
+| [`v1/`](v1/SCOREBOARD.md) | v1 (5,266 cases) | 6,226 | same sixteen arms |
 
 ## The arms
 
@@ -28,6 +28,9 @@ Scores from the runs we did, on the banks in `data/`. Each folder has:
 | **Clef-flash LoRA fine-tuned** | LoRA r=16 on the backbone's attention, linear-attention and MLP projections plus the full joint head, **v1 dev split only** (same split; best checkpoint at epoch 1.7 by val; ~100 GPU-minutes) | same, adapter merged into BF16 weights |
 | **Clef 27B zero-shot (nf4)** | `Cloudflare/clef`: Qwen3.8-27B backbone + released joint head. **Served 4-bit** (bitsandbytes nf4; lm_head and vision tower kept BF16) because BF16 needs ~55 GB; the model card only reports BF16, so these numbers may understate Clef | transformers, nf4, 1× RTX 4090 |
 | **Clef 27B head fine-tuned (nf4)** | the nf4 backbone (frozen) with the joint head fine-tuned on the **v1 dev split only** (same split and recipe as Clef-flash head-only), trained on hidden states from the same nf4 backbone it is served with | same |
+| **Julia-1 zero-shot** | `SupersonicLabs/Julia-1` (revision `a85b127`): 144.3M parameters, mmBERT-small (ModernBERT) encoder + a decision head (2 transformer layers + scorer) that scores one marker token per option in one forward pass. The release's own runtime answers the named-question body (`state` + `questions`), so the request is passed through unchanged; strict (lossless) encoding, 8,192-token limit, question+options budget 640 tokens (release default 512 rejects ~6.5% of requests) | the release's `julia` runtime (PyTorch backend; the optional native Bend router was never built), transformers 5.0.0, BF16 autocast, 1× RTX 4090 shared with an idle loaded LLM; `integrations/julia/serve_julia.py` (`/v1/systemone`, one request at a time) in Docker with `--network none` |
+| **Julia-1 full fine-tuned** | all 144M parameters fine-tuned from the release on the **v1 dev split only** (the Clef split: 3,652 train / 432 val, family-grouped; lr 3e-5 picked from {1e-5, 3e-5, 1e-4} on val; 6 epochs, best at the last evaluation; ~4 GPU-minutes) | same |
+| **Julia-1 head fine-tuned** | encoder frozen; decision head, type embedding and scorer fine-tuned on the **v1 dev split only** (same split; lr 3e-4 picked from {1e-4, 3e-4, 1e-3}; ~1.5 GPU-minutes) | same |
 
 All arms receive byte-identical inputs: the same evidence JSON, the same option keys and descriptions in the same
 order, and the same policy text. The request format depends only on the interface: the Jev/decisions wire format,
@@ -123,5 +126,18 @@ or the chat prompt in `docs/SPEC.md` §5. `input_hash` is identical across arms 
     cases from the broad phase) answer in about 30 ms. The v2 load phases were mostly first-sight: 95 ms at
     concurrency 1 and 607 ms at concurrency 8, with the single-GPU encoder saturating.
   - CLM runs used the published bank and policy text directly.
+- **Julia-1 setup and latency.**
+  - The release's custom code was reviewed before it ran. The inference path (PyTorch + transformers,
+    safetensors weights, `trust_remote_code=False`) makes no network calls and starts no subprocesses. The native
+    router (`build.py` runs the `bend` compiler and `clang`; `native.py` loads the result with `ctypes`) is
+    optional and was never built. Everything ran in Docker with `--network none` and read-only mounts. See
+    `integrations/julia/README.md`.
+  - The question+options budget was raised from the release's 512 to 640 tokens so that every request encodes
+    losslessly (the longest needs 567). This was the only serving setting changed, and it was not tuned on
+    accuracy.
+  - The harness ran on the GPU server itself (Node 25 in a container, over loopback). Other self-hosted arms
+    were driven over the LAN, which adds about 1 ms. The Julia service shared a GPU with an idle, loaded vLLM
+    model. The fine-tuning sweeps stopped that model and restarted it afterwards.
+  - Julia runs used the published bank and policy text directly.
 - Every run passed its verifier (`verify/verify_paired.py` or `verify/verify_single.py`). The verifier recomputes
   hashes, validity, correctness and coverage from the raw run records.

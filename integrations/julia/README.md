@@ -96,8 +96,23 @@ python train_julia.py --release Julia-1 --data prep/records.jsonl --out ft-head 
    cross-entropy over the option scores, BF16 autocast as served, inputs encoded exactly as served. It
    evaluates val twice per epoch, keeps the best checkpoint (val accuracy, ties to lower val NLL) and stops
    early. The checkpoint is written with the release's own `save_pretrained`, plus its tokenizer.
+   ModernBERT's masked attention needs memory that grows with the square of the sequence length, so each batch of 16 is
+   split into micro-batches (`--attn-budget`, items × length² ≤ 2 × 3200²) with gradient accumulation. Full
+   fine-tuning peaks at about 10 GB; head-only at about 2.6 GB.
 
 v1 holdout and v2 are never read.
+
+Validation accuracy (432 dev items). These numbers are optimistic, because val shares generator templates with
+train and was used to pick the learning rate:
+
+| arm | zero-shot | learning rates tried | selected |
+|---|---|---|---|
+| full fine-tune (6 epochs) | 29.4% | 1e-5: 84.0%, **3e-5: 94.2%**, 1e-4: 88.7% | 3e-5; best at the last evaluation (epoch 6) |
+| head only, encoder frozen | 28.9% | 1e-4: 55.3%, **3e-4: 56.5%**, 1e-3: 53.9% | 3e-4; early-stopped at epoch 4.5 |
+
+Wall time on one RTX 4090: about 4 minutes per full fine-tune and 1.5 minutes per head-only fine-tune, including
+evaluation. The full fine-tune was still improving when its learning-rate schedule ended. A longer schedule was not
+tried.
 
 ## 5. Benchmark
 
@@ -113,6 +128,20 @@ python3 verify/verify_single.py runs/julia-1-v1 --bank data/bank.jsonl --plan da
 
 For bank v2, derive a decisions plan with `data/v2/derive_plan.py … --arm decisions`. The server's own Node is
 v18, so the harness ran under Node 25 in a container on the same host (`--network host`, repo read-only).
+
+## Results (holdout accuracy)
+
+All six Julia runs (3 arms × 2 banks) completed every planned trial, and `verify_single.py` passed on all of them.
+
+| arm | v1 | v2 (unseen wording + case types) | p50 latency, concurrency 1 → 8 (v2) |
+|---|---|---|---|
+| Julia-1 zero-shot | 28.5% | 31.7% | 7 → 73 ms |
+| Julia-1 head fine-tuned | 50.6% | 50.6% | 7 → 74 ms |
+| Julia-1 full fine-tuned | 92.8% | **84.6%** | 9 → 70 ms |
+| *Jev 1.13, for reference* | *91.4%* | *83.6%* | *322 → 311 ms* |
+
+The v1 holdout shares wording with v1 dev, so the fine-tuned v1 numbers are in-distribution. Use the v2 column.
+See the top-level README and `results/v2/SCOREBOARD.md` for the full metrics.
 
 ## Tests
 

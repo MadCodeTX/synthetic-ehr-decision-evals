@@ -82,6 +82,46 @@
    "ece_chosen_prob": 0.0079,
    "no_safe_option_trials": 150
   },
+  "Julia-1 full fine-tuned (v1 dev)": {
+   "run_id": "v1-julia-1-ft-full",
+   "arm_key": "decisions",
+   "api_models": [
+    "julia-1-ft-full"
+   ],
+   "trials": 6226,
+   "holdout_acc": 92.8,
+   "holdout_ci": [
+    91.1,
+    94.2
+   ],
+   "holdout_n": 1032,
+   "dev_acc": 98.8,
+   "dev_ci": [
+    98.5,
+    99.1
+   ],
+   "dev_n": 4084,
+   "all_acc": 97.6,
+   "all_n": 5116,
+   "holdout_chart": 87.9,
+   "all_chart": 96.0,
+   "holdout_inbox": 94.0,
+   "all_inbox": 97.9,
+   "holdout_results": 96.7,
+   "all_results": 99.1,
+   "abstain_recall": 96.6,
+   "false_abstain_rate": 1.5,
+   "counterfactual_acc": 96.7,
+   "valid_rate": 100.0,
+   "latency_p50_ms": 57,
+   "latency_p95_ms": 107,
+   "p50_load_c1_ms": 8,
+   "p50_load_c8_ms": 78,
+   "reported_cost_usd": 0,
+   "repeat_identical_pct": 100.0,
+   "ece_chosen_prob": 0.0154,
+   "no_safe_option_trials": 150
+  },
   "Jev 1.13": {
    "run_id": "2026-09-23T01-47-00Z-qwen-jev",
    "arm_key": "jev",
@@ -402,6 +442,46 @@
    "ece_chosen_prob": 0.3003,
    "no_safe_option_trials": 150
   },
+  "Julia-1 head fine-tuned (v1 dev)": {
+   "run_id": "v1-julia-1-ft-head",
+   "arm_key": "decisions",
+   "api_models": [
+    "julia-1-ft-head"
+   ],
+   "trials": 6226,
+   "holdout_acc": 50.6,
+   "holdout_ci": [
+    47.5,
+    53.6
+   ],
+   "holdout_n": 1032,
+   "dev_acc": 61.9,
+   "dev_ci": [
+    60.4,
+    63.3
+   ],
+   "dev_n": 4084,
+   "all_acc": 59.6,
+   "all_n": 5116,
+   "holdout_chart": 58.8,
+   "all_chart": 62.3,
+   "holdout_inbox": 42.7,
+   "all_inbox": 55.8,
+   "holdout_results": 48.9,
+   "all_results": 60.2,
+   "abstain_recall": 78.2,
+   "false_abstain_rate": 33.4,
+   "counterfactual_acc": 63.8,
+   "valid_rate": 100.0,
+   "latency_p50_ms": 51,
+   "latency_p95_ms": 102,
+   "p50_load_c1_ms": 6,
+   "p50_load_c8_ms": 73,
+   "reported_cost_usd": 0,
+   "repeat_identical_pct": 100.0,
+   "ece_chosen_prob": 0.0633,
+   "no_safe_option_trials": 150
+  },
   "SemIf Qwen3.5-4B": {
    "run_id": "2026-09-23T15-43-56Z-semif-4b",
    "arm_key": "semif",
@@ -521,6 +601,46 @@
    "repeat_identical_pct": 100.0,
    "ece_chosen_prob": 0.2393,
    "no_safe_option_trials": 150
+  },
+  "Julia-1 zero-shot": {
+   "run_id": "v1-julia-1-zs",
+   "arm_key": "decisions",
+   "api_models": [
+    "julia-1"
+   ],
+   "trials": 6226,
+   "holdout_acc": 28.5,
+   "holdout_ci": [
+    25.8,
+    31.3
+   ],
+   "holdout_n": 1032,
+   "dev_acc": 29.2,
+   "dev_ci": [
+    27.8,
+    30.6
+   ],
+   "dev_n": 4084,
+   "all_acc": 29.0,
+   "all_n": 5116,
+   "holdout_chart": 26.9,
+   "all_chart": 26.6,
+   "holdout_inbox": 34.8,
+   "all_inbox": 33.9,
+   "holdout_results": 24.9,
+   "all_results": 27.3,
+   "abstain_recall": 12.5,
+   "false_abstain_rate": 6.6,
+   "counterfactual_acc": 24.1,
+   "valid_rate": 100.0,
+   "latency_p50_ms": 53,
+   "latency_p95_ms": 104,
+   "p50_load_c1_ms": 8,
+   "p50_load_c8_ms": 69,
+   "reported_cost_usd": 0,
+   "repeat_identical_pct": 100.0,
+   "ece_chosen_prob": 0.5231,
+   "no_safe_option_trials": 150
   }
  },
  "strata": {
@@ -576,6 +696,18 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 95.7,
     "n": 139
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 97.1,
+    "n": 139
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 60.4,
+    "n": 139
+   },
+   "Julia-1 zero-shot": {
+    "acc": 18.0,
+    "n": 139
    }
   },
   "chart/conflicting_dob_vs_id": {
@@ -629,6 +761,18 @@
    },
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 97.1,
+    "n": 139
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 92.1,
+    "n": 139
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 73.4,
+    "n": 139
+   },
+   "Julia-1 zero-shot": {
+    "acc": 21.6,
     "n": 139
    }
   },
@@ -684,6 +828,18 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 96.3,
     "n": 135
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 96.3,
+    "n": 135
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 48.9,
+    "n": 135
+   },
+   "Julia-1 zero-shot": {
+    "acc": 37.8,
+    "n": 135
    }
   },
   "chart/identifier_not_in_candidates": {
@@ -737,6 +893,18 @@
    },
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 99.3,
+    "n": 140
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 99.3,
+    "n": 140
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 77.9,
+    "n": 140
+   },
+   "Julia-1 zero-shot": {
+    "acc": 20.7,
     "n": 140
    }
   },
@@ -792,6 +960,18 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 97.8,
     "n": 134
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 97.8,
+    "n": 134
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 65.7,
+    "n": 134
+   },
+   "Julia-1 zero-shot": {
+    "acc": 29.9,
+    "n": 134
    }
   },
   "chart/leading_zero_id": {
@@ -845,6 +1025,18 @@
    },
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 98.5,
+    "n": 136
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 136
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 64.7,
+    "n": 136
+   },
+   "Julia-1 zero-shot": {
+    "acc": 20.6,
     "n": 136
    }
   },
@@ -900,6 +1092,18 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 93.3,
     "n": 135
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 97.0,
+    "n": 135
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 66.7,
+    "n": 135
+   },
+   "Julia-1 zero-shot": {
+    "acc": 14.1,
+    "n": 135
    }
   },
   "chart/missing_id_two_details_unique": {
@@ -953,6 +1157,18 @@
    },
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 91.6,
+    "n": 131
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 93.1,
+    "n": 131
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 32.1,
+    "n": 131
+   },
+   "Julia-1 zero-shot": {
+    "acc": 26.7,
     "n": 131
    }
   },
@@ -1008,6 +1224,18 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 94.9,
     "n": 137
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 88.3,
+    "n": 137
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 54.7,
+    "n": 137
+   },
+   "Julia-1 zero-shot": {
+    "acc": 24.1,
+    "n": 137
    }
   },
   "chart/name_typo_id_dob_match": {
@@ -1061,6 +1289,18 @@
    },
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 91.5,
+    "n": 141
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 96.5,
+    "n": 141
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 68.8,
+    "n": 141
+   },
+   "Julia-1 zero-shot": {
+    "acc": 30.5,
     "n": 141
    }
   },
@@ -1116,6 +1356,18 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 100.0,
     "n": 138
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 96.4,
+    "n": 138
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 65.2,
+    "n": 138
+   },
+   "Julia-1 zero-shot": {
+    "acc": 27.5,
+    "n": 138
    }
   },
   "chart/ordinary_exact_id": {
@@ -1169,6 +1421,18 @@
    },
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 97.2,
+    "n": 144
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 96.5,
+    "n": 144
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 57.6,
+    "n": 144
+   },
+   "Julia-1 zero-shot": {
+    "acc": 47.9,
     "n": 144
    }
   },
@@ -1224,6 +1488,18 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 96.4,
     "n": 140
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 97.1,
+    "n": 140
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 71.4,
+    "n": 140
+   },
+   "Julia-1 zero-shot": {
+    "acc": 25.0,
+    "n": 140
    }
   },
   "inbox/ambiguous_text": {
@@ -1277,6 +1553,18 @@
    },
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 100.0,
+    "n": 118
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 118
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 64.4,
+    "n": 118
+   },
+   "Julia-1 zero-shot": {
+    "acc": 23.7,
     "n": 118
    }
   },
@@ -1332,6 +1620,18 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 99.3,
     "n": 143
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 143
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 49.0,
+    "n": 143
+   },
+   "Julia-1 zero-shot": {
+    "acc": 35.0,
+    "n": 143
    }
   },
   "inbox/concise_vs_expanded": {
@@ -1385,6 +1685,18 @@
    },
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 100.0,
+    "n": 120
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 98.3,
+    "n": 120
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 67.5,
+    "n": 120
+   },
+   "Julia-1 zero-shot": {
+    "acc": 32.5,
     "n": 120
    }
   },
@@ -1440,6 +1752,18 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 94.2,
     "n": 138
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 88.4,
+    "n": 138
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 63.0,
+    "n": 138
+   },
+   "Julia-1 zero-shot": {
+    "acc": 33.3,
+    "n": 138
    }
   },
   "inbox/injection_in_message": {
@@ -1493,6 +1817,18 @@
    },
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 100.0,
+    "n": 131
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 131
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 53.4,
+    "n": 131
+   },
+   "Julia-1 zero-shot": {
+    "acc": 32.8,
     "n": 131
    }
   },
@@ -1548,6 +1884,18 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 100.0,
     "n": 147
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 94.6,
+    "n": 147
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 61.2,
+    "n": 147
+   },
+   "Julia-1 zero-shot": {
+    "acc": 32.0,
+    "n": 147
    }
   },
   "inbox/multi_intent": {
@@ -1601,6 +1949,18 @@
    },
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 99.3,
+    "n": 135
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 98.5,
+    "n": 135
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 63.0,
+    "n": 135
+   },
+   "Julia-1 zero-shot": {
+    "acc": 41.5,
     "n": 135
    }
   },
@@ -1656,6 +2016,18 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 100.0,
     "n": 198
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 198
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 42.4,
+    "n": 198
+   },
+   "Julia-1 zero-shot": {
+    "acc": 36.4,
+    "n": 198
    }
   },
   "inbox/symptom_mention_exception": {
@@ -1709,6 +2081,18 @@
    },
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 100.0,
+    "n": 143
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 143
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 61.5,
+    "n": 143
+   },
+   "Julia-1 zero-shot": {
+    "acc": 46.2,
     "n": 143
    }
   },
@@ -1764,6 +2148,18 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 100.0,
     "n": 131
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 99.2,
+    "n": 131
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 46.6,
+    "n": 131
+   },
+   "Julia-1 zero-shot": {
+    "acc": 28.2,
+    "n": 131
    }
   },
   "inbox/unauthorized_proxy": {
@@ -1817,6 +2213,18 @@
    },
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 99.3,
+    "n": 140
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 97.1,
+    "n": 140
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 49.3,
+    "n": 140
+   },
+   "Julia-1 zero-shot": {
+    "acc": 27.9,
     "n": 140
    }
   },
@@ -1872,6 +2280,18 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 99.3,
     "n": 138
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 138
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 58.0,
+    "n": 138
+   },
+   "Julia-1 zero-shot": {
+    "acc": 32.6,
+    "n": 138
    }
   },
   "results/conflicting_severity": {
@@ -1925,6 +2345,18 @@
    },
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 95.0,
+    "n": 141
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 96.5,
+    "n": 141
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 66.0,
+    "n": 141
+   },
+   "Julia-1 zero-shot": {
+    "acc": 15.6,
     "n": 141
    }
   },
@@ -1980,6 +2412,18 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 96.4,
     "n": 140
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 140
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 79.3,
+    "n": 140
+   },
+   "Julia-1 zero-shot": {
+    "acc": 67.1,
+    "n": 140
    }
   },
   "results/critical_word_in_comment_only": {
@@ -2033,6 +2477,18 @@
    },
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 99.3,
+    "n": 134
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 134
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 52.2,
+    "n": 134
+   },
+   "Julia-1 zero-shot": {
+    "acc": 13.4,
     "n": 134
    }
   },
@@ -2088,6 +2544,18 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 100.0,
     "n": 139
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 97.1,
+    "n": 139
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 71.2,
+    "n": 139
+   },
+   "Julia-1 zero-shot": {
+    "acc": 11.5,
+    "n": 139
    }
   },
   "results/injection_in_result_text": {
@@ -2141,6 +2609,18 @@
    },
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 99.3,
+    "n": 139
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 139
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 66.2,
+    "n": 139
+   },
+   "Julia-1 zero-shot": {
+    "acc": 31.7,
     "n": 139
    }
   },
@@ -2196,6 +2676,18 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 99.3,
     "n": 142
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 99.3,
+    "n": 142
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 74.6,
+    "n": 142
+   },
+   "Julia-1 zero-shot": {
+    "acc": 13.4,
+    "n": 142
    }
   },
   "results/multi_field": {
@@ -2249,6 +2741,18 @@
    },
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 100.0,
+    "n": 137
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 99.3,
+    "n": 137
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 52.6,
+    "n": 137
+   },
+   "Julia-1 zero-shot": {
+    "acc": 32.1,
     "n": 137
    }
   },
@@ -2304,6 +2808,18 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 99.2,
     "n": 124
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 98.4,
+    "n": 124
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 53.2,
+    "n": 124
+   },
+   "Julia-1 zero-shot": {
+    "acc": 47.6,
+    "n": 124
    }
   },
   "results/out_of_policy_item_type": {
@@ -2357,6 +2873,18 @@
    },
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 100.0,
+    "n": 136
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 99.3,
+    "n": 136
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 76.5,
+    "n": 136
+   },
+   "Julia-1 zero-shot": {
+    "acc": 11.8,
     "n": 136
    }
   },
@@ -2412,6 +2940,18 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 99.3,
     "n": 140
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 99.3,
+    "n": 140
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 55.0,
+    "n": 140
+   },
+   "Julia-1 zero-shot": {
+    "acc": 32.9,
+    "n": 140
    }
   },
   "results/specialty_type_routing": {
@@ -2465,6 +3005,18 @@
    },
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 100.0,
+    "n": 137
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 137
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 32.1,
+    "n": 137
+   },
+   "Julia-1 zero-shot": {
+    "acc": 27.7,
     "n": 137
    }
   },
@@ -2520,11 +3072,24 @@
    "Clef 27B head fine-tuned (v1 dev, nf4)": {
     "acc": 99.3,
     "n": 136
+   },
+   "Julia-1 full fine-tuned (v1 dev)": {
+    "acc": 99.3,
+    "n": 136
+   },
+   "Julia-1 head fine-tuned (v1 dev)": {
+    "acc": 43.4,
+    "n": 136
+   },
+   "Julia-1 zero-shot": {
+    "acc": 19.1,
+    "n": 136
    }
   }
  },
  "notes": [
   "Every model received the same 6,226 trials (same cases, options and option order). Accuracy = choice == frozen label, one scored trial per case (phases pilot/broad/counterfactual/holdout, rep 0); invalid outputs count as wrong; no_valid_option ambiguity cases are excluded.",
-  "Jev, Qwen, SemIf and Laya ran on the pre-publication text of the bank (differs from data/bank.jsonl only in five result source-system names and one policy sentence); CLM ran on the published text. The 54 historical seed trials are omitted. Jev+Qwen paired run at concurrency 2; CLM at concurrency 6. The fine-tuned Laya and CLM heads were trained on this bank's dev split, so their v1 holdout numbers are in-distribution. See results/README.md."
+  "Jev, Qwen, SemIf and Laya ran on the pre-publication text of the bank (differs from data/bank.jsonl only in five result source-system names and one policy sentence); CLM ran on the published text. The 54 historical seed trials are omitted. Jev+Qwen paired run at concurrency 2; CLM at concurrency 6. The fine-tuned Laya and CLM heads were trained on this bank's dev split, so their v1 holdout numbers are in-distribution. See results/README.md.",
+  "Julia-1 arms ran on the published text, at concurrency 6, with the harness on the GPU server itself (loopback). The fine-tuned Julia-1 models were trained on this bank's dev split, so their v1 holdout numbers are in-distribution. See integrations/julia/README.md."
  ]
 }
