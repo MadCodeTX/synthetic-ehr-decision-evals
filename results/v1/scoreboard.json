@@ -2,6 +2,86 @@
  "title": "Results \u2014 bank v1 (5,266 cases; 6,226 trials per model)",
  "bank": "bank.jsonl",
  "arms": {
+  "Clef-flash LoRA fine-tuned (v1 dev)": {
+   "run_id": "v1-clef-flash-ft-lora",
+   "arm_key": "decisions",
+   "api_models": [
+    "clef-flash-ft-lora"
+   ],
+   "trials": 6226,
+   "holdout_acc": 100.0,
+   "holdout_ci": [
+    99.6,
+    100.0
+   ],
+   "holdout_n": 1032,
+   "dev_acc": 99.9,
+   "dev_ci": [
+    99.7,
+    99.9
+   ],
+   "dev_n": 4084,
+   "all_acc": 99.9,
+   "all_n": 5116,
+   "holdout_chart": 100.0,
+   "all_chart": 99.9,
+   "holdout_inbox": 100.0,
+   "all_inbox": 99.7,
+   "holdout_results": 100.0,
+   "all_results": 100.0,
+   "abstain_recall": 99.9,
+   "false_abstain_rate": 0.1,
+   "counterfactual_acc": 99.9,
+   "valid_rate": 100.0,
+   "latency_p50_ms": 710,
+   "latency_p95_ms": 1100,
+   "p50_load_c1_ms": 119,
+   "p50_load_c8_ms": 975,
+   "reported_cost_usd": 0,
+   "repeat_identical_pct": 100.0,
+   "ece_chosen_prob": 0.0008,
+   "no_safe_option_trials": 150
+  },
+  "Clef 27B head fine-tuned (v1 dev, nf4)": {
+   "run_id": "v1-clef-27b-nf4-ft-head",
+   "arm_key": "decisions",
+   "api_models": [
+    "clef-nf4-ft-head"
+   ],
+   "trials": 6226,
+   "holdout_acc": 96.2,
+   "holdout_ci": [
+    94.9,
+    97.2
+   ],
+   "holdout_n": 1032,
+   "dev_acc": 98.5,
+   "dev_ci": [
+    98.1,
+    98.9
+   ],
+   "dev_n": 4084,
+   "all_acc": 98.1,
+   "all_n": 5116,
+   "holdout_chart": 92.3,
+   "all_chart": 96.1,
+   "holdout_inbox": 99.7,
+   "all_inbox": 99.3,
+   "holdout_results": 97.3,
+   "all_results": 98.9,
+   "abstain_recall": 98.7,
+   "false_abstain_rate": 2.4,
+   "counterfactual_acc": 97.2,
+   "valid_rate": 100.0,
+   "latency_p50_ms": 2724,
+   "latency_p95_ms": 4065,
+   "p50_load_c1_ms": 457,
+   "p50_load_c8_ms": 3836,
+   "reported_cost_usd": 0,
+   "repeat_identical_pct": 100.0,
+   "ece_chosen_prob": 0.0079,
+   "no_safe_option_trials": 150
+  },
   "Jev 1.13": {
    "run_id": "2026-09-23T01-47-00Z-qwen-jev",
    "arm_key": "jev",
@@ -42,6 +122,46 @@
    "ece_chosen_prob": 0.016,
    "no_safe_option_trials": 150
   },
+  "Clef-flash head fine-tuned (v1 dev)": {
+   "run_id": "v1-clef-flash-ft-head",
+   "arm_key": "decisions",
+   "api_models": [
+    "clef-flash-ft-head"
+   ],
+   "trials": 6226,
+   "holdout_acc": 89.8,
+   "holdout_ci": [
+    87.8,
+    91.5
+   ],
+   "holdout_n": 1032,
+   "dev_acc": 95.3,
+   "dev_ci": [
+    94.6,
+    95.9
+   ],
+   "dev_n": 4084,
+   "all_acc": 94.2,
+   "all_n": 5116,
+   "holdout_chart": 89.6,
+   "all_chart": 94.8,
+   "holdout_inbox": 90.1,
+   "all_inbox": 95.7,
+   "holdout_results": 89.9,
+   "all_results": 92.3,
+   "abstain_recall": 91.7,
+   "false_abstain_rate": 3.3,
+   "counterfactual_acc": 93.7,
+   "valid_rate": 100.0,
+   "latency_p50_ms": 768,
+   "latency_p95_ms": 1188,
+   "p50_load_c1_ms": 125,
+   "p50_load_c8_ms": 1085,
+   "reported_cost_usd": 0,
+   "repeat_identical_pct": 100.0,
+   "ece_chosen_prob": 0.014,
+   "no_safe_option_trials": 150
+  },
   "Qwen3.8-27B (chat JSON)": {
    "run_id": "2026-09-23T01-47-00Z-qwen-jev",
    "arm_key": "qwen",
@@ -80,6 +200,46 @@
    "reported_cost_usd": 0,
    "repeat_identical_pct": 99.2,
    "ece_chosen_prob": null,
+   "no_safe_option_trials": 150
+  },
+  "Clef 27B zero-shot (nf4)": {
+   "run_id": "v1-clef-27b-nf4-zeroshot",
+   "arm_key": "decisions",
+   "api_models": [
+    "clef-nf4"
+   ],
+   "trials": 6226,
+   "holdout_acc": 79.6,
+   "holdout_ci": [
+    77.0,
+    81.9
+   ],
+   "holdout_n": 1032,
+   "dev_acc": 80.2,
+   "dev_ci": [
+    78.9,
+    81.4
+   ],
+   "dev_n": 4084,
+   "all_acc": 80.1,
+   "all_n": 5116,
+   "holdout_chart": 80.2,
+   "all_chart": 82.2,
+   "holdout_inbox": 84.8,
+   "all_inbox": 85.4,
+   "holdout_results": 74.6,
+   "all_results": 73.4,
+   "abstain_recall": 60.4,
+   "false_abstain_rate": 3.7,
+   "counterfactual_acc": 74.2,
+   "valid_rate": 100.0,
+   "latency_p50_ms": 2948,
+   "latency_p95_ms": 4417,
+   "p50_load_c1_ms": 499,
+   "p50_load_c8_ms": 4112,
+   "reported_cost_usd": 0,
+   "repeat_identical_pct": 100.0,
+   "ece_chosen_prob": 0.0739,
    "no_safe_option_trials": 150
   },
   "SemIf Qwen3.8-27B": {
@@ -200,6 +360,46 @@
    "reported_cost_usd": 0,
    "repeat_identical_pct": 100.0,
    "ece_chosen_prob": 0.0183,
+   "no_safe_option_trials": 150
+  },
+  "Clef-flash zero-shot": {
+   "run_id": "v1-clef-flash-zeroshot",
+   "arm_key": "decisions",
+   "api_models": [
+    "clef-flash"
+   ],
+   "trials": 6226,
+   "holdout_acc": 53.0,
+   "holdout_ci": [
+    50.0,
+    56.0
+   ],
+   "holdout_n": 1032,
+   "dev_acc": 54.6,
+   "dev_ci": [
+    53.1,
+    56.1
+   ],
+   "dev_n": 4084,
+   "all_acc": 54.3,
+   "all_n": 5116,
+   "holdout_chart": 55.2,
+   "all_chart": 56.8,
+   "holdout_inbox": 54.0,
+   "all_inbox": 55.6,
+   "holdout_results": 50.0,
+   "all_results": 50.6,
+   "abstain_recall": 15.0,
+   "false_abstain_rate": 3.0,
+   "counterfactual_acc": 38.5,
+   "valid_rate": 100.0,
+   "latency_p50_ms": 731,
+   "latency_p95_ms": 1126,
+   "p50_load_c1_ms": 120,
+   "p50_load_c8_ms": 1021,
+   "reported_cost_usd": 0,
+   "repeat_identical_pct": 100.0,
+   "ece_chosen_prob": 0.3003,
    "no_safe_option_trials": 150
   },
   "SemIf Qwen3.5-4B": {
@@ -356,6 +556,26 @@
    "Laya zero-shot": {
     "acc": 25.9,
     "n": 139
+   },
+   "Clef-flash zero-shot": {
+    "acc": 34.5,
+    "n": 139
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 92.1,
+    "n": 139
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 139
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 79.9,
+    "n": 139
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 95.7,
+    "n": 139
    }
   },
   "chart/conflicting_dob_vs_id": {
@@ -389,6 +609,26 @@
    },
    "Laya zero-shot": {
     "acc": 20.1,
+    "n": 139
+   },
+   "Clef-flash zero-shot": {
+    "acc": 44.6,
+    "n": 139
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 92.1,
+    "n": 139
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 99.3,
+    "n": 139
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 68.3,
+    "n": 139
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 97.1,
     "n": 139
    }
   },
@@ -424,6 +664,26 @@
    "Laya zero-shot": {
     "acc": 39.3,
     "n": 135
+   },
+   "Clef-flash zero-shot": {
+    "acc": 83.0,
+    "n": 135
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 98.5,
+    "n": 135
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 135
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 97.8,
+    "n": 135
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 96.3,
+    "n": 135
    }
   },
   "chart/identifier_not_in_candidates": {
@@ -457,6 +717,26 @@
    },
    "Laya zero-shot": {
     "acc": 29.3,
+    "n": 140
+   },
+   "Clef-flash zero-shot": {
+    "acc": 41.4,
+    "n": 140
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 97.1,
+    "n": 140
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 140
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 89.3,
+    "n": 140
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 99.3,
     "n": 140
    }
   },
@@ -492,6 +772,26 @@
    "Laya zero-shot": {
     "acc": 29.1,
     "n": 134
+   },
+   "Clef-flash zero-shot": {
+    "acc": 48.5,
+    "n": 134
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 98.5,
+    "n": 134
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 134
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 94.0,
+    "n": 134
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 97.8,
+    "n": 134
    }
   },
   "chart/leading_zero_id": {
@@ -525,6 +825,26 @@
    },
    "Laya zero-shot": {
     "acc": 18.4,
+    "n": 136
+   },
+   "Clef-flash zero-shot": {
+    "acc": 58.1,
+    "n": 136
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 97.1,
+    "n": 136
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 136
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 83.1,
+    "n": 136
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 98.5,
     "n": 136
    }
   },
@@ -560,6 +880,26 @@
    "Laya zero-shot": {
     "acc": 27.4,
     "n": 135
+   },
+   "Clef-flash zero-shot": {
+    "acc": 51.9,
+    "n": 135
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 97.0,
+    "n": 135
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 135
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 77.8,
+    "n": 135
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 93.3,
+    "n": 135
    }
   },
   "chart/missing_id_two_details_unique": {
@@ -593,6 +933,26 @@
    },
    "Laya zero-shot": {
     "acc": 20.6,
+    "n": 131
+   },
+   "Clef-flash zero-shot": {
+    "acc": 76.3,
+    "n": 131
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 95.4,
+    "n": 131
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 131
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 90.1,
+    "n": 131
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 91.6,
     "n": 131
    }
   },
@@ -628,6 +988,26 @@
    "Laya zero-shot": {
     "acc": 21.9,
     "n": 137
+   },
+   "Clef-flash zero-shot": {
+    "acc": 56.2,
+    "n": 137
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 92.7,
+    "n": 137
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 137
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 70.8,
+    "n": 137
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 94.9,
+    "n": 137
    }
   },
   "chart/name_typo_id_dob_match": {
@@ -661,6 +1041,26 @@
    },
    "Laya zero-shot": {
     "acc": 32.6,
+    "n": 141
+   },
+   "Clef-flash zero-shot": {
+    "acc": 55.3,
+    "n": 141
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 86.5,
+    "n": 141
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 141
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 70.2,
+    "n": 141
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 91.5,
     "n": 141
    }
   },
@@ -696,6 +1096,26 @@
    "Laya zero-shot": {
     "acc": 26.8,
     "n": 138
+   },
+   "Clef-flash zero-shot": {
+    "acc": 55.1,
+    "n": 138
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 94.2,
+    "n": 138
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 138
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 78.3,
+    "n": 138
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 100.0,
+    "n": 138
    }
   },
   "chart/ordinary_exact_id": {
@@ -729,6 +1149,26 @@
    },
    "Laya zero-shot": {
     "acc": 39.6,
+    "n": 144
+   },
+   "Clef-flash zero-shot": {
+    "acc": 84.7,
+    "n": 144
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 98.6,
+    "n": 144
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 144
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 93.1,
+    "n": 144
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 97.2,
     "n": 144
    }
   },
@@ -764,6 +1204,26 @@
    "Laya zero-shot": {
     "acc": 32.9,
     "n": 140
+   },
+   "Clef-flash zero-shot": {
+    "acc": 49.3,
+    "n": 140
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 92.9,
+    "n": 140
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 140
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 76.4,
+    "n": 140
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 96.4,
+    "n": 140
    }
   },
   "inbox/ambiguous_text": {
@@ -797,6 +1257,26 @@
    },
    "Laya zero-shot": {
     "acc": 28.8,
+    "n": 118
+   },
+   "Clef-flash zero-shot": {
+    "acc": 57.6,
+    "n": 118
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 96.6,
+    "n": 118
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 118
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 96.6,
+    "n": 118
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 100.0,
     "n": 118
    }
   },
@@ -832,6 +1312,26 @@
    "Laya zero-shot": {
     "acc": 46.2,
     "n": 143
+   },
+   "Clef-flash zero-shot": {
+    "acc": 74.1,
+    "n": 143
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 95.1,
+    "n": 143
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 143
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 88.8,
+    "n": 143
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 99.3,
+    "n": 143
    }
   },
   "inbox/concise_vs_expanded": {
@@ -865,6 +1365,26 @@
    },
    "Laya zero-shot": {
     "acc": 30.0,
+    "n": 120
+   },
+   "Clef-flash zero-shot": {
+    "acc": 51.7,
+    "n": 120
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 97.5,
+    "n": 120
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 120
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 85.0,
+    "n": 120
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 100.0,
     "n": 120
    }
   },
@@ -900,6 +1420,26 @@
    "Laya zero-shot": {
     "acc": 24.6,
     "n": 138
+   },
+   "Clef-flash zero-shot": {
+    "acc": 28.3,
+    "n": 138
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 82.6,
+    "n": 138
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 99.3,
+    "n": 138
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 41.3,
+    "n": 138
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 94.2,
+    "n": 138
    }
   },
   "inbox/injection_in_message": {
@@ -933,6 +1473,26 @@
    },
    "Laya zero-shot": {
     "acc": 35.9,
+    "n": 131
+   },
+   "Clef-flash zero-shot": {
+    "acc": 55.7,
+    "n": 131
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 98.5,
+    "n": 131
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 131
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 93.9,
+    "n": 131
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 100.0,
     "n": 131
    }
   },
@@ -968,6 +1528,26 @@
    "Laya zero-shot": {
     "acc": 24.5,
     "n": 147
+   },
+   "Clef-flash zero-shot": {
+    "acc": 33.3,
+    "n": 147
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 93.9,
+    "n": 147
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 147
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 88.4,
+    "n": 147
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 100.0,
+    "n": 147
    }
   },
   "inbox/multi_intent": {
@@ -1001,6 +1581,26 @@
    },
    "Laya zero-shot": {
     "acc": 26.7,
+    "n": 135
+   },
+   "Clef-flash zero-shot": {
+    "acc": 45.2,
+    "n": 135
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 96.3,
+    "n": 135
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 97.8,
+    "n": 135
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 90.4,
+    "n": 135
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 99.3,
     "n": 135
    }
   },
@@ -1036,6 +1636,26 @@
    "Laya zero-shot": {
     "acc": 60.6,
     "n": 198
+   },
+   "Clef-flash zero-shot": {
+    "acc": 83.8,
+    "n": 198
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 97.5,
+    "n": 198
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 198
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 98.5,
+    "n": 198
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 100.0,
+    "n": 198
    }
   },
   "inbox/symptom_mention_exception": {
@@ -1069,6 +1689,26 @@
    },
    "Laya zero-shot": {
     "acc": 27.3,
+    "n": 143
+   },
+   "Clef-flash zero-shot": {
+    "acc": 55.2,
+    "n": 143
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 143
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 143
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 90.2,
+    "n": 143
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 100.0,
     "n": 143
    }
   },
@@ -1104,6 +1744,26 @@
    "Laya zero-shot": {
     "acc": 37.4,
     "n": 131
+   },
+   "Clef-flash zero-shot": {
+    "acc": 60.3,
+    "n": 131
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 98.5,
+    "n": 131
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 131
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 90.8,
+    "n": 131
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 100.0,
+    "n": 131
    }
   },
   "inbox/unauthorized_proxy": {
@@ -1137,6 +1797,26 @@
    },
    "Laya zero-shot": {
     "acc": 28.6,
+    "n": 140
+   },
+   "Clef-flash zero-shot": {
+    "acc": 54.3,
+    "n": 140
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 95.7,
+    "n": 140
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 140
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 71.4,
+    "n": 140
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 99.3,
     "n": 140
    }
   },
@@ -1172,6 +1852,26 @@
    "Laya zero-shot": {
     "acc": 25.4,
     "n": 138
+   },
+   "Clef-flash zero-shot": {
+    "acc": 58.0,
+    "n": 138
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 92.8,
+    "n": 138
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 138
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 84.8,
+    "n": 138
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 99.3,
+    "n": 138
    }
   },
   "results/conflicting_severity": {
@@ -1205,6 +1905,26 @@
    },
    "Laya zero-shot": {
     "acc": 11.3,
+    "n": 141
+   },
+   "Clef-flash zero-shot": {
+    "acc": 19.1,
+    "n": 141
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 85.8,
+    "n": 141
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 141
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 52.5,
+    "n": 141
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 95.0,
     "n": 141
    }
   },
@@ -1240,6 +1960,26 @@
    "Laya zero-shot": {
     "acc": 62.1,
     "n": 140
+   },
+   "Clef-flash zero-shot": {
+    "acc": 92.9,
+    "n": 140
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 97.1,
+    "n": 140
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 140
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 95.7,
+    "n": 140
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 96.4,
+    "n": 140
    }
   },
   "results/critical_word_in_comment_only": {
@@ -1273,6 +2013,26 @@
    },
    "Laya zero-shot": {
     "acc": 33.6,
+    "n": 134
+   },
+   "Clef-flash zero-shot": {
+    "acc": 56.0,
+    "n": 134
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 88.8,
+    "n": 134
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 134
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 75.4,
+    "n": 134
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 99.3,
     "n": 134
    }
   },
@@ -1308,6 +2068,26 @@
    "Laya zero-shot": {
     "acc": 6.5,
     "n": 139
+   },
+   "Clef-flash zero-shot": {
+    "acc": 14.4,
+    "n": 139
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 89.9,
+    "n": 139
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 139
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 30.2,
+    "n": 139
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 100.0,
+    "n": 139
    }
   },
   "results/injection_in_result_text": {
@@ -1341,6 +2121,26 @@
    },
    "Laya zero-shot": {
     "acc": 30.9,
+    "n": 139
+   },
+   "Clef-flash zero-shot": {
+    "acc": 48.2,
+    "n": 139
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 93.5,
+    "n": 139
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 139
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 69.1,
+    "n": 139
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 99.3,
     "n": 139
    }
   },
@@ -1376,6 +2176,26 @@
    "Laya zero-shot": {
     "acc": 6.3,
     "n": 142
+   },
+   "Clef-flash zero-shot": {
+    "acc": 12.7,
+    "n": 142
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 97.9,
+    "n": 142
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 142
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 62.0,
+    "n": 142
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 99.3,
+    "n": 142
    }
   },
   "results/multi_field": {
@@ -1409,6 +2229,26 @@
    },
    "Laya zero-shot": {
     "acc": 28.5,
+    "n": 137
+   },
+   "Clef-flash zero-shot": {
+    "acc": 56.9,
+    "n": 137
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 91.2,
+    "n": 137
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 137
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 72.3,
+    "n": 137
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 100.0,
     "n": 137
    }
   },
@@ -1444,6 +2284,26 @@
    "Laya zero-shot": {
     "acc": 56.5,
     "n": 124
+   },
+   "Clef-flash zero-shot": {
+    "acc": 66.1,
+    "n": 124
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 92.7,
+    "n": 124
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 124
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 89.5,
+    "n": 124
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 99.2,
+    "n": 124
    }
   },
   "results/out_of_policy_item_type": {
@@ -1477,6 +2337,26 @@
    },
    "Laya zero-shot": {
     "acc": 4.4,
+    "n": 136
+   },
+   "Clef-flash zero-shot": {
+    "acc": 34.6,
+    "n": 136
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 88.2,
+    "n": 136
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 136
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 64.0,
+    "n": 136
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 100.0,
     "n": 136
    }
   },
@@ -1512,6 +2392,26 @@
    "Laya zero-shot": {
     "acc": 65.7,
     "n": 140
+   },
+   "Clef-flash zero-shot": {
+    "acc": 74.3,
+    "n": 140
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 91.4,
+    "n": 140
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 140
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 94.3,
+    "n": 140
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 99.3,
+    "n": 140
    }
   },
   "results/specialty_type_routing": {
@@ -1546,6 +2446,26 @@
    "Laya zero-shot": {
     "acc": 30.7,
     "n": 137
+   },
+   "Clef-flash zero-shot": {
+    "acc": 79.6,
+    "n": 137
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 96.4,
+    "n": 137
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 137
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 91.2,
+    "n": 137
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 100.0,
+    "n": 137
    }
   },
   "results/status_routing": {
@@ -1579,6 +2499,26 @@
    },
    "Laya zero-shot": {
     "acc": 19.1,
+    "n": 136
+   },
+   "Clef-flash zero-shot": {
+    "acc": 48.5,
+    "n": 136
+   },
+   "Clef-flash head fine-tuned (v1 dev)": {
+    "acc": 93.4,
+    "n": 136
+   },
+   "Clef-flash LoRA fine-tuned (v1 dev)": {
+    "acc": 100.0,
+    "n": 136
+   },
+   "Clef 27B zero-shot (nf4)": {
+    "acc": 75.0,
+    "n": 136
+   },
+   "Clef 27B head fine-tuned (v1 dev, nf4)": {
+    "acc": 99.3,
     "n": 136
    }
   }

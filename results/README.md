@@ -9,8 +9,8 @@ Scores from the runs we did, on the banks in `data/`. Each folder has:
 
 | folder | bank | trials per arm | arms |
 |---|---|---|---|
-| [`v2/`](v2/SCOREBOARD.md) | v2 core shard `s00` (9,350 trials: 3,000-case stratified holdout with unseen wording + 3 unseen case types, dev sample, counterfactual families, repeat panel, load sweep) | 9,350 | Jev 1.13, Qwen3.8-27B, SemIf (Qwen3.8-27B, Qwen3.5-4B), Laya and CLM-8B (each zero-shot and fine-tuned on v1 dev) |
-| [`v1/`](v1/SCOREBOARD.md) | v1 (5,266 cases) | 6,226 | same eight arms |
+| [`v2/`](v2/SCOREBOARD.md) | v2 core shard `s00` (9,350 trials: 3,000-case stratified holdout with unseen wording + 3 unseen case types, dev sample, counterfactual families, repeat panel, load sweep) | 9,350 | Jev 1.13, Qwen3.8-27B, SemIf (Qwen3.8-27B, Qwen3.5-4B), Laya, CLM-8B, Clef-flash and Clef 27B (each zero-shot and fine-tuned on v1 dev; Clef-flash also LoRA) |
+| [`v1/`](v1/SCOREBOARD.md) | v1 (5,266 cases) | 6,226 | same thirteen arms |
 
 ## The arms
 
@@ -23,6 +23,11 @@ Scores from the runs we did, on the banks in `data/`. Each folder has:
 | **Laya fine-tuned** | Laya fine-tuned with its official recipe on the **v1 dev split only** (4,084 items, ~7 GPU-minutes) | same |
 | **CLM-8B zero-shot** | `Contrastive-LM/CLM` v0.1: frozen `Qwen/Qwen3-8B` encoder (last-token pooling) + the reference projection heads `CLM_v0.1-8B.pt` (18.9M params); an option's score is the scaled cosine between the projected state (evidence + instructions) and the projected option description | vLLM v0.30.0 pooling server on 1× RTX 4090 + `clm.server` (`/v1/systemone`), heads on the second GPU |
 | **CLM-8B fine-tuned** | the same encoder with projection heads fine-tuned by CLM's `train/finetune.py --task choice` on the **v1 dev split only** (the same 4,084 items as Laya; ~8 s of head training once embeddings are cached) | same |
+| **Clef-flash zero-shot** | `Cloudflare/clef-flash`: Qwen3.5-9B backbone + the released joint schema head, which reads the backbone's final hidden states and scores every option in one forward pass (no generation) | transformers, BF16, 1× RTX 4090, `integrations/clef/serve_clef.py` (`/v1/systemone`, one request at a time) |
+| **Clef-flash head fine-tuned** | the same backbone (frozen) with the joint head fine-tuned on the **v1 dev split only** (3,652 train / 432 val, family-grouped; lr 3e-5 picked from {1e-5, 3e-5, 1e-4} on val; ~20 GPU-minutes including caching hidden states) | same |
+| **Clef-flash LoRA fine-tuned** | LoRA r=16 on the backbone's attention, linear-attention and MLP projections plus the full joint head, **v1 dev split only** (same split; best checkpoint at epoch 1.7 by val; ~100 GPU-minutes) | same, adapter merged into BF16 weights |
+| **Clef 27B zero-shot (nf4)** | `Cloudflare/clef`: Qwen3.8-27B backbone + released joint head. **Served 4-bit** (bitsandbytes nf4; lm_head and vision tower kept BF16) because BF16 needs ~55 GB; the model card only reports BF16, so these numbers may understate Clef | transformers, nf4, 1× RTX 4090 |
+| **Clef 27B head fine-tuned (nf4)** | the nf4 backbone (frozen) with the joint head fine-tuned on the **v1 dev split only** (same split and recipe as Clef-flash head-only), trained on hidden states from the same nf4 backbone it is served with | same |
 
 All arms receive byte-identical inputs: the same evidence JSON, the same option keys and descriptions in the same
 order, and the same policy text. The request format depends only on the interface: the Jev/decisions wire format,
