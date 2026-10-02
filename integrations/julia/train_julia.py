@@ -32,6 +32,9 @@ ap.add_argument("--lr", type=float, default=3e-5)
 ap.add_argument("--wd", type=float, default=0.01)
 ap.add_argument("--epochs", type=int, default=6)
 ap.add_argument("--batch", type=int, default=16, help="items per optimizer step")
+ap.add_argument("--attn-budget", type=int, default=2 * 3200 * 3200,
+                help="micro-batch limit on items x padded_length^2 (ModernBERT's masked SDPA is quadratic in memory); "
+                     "gradients are accumulated over micro-batches, so this does not change the optimizer batch")
 ap.add_argument("--warmup", type=float, default=0.06)
 ap.add_argument("--patience", type=int, default=4, help="evals without improvement")
 ap.add_argument("--evals-per-epoch", type=int, default=2)
@@ -95,6 +98,19 @@ def batches(items, size, shuffle):
     return out
 
 
+def micro(b):
+    """Split one batch into micro-batches with len(mb) * max_len^2 <= --attn-budget."""
+    b = sorted(b, key=lambda r: len(r["_encoded"]["ids"]))
+    out, cur = [], []
+    for r in b:
+        n = len(r["_encoded"]["ids"])
+        if cur and (len(cur) + 1) * n * n > args.attn_budget:
+            out.append(cur)
+            cur = []
+        cur.append(r)
+    return out + [cur] if cur else out
+
+
 def to_dev(b):
     return {k: v.to(dev) for k, v in b.items()}
 
@@ -105,7 +121,7 @@ def evaluate(items):
     k = n = 0
     nll = 0.0
     per_wf = {}
-    for b in batches(items, 16, False):
+    for b in (mb for bb in batches(items, 16, False) for mb in micro(bb)):
         x = to_dev(collate(b))
         y = x.pop("labels")
         with torch.autocast(**AMP):
@@ -140,7 +156,9 @@ def save_best():
     d = os.path.join(args.out, "best")
     model.save_pretrained(d)
     if not os.path.isdir(os.path.join(d, "tokenizer")):
-        shutil.copytree(os.path.join(args.release, "tokenizer"), os.path.join(d, "tokenizer"))
+        shutil.copytree(os.path.join(args.release, "tokenizer"), os.path.join(d, "tokenizer"),
+                        copy_function=shutil.copyfile)  # contents only: the release mount is read-only
+        os.chmod(os.path.join(d, "tokenizer"), 0o755)
 
 
 save_best()
@@ -149,18 +167,21 @@ step, stop = 0, False
 for ep in range(args.epochs):
     run_loss, run_n = 0.0, 0
     for b in batches(train, args.batch, True):
-        x = to_dev(collate(b))
-        y = x.pop("labels")
-        with torch.autocast(**AMP):
-            s = model(**x)
-        loss = F.cross_entropy(s.float(), y)
         opt.zero_grad(set_to_none=True)
-        loss.backward()
+        loss = 0.0
+        for mb in micro(b):  # gradient accumulation: mean loss over the whole batch
+            x = to_dev(collate(mb))
+            y = x.pop("labels")
+            with torch.autocast(**AMP):
+                s = model(**x)
+            part = F.cross_entropy(s.float(), y, reduction="sum") / len(b)
+            part.backward()
+            loss += part.item()
         torch.nn.utils.clip_grad_norm_(params, 1.0)
         opt.step()
         sched.step()
         step += 1
-        run_loss += loss.item() * len(b)
+        run_loss += loss * len(b)
         run_n += len(b)
         if step % eval_every == 0 or step == total:
             acc, nll, wf = evaluate(val)
